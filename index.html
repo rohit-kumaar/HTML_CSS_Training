@@ -4,12 +4,106 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="app/css/style.css" />
-    <script src="app/js/app.js"></script>
     <title>HW School</title>
-   
+    <link rel="stylesheet" href="app/css/style.css" />
   </head>
+
   <body>
-    <h1>HW School</h1>
+    <!-- -------------header section-------------  -->
+    <header class="header">
+      <div class="header-contact">
+        <a href="" class="header__phone">
+          <span class="icon-call"></span>
+          <span>Support Hotline : 586-217-2163</span>
+        </a>
+        <a href="" class="header__email">
+          <span class="icon-letter"></span>
+          <span>vctung@outlook.com</span>
+        </a>
+      </div>
+      <div class="header-btn">
+        <a href="" class="header__signup">Sign up</a>
+        <select class="header__language">
+          <option value="selectlanguage">Select Language</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+      </div>
+    </header>
+
+    <!-- ------------navigation section------------ -->
+    <nav class="nav">
+      <div class="nav-left">
+        <img src="app/images/logo.svg" alt="logo" class="nav__img" />
+        <h3 class="nav__name">HW SCHOOL DISTRICT</h3>
+      </div>
+      <div class="nav-right">
+        <a href="" class="nav-right__home">Home</a>
+        <select class="nav-right__schools">
+          <option value="schools">Schools</option>
+          <option value="khms">KHMS</option>
+          <option value="hps">HPS</option>
+          <option value="dav">DAV</option>
+        </select>
+        <select class="nav-right__district">
+          <option value="district">District Info</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+        <a href="" class="nav-right__services">Services</a>
+        <a href="" class="nav-right__nutrition">Nutrition</a>
+        <select class="nav-right__education">
+          <option value="education">Education Services</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+        <select class="nav-right__athletics">
+          <option value="athletics">Athletics</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+        <select class="nav-right__more">
+          <option value="More">More</option>
+          <option value="html">HTML</option>
+          <option value="css">CSS</option>
+          <option value="javascript">JavaScript</option>
+        </select>
+
+        <form class="nav-right__search" id="search">
+          <input type="text" />
+          <span class="icon-search"></span>
+        </form>
+        <textarea class="nav-right__searchbar" id="searchbar"> </textarea>
+      </div>
+    </nav>
+
+    <!-- ---------------hero banner--------------- -->
+    <div class="hero-banner">
+      <img class="hero-banner__back-img" src="app/images/hero_banner.png" />
+      <img
+        class="hero-banner__front-img"
+        src="app/images/home-hero-banner-student.png"
+      />
+
+      <div class="container">
+        <h1 class="hero-banner__header">
+          We are determined to achieve the highest standards
+        </h1>
+        <p class="hero-banner__para">
+          We are always availed to consult on taking your higher education to
+          the next level so you can stay competitive in the global world.
+        </p>
+        <a href="" class="hero-banner__btn">
+          Enroll Now
+          <span class="icon-arrow_right"></span>
+        </a>
+      </div>
+    </div>
+
+    <script src="app/js/app.js" defer></script>
   </body>
 </html>

@@ -8,7 +8,6 @@
 
 @charset 'utf-8';
 
-
 //Helpers
 @import "helpers/__helpers-dir";
 
@@ -27,8 +26,3 @@
 //Pages
 @import "pages/__pages-dir";
 
-
-h1{
-    color: green;
-    font-family: $primary-font-circular-std;
-}
