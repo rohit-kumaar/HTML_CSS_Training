@@ -1,0 +1,15 @@
+.header {
+  &__btn {
+    font-size: 0.786em;
+    font-family: $primary-font;
+    font-weight: 900;
+    color: $color-black;
+    background: $color-white;
+    border-radius: 1.8em;
+    margin-right: 1.71em;
+    padding: 0.59em 2.13em 0.4em;
+    &:hover {
+      color: $color-black;
+    }
+  }
+}

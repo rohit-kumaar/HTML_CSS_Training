@@ -1,0 +1,85 @@
+// ------------navigation section------------
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  color: $color-blue-oxford;
+  background: $color-white-snow;
+  padding: 0.8em 2.85em 0.8em 3.868em;
+
+  &-left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 2.93em;
+    height: 2.88em;
+    border-radius: 50%;
+  }
+
+  &__name {
+    font-size: 1.067em;
+    font-weight: 900;
+    color: $color-blue-oxford;
+    margin-left: 0.542em;
+  }
+
+  &-right {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .nav-link {
+      font-size: 0.89em;
+      font-weight: 500;
+      color: $color-blue-oxford;
+      padding: 0 0 0 1.84em;
+    }
+
+    &__search {
+      position: relative;
+      border: 1px solid $color-silver;
+      border-radius: 1.375em;
+      margin-left: 20px;
+      padding: 0.58em 0.98em;
+      cursor: pointer;
+
+      input[type="text"] {
+        width: 1.25em;
+        border: none;
+        outline: none;
+        background: transparent;
+      }
+      .icon-search {
+        position: absolute;
+        top: 12px;
+        left: 1.19em;
+        font-size: 1.07em;
+        font-weight: 500;
+        color: $color-blue-darkgrayish;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+      }
+    }
+
+    &__searchbar {
+      position: fixed;
+      top: 8em;
+      right: 2.82em;
+      display: none;
+      border-radius: 0.3em;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      background: $color-white-snow;
+      padding: 0.63em 0.63em 5.2em 0.63em;
+      z-index: 20;
+    }
+    .active {
+      display: block;
+      border: none;
+    }
+  }
+}

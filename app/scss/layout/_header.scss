@@ -10,7 +10,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    [class*="icon-"]{
+    [class*="icon-"] {
       padding-right: 0.32em;
     }
   }
@@ -22,146 +22,33 @@
     font-size: 0.8125em;
     font-weight: 500;
     color: $color-silver;
+
+    &:hover {
+      color: $color-silver;
+    }
   }
 
   &__email {
     margin-left: 2.682em;
   }
 
-  &__btn,
+ 
   &__language {
     font-size: 0.786em;
     font-family: $primary-font;
-    border-radius: 1.80em;
-    
+    border-radius: 1.8em;
   }
 
-  &__btn {
-    font-weight: 900;
-    color: $color-black;
-    background: $color-white;
-    margin-right: 1.71em;
-    padding: 0.77em 2.13em 0.59em;
-  }
+ 
 
   &__language {
     font-weight: 500;
     color: $color-white;
     border: 1px solid $color-white;
     background: transparent;
-    padding: 0.615em 0 0.49em 1.30em;
+    padding: 0.615em 0 0.49em 1.33em;
     option:not(:first-child) {
       color: $color-black;
-    }
-  }
-}
-
-// ------------navigation section------------
-.nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-weight: 600;
-  color: $color-blue-oxford;
-  background: $color-white;
-  padding: 0.8em 2.85em 0.8em 3.868em;
-
-  &-left {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  &__img {
-    // width: 2.93em;
-    // height: 2.88em;
-    border-radius: 50%;
-  }
-
-  &__name {
-    font-size: 1.067em;
-    margin-left: 0.542em;
-  }
-
-  &-right {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    font-size: 0.89em;
-
-    & > * {
-      margin-left: 1.645em;
-    }
-    &__home {
-      margin-left: 0;
-    }
-
-    &__home,
-    &__services,
-    &__nutrition {
-      color: $color-blue-oxford;
-    }
-
-    &__schools,
-    &__district,
-    &__education,
-    &__athletics,
-    &__more {
-      color: $color-blue-oxford;
-      font-weight: 600;
-      border: none;
-    }
-
-    &__search {
-      position: relative;
-      border: 1px solid $color-silver;
-      border-radius: 1.375em;
-      padding: 0.58em 0.98em;
-      cursor: pointer;
-
-      input[type="text"] {
-        width: 1.25em;
-        border: none;
-        outline: none;
-      }
-      .icon-search {
-        position: absolute;
-        left: 1.19em;
-        font-size: 1.07em;
-        font-weight: 500;
-        border: 0;
-        background: transparent;
-        cursor: pointer;
-      }
-    }
-
-    &__schools {
-      width: 5em;
-    }
-
-    &__athletics {
-      width: 6em;
-    }
-
-    &__more {
-      width: 4em;
-    }
-    &__searchbar {
-      position: fixed;
-      top: 8.6em;
-      right: 2.82em;
-      width: 15em;
-      display: none;
-      border: none;
-      border-radius: 0.94em;
-      background-color: $color-white;
-      box-shadow: 0.32em 0.32em 0.63em $color-white-ebb;
-      padding: 0.63em 0.63em 3.2em 0.63em;
-      z-index: 20;
-    }
-    .active {
-      display: block;
     }
   }
 }
