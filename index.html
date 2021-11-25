@@ -53,7 +53,9 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           Schools
+          <span class="icon-arrow_down"></span>
         </a>
+
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -68,6 +70,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           District Info
+          <span class="icon-arrow_down"></span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
@@ -91,6 +94,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           Education Services
+          <span class="icon-arrow_down"></span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
@@ -106,6 +110,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           Athletics
+          <span class="icon-arrow_down"></span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
@@ -121,6 +126,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
           aria-expanded="false">
           More
+          <span class="icon-arrow_down"></span>
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <li><a class="dropdown-item" href="#">Action</a></li>
@@ -132,11 +138,21 @@
         </ul>
       </li>
 
-      <form class="nav-right__search" id="search">
-        <input type="text" />
-        <span class="icon-search"></span>
-      </form>
-      <input type="text" class="nav-right__searchbar" id="searchbar" />
+      <div class="dropdown">
+
+        <button onclick="myFunction()" class="dropbtn">
+           <span class="icon-search"></span>
+          </button>
+
+        <div id="myDropdown" class="dropdown-content">
+          <input type="text"  class="dropdown__search" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+          <a href="#about">About</a>
+          <a href="#base">Base</a>
+          <a href="#blog">Blog</a>
+        </div>
+      </div>
+
+    
     </div>
   </nav>
 
