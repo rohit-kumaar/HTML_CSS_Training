@@ -1,8 +1,8 @@
 // ------------------Circular Std------------------
 @font-face {
   font-family: $primary-font;
-  src: url("#{$fonts-path}/CircularStd-Book.woff2") format("woff2"),
-    url("#{$fonts-path}/CircularStd-Book.woff") format("woff");
+  src: url("#{$fonts-path}/cricular/CircularStd-Book.woff2") format("woff2"),
+    url("#{$fonts-path}/cricular/CircularStd-Book.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -10,17 +10,17 @@
 
 @font-face {
   font-family: $primary-font;
-  src: url("#{$fonts-path}/CircularStd-Bold.woff2") format("woff2"),
-    url("#{$fonts-path}/CircularStd-Bold.woff") format("woff");
-  font-weight: bold;
+  src: url("#{$fonts-path}/cricular/CircularStd-Bold.woff2") format("woff2"),
+    url("#{$fonts-path}/cricular/CircularStd-Bold.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: $primary-font;
-  src: url("#{$fonts-path}/CircularStd-Medium.woff2") format("woff2"),
-    url("#{$fonts-path}/CircularStd-Medium.woff") format("woff");
+  src: url("#{$fonts-path}/cricular/CircularStd-Medium.woff2") format("woff2"),
+    url("#{$fonts-path}/cricular/CircularStd-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -28,8 +28,8 @@
 
 @font-face {
   font-family: $primary-font;
-  src: url("#{$fonts-path}/CircularStd-Black.woff2") format("woff2"),
-    url("#{$fonts-path}/CircularStd-Black.woff") format("woff");
+  src: url("#{$fonts-path}/cricular/CircularStd-Black.woff2") format("woff2"),
+    url("#{$fonts-path}/cricular/CircularStd-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -39,47 +39,47 @@
 
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-thin-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-thin-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-thin-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-thin-webfont.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-light-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-light-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-light-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-light-webfont.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-regular-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-regular-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-regular-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-regular-webfont.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-medium-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-medium-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-medium-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-medium-webfont.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-bold-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-bold-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-bold-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-bold-webfont.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: $secondary-font;
-  src: url("#{$fonts-path}/roboto-black-webfont.woff2") format("woff2"),
-    url("#{$fonts-path}/roboto-black-webfont.woff") format("woff");
+  src: url("#{$fonts-path}/roboto/roboto-black-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/roboto/roboto-black-webfont.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
@@ -88,8 +88,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Thin.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-Thin.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Thin.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
   font-display: swap;
@@ -97,8 +97,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-ExtraLight.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-ExtraLight.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-ExtraLight.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
   font-display: swap;
@@ -106,8 +106,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Light.woff2") format("woff2"),
-    url("Metropolis-Light.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Light.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -115,8 +115,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Regular.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-Regular.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Regular.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -124,8 +124,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Medium.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-Medium.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Medium.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -133,8 +133,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-SemiBold.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-SemiBold.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-SemiBold.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -142,8 +142,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Bold.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-Bold.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Bold.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -151,8 +151,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-ExtraBold.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-ExtraBold.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-ExtraBold.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-ExtraBold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -160,8 +160,8 @@
 
 @font-face {
   font-family: $tertiary-font;
-  src: url("#{$fonts-path}/Metropolis-Black.woff2") format("woff2"),
-    url("#{$fonts-path}/Metropolis-Black.woff") format("woff");
+  src: url("#{$fonts-path}/metropolis/Metropolis-Black.woff2") format("woff2"),
+    url("#{$fonts-path}/metropolis/Metropolis-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
