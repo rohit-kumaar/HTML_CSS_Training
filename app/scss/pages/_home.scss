@@ -1,0 +1,178 @@
+//  ---------------hero banner---------------
+.hero-banner {
+  min-height: 40.75em;
+  img {
+    position: absolute;
+    width: 100%;
+    height: 40.75em;
+  }
+
+  &__back-img {
+    z-index: 1;
+  }
+
+  &__front-img {
+    background: linear-gradient($color-black-russian, #00000073);
+    z-index: 3;
+  }
+
+  .container {
+    position: absolute;
+    margin-left: 7.83em;
+    z-index: 3;
+  }
+
+  &__header {
+    width: 10.05em;
+    font-size: 3.11em;
+    font-weight: 700;
+    color: $color-white;
+    margin-top: 2.86em;
+  }
+
+  &__para {
+    width: 27em;
+    font-size: 0.97em;
+    font-weight: 500;
+    color: $color-white-boulder;
+    padding-top: 2.25em;
+    padding-bottom: 1.84em;
+  }
+
+  &__btn {
+    font-size: 0.97em;
+    font-weight: 900;
+    color: $color-white;
+    background: $color-brown-old-brick;
+    border-radius: 2.07em;
+    padding: 1.06em 0 1.06em 2.48em;
+    .icon-arrow_right {
+      font-size: 0.73em;
+      padding-left: 0.83em;
+      padding-right: 2.66em;
+    }
+  }
+}
+
+// ----------------supervisor----------------
+.supervisor {
+  position: relative;
+  display: flex;
+  padding: 8.41em 17.92em 14.41em 17.04em;
+
+  &__circle {
+    position: absolute;
+    top: 5.56em;
+    left: 14.41em;
+    width: 7.19em;
+    height: 7.19em;
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1.61em solid $color-brown-old-brick;
+  }
+
+  &__img {
+    width: 24.06em;
+    height: 17.96em;
+  }
+
+  &__name {
+    position: absolute;
+    left: 24%;
+    top: 58%;
+    width: 15.8em;
+    font-size: 1.12em;
+    font-weight: 500;
+    background: $color-yellow-orange;
+    border-radius: 0.34em;
+    padding: 1.12em 5.52em;
+  }
+
+  &__dottedcircle {
+    position: absolute;
+    top: 15%;
+    right: 21.6%;
+    width: 8.3em;
+
+    .dot {
+      width: 0.14em;
+      height: 0.14em;
+      background: $color-brown-old-brick;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 0.5em;
+      &:nth-child(1),
+      &:nth-child(11),
+      &:nth-child(21),
+      &:nth-child(31),
+      &:nth-child(41) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &-right {
+    width: 24em;
+    padding-left: 1.87em;
+  }
+
+  &__title {
+    font-size: 2.13em;
+    font-weight: 700;
+    color: $color-blue-oxford;
+    padding-bottom: 0.9em;
+  }
+
+  &__para {
+    font-size: 1.07em;
+    font-weight: 500;
+  }
+}
+
+// -------------------goal-------------------
+
+.goal {
+  width: 100%;
+  height: 1000px;
+  background: $color-brown-old-brick;
+  &-mission,
+  &-vision {
+    display: flex;
+    color: $color-white;
+
+    &__img {
+      width: 19.08em;
+      height: 24.37em;
+    }
+
+    &__title {
+      font-size: 48px;
+      font-weight: 700;
+    }
+
+    &__para,
+    &__btn {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    &__para {
+      font-family: $secondary-font;
+    }
+
+    &__btn {
+      color: $color-white;
+    }
+  }
+
+  &-mission {
+      margin-left: 11.79em;
+      pa-left: 11.79em;
+    .container {
+        border: 1px solid yellow;
+      padding-left: 2.41em;
+      padding-right: 24.24em;
+    }
+  }
+}
