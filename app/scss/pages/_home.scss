@@ -56,8 +56,10 @@
 
 // ----------------supervisor----------------
 .supervisor {
+    // border: 1px solid red;
   position: relative;
   display: flex;
+//   border-radius: 0% 0% 30% 30%;
   padding: 8.41em 17.92em 14.41em 17.04em;
 
   &__circle {
@@ -167,8 +169,8 @@
   }
 
   &-mission {
-      margin-left: 11.79em;
-      pa-left: 11.79em;
+    //   margin-left: 11.79em;
+      padding-left: 11.79em;
     .container {
         border: 1px solid yellow;
       padding-left: 2.41em;
