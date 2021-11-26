@@ -6,6 +6,10 @@
   justify-content: space-between;
   background: $color-brown-old-brick;
   padding: 0.998em 2.801em 0.82em 3.868em;
+  @include breakpoint(portrait-mobile-max) {
+    flex-direction: column;
+  }
+
   &-contact {
     display: flex;
     flex-wrap: wrap;
@@ -30,16 +34,16 @@
 
   &__email {
     margin-left: 2.682em;
+    @include breakpoint(portrait-mobile-max) {
+      margin-left: 0;
+    }
   }
 
- 
   &__language {
     font-size: 0.786em;
     font-family: $primary-font;
     border-radius: 1.8em;
   }
-
- 
 
   &__language {
     font-weight: 500;
@@ -51,5 +55,22 @@
       color: $color-black;
     }
   }
-}
 
+  &-contact,
+  &-btns {
+    @include breakpoint(portrait-mobile-max) {
+      display: flex;
+      flex-direction: column;
+      display: inline-block;
+    }
+  }
+
+  &__phone,
+  &__email,
+  &__btn,
+  &__language {
+    @include breakpoint(portrait-mobile-max) {
+      margin-bottom: 0.23em;
+    }
+  }
+}
