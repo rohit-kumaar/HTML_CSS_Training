@@ -17,13 +17,22 @@
     width: 2.93em;
     height: 2.88em;
     border-radius: 50%;
+    @include breakpoint(desktop-max) {
+      width: 2.57em;
+      height: 2.57em;
+    }
   }
 
   &__name {
-    font-size: 1.067em;
+    font-size: 1.06em;
     font-weight: 900;
     color: $color-blue-oxford;
-    margin-left: 0.542em;
+    margin-left: 0.49em;
+
+    @include breakpoint(desktop-max) {
+      width: 6.5em;
+      font-size: 0.93em;
+    }
   }
 
   &-right {
@@ -31,16 +40,27 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    @include breakpoint(ipad-max) {
+      display: none;
+    }
 
     .dropdown-toggle::after {
       border: none;
     }
 
     .nav-link {
-      font-size: 0.89em;
+      font-size: 0.88em;
       font-weight: 500;
       color: $color-blue-oxford;
-      padding: 0 0 0 1.84em;
+      padding: 0 0 0 1.563em;
+      @include breakpoint(desktop-max) {
+        font-size: 0.78em;
+        padding: 0 0 0 1.3em;
+      }
+
+      &.firstchild {
+        padding: 0;
+      }
     }
 
     .nav-link.dropdown-toggle {
@@ -49,15 +69,20 @@
     }
 
     .icon-arrow_down {
-      margin-left: 0.3em;
+      margin-top: 0.1em;
+      margin-left: 0.2em;
     }
 
     .dropbtn {
       border: 1px solid $color-silver;
       border-radius: 3.375em;
-      margin-left: 20px;
+      margin-left: 2.1em;
       padding: 0.63em 1.4em 0.3em;
       cursor: pointer;
+
+      @include breakpoint(desktop-max) {
+        margin-left: 1.6em;
+      }
 
       .icon-search {
         font-size: 1.08em;
@@ -104,5 +129,25 @@
     .show {
       display: block;
     }
+  }
+
+  .navbar-toggler,
+  .offcanvas.offcanvas-end {
+    @include breakpoint(medium-large-desktop-max) {
+      display: none;
+    }
+    @include breakpoint(ipad-max) {
+      display: block;
+    }
+  }
+
+  .offcanvas-title {
+    font-size: 1.06em;
+    font-weight: 900;
+    color: $color-blue-oxford;
+  }
+
+  .dropdown-toggle::after {
+    border: none;
   }
 }
