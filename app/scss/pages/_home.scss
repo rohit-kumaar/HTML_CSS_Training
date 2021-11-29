@@ -173,10 +173,10 @@
 // ----------------supervisor----------------
 .supervisor {
   display: flex;
-  padding: 6.14em 15.92em 12.2em 17.04em;
+  padding: 6.14em 15.92em 0 17.04em;
 
   @include breakpoint(desktop-max) {
-    padding: 6.14em 8.04em 12.2em;
+    padding: 6.14em 8.04em 0;
   }
 
   @include breakpoint(ipad-max) {
@@ -336,37 +336,58 @@
   }
 }
 
-@include breakpoint(custom-small-mobile-max) {
-}
-
 // -------------------goal-------------------
 
 .goal {
   width: 100%;
-  height: 1000px;
+  position: relative;
   background: $color-brown-old-brick;
+  z-index: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: em(44.11);
+    background: $color-white;
+  }
+
+  &:before {
+    top: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  &:after {
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
   &-mission,
   &-vision {
+    border: 1px solid #000;
     display: flex;
     color: $color-white;
 
     &__img {
       width: 19.08em;
       height: 24.37em;
+      z-index: 2;
     }
 
     &__title {
-      font-size: 48px;
+      font-size: em(34.15);
       font-weight: 700;
     }
 
-    &__para,
+    &__paragraph,
     &__btn {
-      font-size: 22px;
+      font-size: em(15.65);
       font-weight: 400;
     }
 
-    &__para {
+    &__paragraph {
       font-family: $secondary-font;
     }
 
@@ -376,12 +397,27 @@
   }
 
   &-mission {
-    //   margin-left: 11.79em;
     padding-left: 11.79em;
+
     .container {
       border: 1px solid yellow;
+      padding-top: em(118.81);
+      padding-right: 25.44em;
       padding-left: 2.41em;
-      padding-right: 24.24em;
     }
   }
+
+  &-vision {
+    margin-top: em(54.78);
+    padding-right: em(231.22);
+    .container {
+      border: 1px solid yellow;
+      padding-top: em(31.3);
+      padding-right: em(77.54);
+      padding-left: em(320);
+    }
+  }
+}
+
+@include breakpoint(custom-small-mobile-max) {
 }
