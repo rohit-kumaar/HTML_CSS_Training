@@ -131,6 +131,10 @@
     }
   }
 
+  .navbar-toggler{
+    color: #a7383f;
+  }
+
   .navbar-toggler,
   .offcanvas.offcanvas-end {
     @include breakpoint(medium-large-desktop-max) {
@@ -149,5 +153,10 @@
 
   .dropdown-toggle::after {
     border: none;
+  }
+
+  .nav-link {
+    font-weight: 500;
+    color: $color-blue-oxford;
   }
 }
