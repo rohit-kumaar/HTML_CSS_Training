@@ -6,6 +6,10 @@
   color: $color-blue-oxford;
   background: $color-white-snow;
   padding: 0.8em 2.85em 0.8em 3.868em;
+  @include breakpoint(portrait-mobile-max) {
+    padding: 0.8em em(15) 0.8em ;
+  }
+  
 
   &-left {
     display: flex;

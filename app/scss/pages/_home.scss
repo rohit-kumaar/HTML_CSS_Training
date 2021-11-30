@@ -53,8 +53,10 @@
   }
 
   &__front-img {
-    background: linear-gradient($color-black-russian, #00000073);
+    background: linear-gradient(#1f1f24d6, #000000b8);
     z-index: 3;
+    
+   
   }
 
   .container {
@@ -71,13 +73,14 @@
     @include breakpoint(mobile-max) {
       width: 29.125em;
       margin-top: 3.16em;
-      margin-left: em(61.28);
+      margin-left: em(55);
+
     }
 
     @include breakpoint(portrait-mobile-max) {
       width: 18.125em;
       margin-top: 1.16em;
-      margin-left: 3.2em;
+      margin-left: em(15);
     }
 
     @include breakpoint(custom-small-mobile-max) {
@@ -100,11 +103,11 @@
     }
 
     @include breakpoint(mobile-max) {
-      font-size: em(27.96);
+      font-size: em(28);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      font-size: em(13.08);
+      font-size: em(22);
     }
   }
 
@@ -127,8 +130,15 @@
       padding-bottom: em(23, 13.73);
     }
 
+    @include breakpoint(mobile-max) {
+      padding-right: em(220, 13.73);
+    }
+    
+
     @include breakpoint(portrait-mobile-max) {
       padding-right: 0;
+      padding-top: em(20);
+      padding-bottom: em(20);
     }
 
     @include breakpoint(custom-small-mobile-max) {
@@ -152,11 +162,11 @@
     }
 
     @include breakpoint(mobile-max) {
-      font-size: em(8.78);
+      font-size: em(12);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      font-size: em(5.78);
+      font-size: em(10);
     }
 
     .icon-arrow_right {

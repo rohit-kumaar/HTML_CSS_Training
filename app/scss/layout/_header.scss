@@ -6,14 +6,23 @@
   justify-content: space-between;
   background: $color-brown-old-brick;
   padding: 0.998em 2.801em 0.82em 3.868em;
+
+  @include breakpoint(mobile-max) {
+    // flex-direction: column;
+  }
   @include breakpoint(portrait-mobile-max) {
-    flex-direction: column;
+    padding: 0.998em em(15) 0.82em ;
   }
 
   &-contact {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+    }
+
     [class*="icon-"] {
       padding-right: 0.32em;
     }
@@ -27,6 +36,10 @@
     font-weight: 500;
     color: $color-silver;
 
+    @include breakpoint(mobile-max) {
+      margin-right: auto;
+    }
+
     &:hover {
       color: $color-silver;
     }
@@ -34,43 +47,38 @@
 
   &__email {
     margin-left: 2.682em;
-    @include breakpoint(portrait-mobile-max) {
+    @include breakpoint(mobile-max) {
+      margin-top: 2px;
       margin-left: 0;
+    }
+  }
+
+  &-btns {
+    display: flex;
+
+    @include breakpoint(mobile-max) {
+      display: inline-block;
+      flex-direction: column;
+      margin-top: 0;
+     
     }
   }
 
   &__language {
     font-size: 0.786em;
+    font-weight: 500;
     font-family: $primary-font;
     border-radius: 1.8em;
-  }
-
-  &__language {
-    font-weight: 500;
     color: $color-white;
     border: 1px solid $color-white;
     background: transparent;
     padding: 0.615em 0 0.49em 1.33em;
+    @include breakpoint(mobile-max) {
+      // display: block;
+      margin-top: 10px;
+    }
     option:not(:first-child) {
       color: $color-black;
-    }
-  }
-
-  &-contact,
-  &-btns {
-    @include breakpoint(portrait-mobile-max) {
-      display: flex;
-      flex-direction: column;
-      display: inline-block;
-    }
-  }
-
-  &__phone,
-  &__email,
-  &__btn,
-  &__language {
-    @include breakpoint(portrait-mobile-max) {
-      margin-bottom: 0.23em;
     }
   }
 }
