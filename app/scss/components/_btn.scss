@@ -16,3 +16,43 @@
    
   }
 }
+
+.supervisor {
+  &__name {
+    position: absolute;
+    bottom: -16px;
+    left: 46px;
+    width: 16em;
+    display: inline-block;
+    font-size: em(17.92);
+    font-weight: 500;
+    background: $color-yellow-orange;
+    border-radius: 0.34em;
+    padding: 0.93em 5.52em;
+    cursor: pointer;
+
+    @include breakpoint(ipad-max) {
+      bottom: -3px;
+      left: 80px;
+      width: 20em;
+      text-align: center;
+    }
+
+    @include breakpoint(mobile-max) {
+      bottom: -5px;
+      text-align: center;
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      bottom: -18px;
+      left: 47px;
+      width: 15em;
+      padding: 0.93em 4.52em;
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      left: em(24);
+      bottom: em(-21);
+    }
+  }
+}

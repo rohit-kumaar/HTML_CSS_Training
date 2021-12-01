@@ -218,10 +218,6 @@
     background-color: transparent;
     border-radius: 50%;
     border: 1.61em solid $color-brown-old-brick;
-    // @include breakpoint(desktop-max) {
-    //   top: 0;
-    //   left: 0;
-    // }
   }
 
   &__img {
@@ -242,44 +238,6 @@
 
     @include breakpoint(custom-small-mobile-max) {
       width: em(320);
-    }
-  }
-
-  &__name {
-    position: absolute;
-    bottom: -16px;
-    left: 46px;
-    width: 16em;
-    display: inline-block;
-    font-size: em(17.92);
-    font-weight: 500;
-    background: $color-yellow-orange;
-    border-radius: 0.34em;
-    padding: 0.93em 5.52em;
-    cursor: pointer;
-
-    @include breakpoint(ipad-max) {
-      bottom: -3px;
-      left: 80px;
-      width: 20em;
-      text-align: center;
-    }
-
-    @include breakpoint(mobile-max) {
-      bottom: -5px;
-      text-align: center;
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      bottom: -18px;
-      left: 47px;
-      width: 15em;
-      padding: 0.93em 4.52em;
-    }
-
-    @include breakpoint(custom-small-mobile-max) {
-      left: em(24);
-      bottom: em(-21);
     }
   }
 
@@ -338,8 +296,6 @@
       top: 12px;
     }
 
-  
-
     .dot {
       width: 0.14em;
       height: 0.14em;
@@ -374,10 +330,9 @@
 }
 
 // -------------------goal-------------------
-
 .goal {
-  width: 100%;
   position: relative;
+  width: 100%;
   background: $color-brown-old-brick;
   z-index: 1;
 
@@ -386,7 +341,7 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: em(44.11);
+    height: em(22.05);
     background: $color-white;
   }
 
@@ -404,13 +359,13 @@
 
   &-mission,
   &-vision {
-    border: 1px solid #000;
     display: flex;
     color: $color-white;
 
     &__img {
       width: 19.08em;
       height: 24.37em;
+      border-radius: 1.125em;
       z-index: 2;
     }
 
@@ -427,32 +382,127 @@
 
     &__paragraph {
       font-family: $secondary-font;
+      padding-top: em(21.34);
+      padding-bottom: em(15.68);
     }
 
     &__btn {
-      color: $color-white;
+      display: inline-block;
+      color: $color-blue-darkgrayish;
+      background: $color-white;
+      border-radius: em(32);
+      padding: em(10.9, 15.65) em(34.87, 15.65);
+
+      &:hover {
+        color: $color-blue-darkgrayish;
+      }
     }
   }
 
   &-mission {
     padding-left: 11.79em;
 
+    &__smallcircle {
+      position: absolute;
+      top: em(120.94);
+      left: em(108.85);
+      width: em(61);
+      height: em(61);
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 50%;
+      border: em(3.55) solid $color-yellow-orange;
+    }
+
+    &__bigcircle {
+      position: absolute;
+      top: 11.5em;
+      left: em(120.94);
+      width: em(266);
+      height: em(266);
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 50%;
+      border: em(3.55) solid $color-yellow-orange;
+      z-index: 1;
+
+      .dottedcircle {
+        position: relative;
+        top: 7em;
+        display: inline-block;
+        width: 11.25em;
+        right: em(31);
+        line-height: em(31);
+
+        .dot {
+          width: em(4.24);
+          height: em(4.24);
+          display: inline-block;
+          background: $color-green-atlantis;
+          border-radius: 50%;
+          margin-left: em(27);
+        }
+      }
+    }
+
     .container {
-      border: 1px solid yellow;
-      padding-top: em(118.81);
+      padding-top: em(96.75);
       padding-right: 25.44em;
       padding-left: 2.41em;
     }
   }
 
   &-vision {
-    margin-top: em(54.78);
+    position: relative;
+    margin-top: em(51.93);
     padding-right: em(231.22);
+
+    &__smallcircle {
+      position: absolute;
+      top: em(-63);
+      right: em(450);
+      width: em(61);
+      height: em(61);
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 50%;
+      border: em(3.55) solid $color-yellow-orange;
+    }
+
+    &__bigcircle {
+      position: absolute;
+      top: em(-52);
+      right: em(66);
+      width: em(266);
+      height: em(266);
+      display: inline-block;
+      background-color: transparent;
+      border-radius: 50%;
+      border: em(3.55) solid $color-yellow-orange;
+      z-index: 1;
+
+      .dottedcircle {
+        position: relative;
+        top: em(145);
+        left: em(72);
+        display: inline-block;
+        width: 10.25em;
+        right: em(31);
+        line-height: em(31);
+
+        .dot {
+          width: em(4.24);
+          height: em(4.24);
+          display: inline-block;
+          background: $color-green-atlantis;
+          border-radius: 50%;
+          margin-left: em(27);
+        }
+      }
+    }
+
     .container {
-      border: 1px solid yellow;
-      padding-top: em(31.3);
-      padding-right: em(77.54);
-      padding-left: em(320);
+      padding: em(31.3) em(77.54) em(70) em(320);
     }
   }
 }
