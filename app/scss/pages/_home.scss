@@ -55,8 +55,6 @@
   &__front-img {
     background: linear-gradient(#1f1f24d6, #000000b8);
     z-index: 3;
-    
-   
   }
 
   .container {
@@ -74,7 +72,6 @@
       width: 29.125em;
       margin-top: 3.16em;
       margin-left: em(55);
-
     }
 
     @include breakpoint(portrait-mobile-max) {
@@ -133,7 +130,6 @@
     @include breakpoint(mobile-max) {
       padding-right: em(220, 13.73);
     }
-    
 
     @include breakpoint(portrait-mobile-max) {
       padding-right: 0;
@@ -183,7 +179,7 @@
 // ----------------supervisor----------------
 .supervisor {
   display: flex;
-  padding: 6.14em 15.92em 0 17.04em;
+  padding: 8.32em 15.92em 0 17.04em;
 
   @include breakpoint(desktop-max) {
     padding: 6.14em 8.04em 0;
@@ -191,7 +187,8 @@
 
   @include breakpoint(ipad-max) {
     flex-direction: column;
-    padding: 6.14em em(104);
+    padding-bottom: em(151);
+    // padding: em(97) em(205) em(151) em(151);
     align-items: center;
   }
 
@@ -231,6 +228,10 @@
     width: 24.06em;
     height: auto;
 
+    @include breakpoint(ipad-max) {
+      width: em(540);
+    }
+
     @include breakpoint(mobile-max) {
       width: 500px;
     }
@@ -247,7 +248,7 @@
   &__name {
     position: absolute;
     bottom: -16px;
-    left: 41px;
+    left: 46px;
     width: 16em;
     display: inline-block;
     font-size: em(17.92);
@@ -257,15 +258,28 @@
     padding: 0.93em 5.52em;
     cursor: pointer;
 
+    @include breakpoint(ipad-max) {
+      bottom: -3px;
+      left: 80px;
+      width: 20em;
+      text-align: center;
+    }
+
     @include breakpoint(mobile-max) {
       bottom: -5px;
-      width: 23em;
       text-align: center;
     }
 
     @include breakpoint(portrait-mobile-max) {
+      bottom: -18px;
+      left: 47px;
       width: 15em;
       padding: 0.93em 4.52em;
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      left: em(24);
+      bottom: em(-21);
     }
   }
 
@@ -275,7 +289,7 @@
 
     @include breakpoint(ipad-max) {
       width: em(559);
-      padding-top: em(30);
+      padding-top: em(32);
       padding-right: em(20);
     }
 
@@ -305,7 +319,7 @@
     }
 
     @include breakpoint(ipad-max) {
-      top: em(3);
+      top: em(5);
       right: em(4);
     }
 
@@ -313,6 +327,18 @@
       right: 3px;
       top: -24px;
     }
+
+    @include breakpoint(portrait-mobile-max) {
+      right: 59px;
+      top: 12px;
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      right: 19px;
+      top: 12px;
+    }
+
+  
 
     .dot {
       width: 0.14em;
@@ -329,10 +355,11 @@
     font-weight: 700;
     color: $color-blue-oxford;
     padding-right: 0.83em;
-    padding-bottom: 0.9em;
+    padding-bottom: 0.87em;
 
     @include breakpoint(ipad-max) {
       padding-right: 0;
+      padding-bottom: em(21, 34);
     }
 
     @include breakpoint(mobile-max) {
@@ -368,6 +395,7 @@
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
   }
+
   &:after {
     bottom: 0;
     border-top-left-radius: 50%;
