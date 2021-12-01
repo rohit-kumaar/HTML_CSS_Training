@@ -367,6 +367,10 @@
       height: 24.37em;
       border-radius: 1.125em;
       z-index: 2;
+
+      @include breakpoint(mobile-max) {
+        margin-left: em(70);
+      }
     }
 
     &__title {
@@ -374,12 +378,15 @@
       font-weight: 700;
     }
 
+    
     &__paragraph,
     &__btn {
       font-size: em(15.65);
       font-weight: 400;
     }
 
+
+  
     &__paragraph {
       font-family: $secondary-font;
       padding-top: em(21.34);
@@ -402,6 +409,14 @@
   &-mission {
     padding-left: 11.79em;
 
+    @include breakpoint(desktop-max) {
+      padding-left: 0;
+    }
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+    }
+
     &__smallcircle {
       position: absolute;
       top: em(120.94);
@@ -412,6 +427,12 @@
       background-color: transparent;
       border-radius: 50%;
       border: em(3.55) solid $color-yellow-orange;
+
+      @include breakpoint(desktop-max) {
+        left: em(10);
+        width: em(55);
+        height: em(55);
+      }
     }
 
     &__bigcircle {
@@ -426,13 +447,24 @@
       border: em(3.55) solid $color-yellow-orange;
       z-index: 1;
 
+      @include breakpoint(desktop-max) {
+        left: 0;
+        width: em(255);
+        height: em(255);
+      }
+
       .dottedcircle {
         position: relative;
         top: 7em;
+        right: em(31);
         display: inline-block;
         width: 11.25em;
-        right: em(31);
         line-height: em(31);
+
+        @include breakpoint(desktop-max) {
+          right: em(0);
+          line-height: em(17.5);
+        }
 
         .dot {
           width: em(4.24);
@@ -445,10 +477,38 @@
       }
     }
 
+    &__img {
+      @include breakpoint(desktop-max) {
+        margin-left: em(70);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        margin: 0 auto;
+      }
+    }
+
     .container {
       padding-top: em(96.75);
       padding-right: 25.44em;
       padding-left: 2.41em;
+
+      @include breakpoint(desktop-max) {
+        padding-left: em(35);
+        padding-right: em(70);
+      }
+
+      @include breakpoint(mobile-max) {
+        margin: 0;
+        padding: em(35) em(35) em(35) em(70);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        padding-left: em(27.35);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        padding-right: em(10);
+      }
     }
   }
 
@@ -456,6 +516,14 @@
     position: relative;
     margin-top: em(51.93);
     padding-right: em(231.22);
+
+    @include breakpoint(desktop-max) {
+      padding-right: 0;
+    }
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column-reverse;
+    }
 
     &__smallcircle {
       position: absolute;
@@ -467,6 +535,12 @@
       background-color: transparent;
       border-radius: 50%;
       border: em(3.55) solid $color-yellow-orange;
+
+      @include breakpoint(desktop-max) {
+        right: em(300);
+        width: em(55);
+        height: em(55);
+      }
     }
 
     &__bigcircle {
@@ -481,6 +555,12 @@
       border: em(3.55) solid $color-yellow-orange;
       z-index: 1;
 
+      @include breakpoint(desktop-max) {
+        right: em(33);
+        width: em(255);
+        height: em(255);
+      }
+
       .dottedcircle {
         position: relative;
         top: em(145);
@@ -489,6 +569,14 @@
         width: 10.25em;
         right: em(31);
         line-height: em(31);
+
+        @include breakpoint(desktop-max) {
+          left: em(130);
+        }
+
+        @include breakpoint(portrait-mobile-max) {
+          display: none;
+        }
 
         .dot {
           width: em(4.24);
@@ -503,6 +591,38 @@
 
     .container {
       padding: em(31.3) em(77.54) em(70) em(320);
+
+      @include breakpoint(desktop-max) {
+        padding-left: em(70);
+        padding-right: em(35);
+      }
+
+      @include breakpoint(mobile-max) {
+        margin: 0;
+        padding: em(35) em(35) em(35) em(70);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        padding-left: em(27.35);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        padding-right: em(10);
+      }
+    }
+
+    &__img {
+      @include breakpoint(desktop-max) {
+        margin-right: em(70);
+      }
+
+      @include breakpoint(mobile-max) {
+        margin-right: 0;
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        margin: 0 auto;
+      }
     }
   }
 }
