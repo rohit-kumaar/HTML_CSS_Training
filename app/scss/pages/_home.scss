@@ -607,6 +607,7 @@
     }
 
     &__img {
+      box-shadow: 0 em(24) em(17) em(-6) #777;
       @include breakpoint(desktop-max) {
         margin-right: em(70);
       }
@@ -624,64 +625,82 @@
 
 // -------------------why-------------------
 .why {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: em(170.03) em(261.81) em(123.79);
 
   &__title {
-    font-size: 48px;
+    font-size: em(34.15);
     font-weight: 700;
-    font-style: $primary-font;
     color: $color-grap-dark;
   }
 
   &__paragraph {
-    font-size: 23px;
+    font-size: em(16.36);
     font-weight: 400;
-    font-size: $secondary-font;
+    font-family: $secondary-font;
     color: $color-white-boulder;
+    margin-top: em(32.01, 16.36);
+    margin-bottom: em(83.95, 16.36);
+    padding-left: em(80, 16.36);
+    padding-right: em(60, 16.36);
+  }
+
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: em(34.86);
+
+    & > * {
+      // TODO: ckeck after
+      flex-basis: 200px;
+      flex-grow: 1;
+    }
+
+    &.top {
+      margin-bottom: em(37.7);
+    }
   }
 
   &-card {
-    border: 1px solid #000;
-
-    width: 362.02px;
-    height: 369.39px;
-    border-radius: 15px;
+    $card: &;
+    width: em(257.56);
+    // height: em(257.56);
+    border-radius: em(15);
     background: $color-white;
-    padding-top: 34px;
-    padding-right: 27px;
-    padding-bottom: 27px;
-    padding-left: 36px;
+    padding: em(24.18) em(19.2) em(19.2) em(25.61);
+    box-shadow: 0 0 em(24) em(18) $color-white-anti-flash;
 
     &__logo {
       img {
-        width: 79.98px;
-        height: 79.98px;
+        width: em(56.9);
+        height: em(56.9);
       }
     }
 
     &__title {
-      font-size: 25px;
+      font-size: em(17.78);
       font-weight: 700;
-      font-style: $primary-font;
       color: $color-blue-limed-spruce;
-      padding-top: 40px;
-      padding-bottom: 32px;
+      padding-top: em(28.45, 17.78);
+      padding-bottom: em(22.76, 17.78);
     }
 
     &__paragraph {
-      font-size: 19px;
+      font-size: em(13.51);
       font-weight: 400;
-      font-style: $secondary-font;
+      font-family: $secondary-font;
       color: $color-blue-dark;
     }
 
-    // TODO: color not working 
     &--color {
       background: $color-brown-old-brick;
-      color: $color-white;
+
+      #{$card}__paragraph,
+      #{$card}__title {
+        color: $color-white;
+      }
     }
   }
 }
