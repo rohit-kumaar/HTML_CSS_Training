@@ -378,22 +378,25 @@
       font-weight: 700;
     }
 
-    
-    &__paragraph,
-    &__btn {
+    &__paragraph {
       font-size: em(15.65);
       font-weight: 400;
-    }
-
-
-  
-    &__paragraph {
       font-family: $secondary-font;
       padding-top: em(21.34);
+    }
+
+    &__list {
+      font-size: em(15.65);
+      font-weight: 400;
+      font-family: $secondary-font;
+      margin-bottom: 0;
+      padding-left: 16px;
       padding-bottom: em(15.68);
     }
 
     &__btn {
+      font-size: em(15.65);
+      font-weight: 400;
       display: inline-block;
       color: $color-blue-darkgrayish;
       background: $color-white;
@@ -498,6 +501,7 @@
       }
 
       @include breakpoint(mobile-max) {
+        max-width: 100%;
         margin: 0;
         padding: em(35) em(35) em(35) em(70);
       }
@@ -509,6 +513,10 @@
       @include breakpoint(custom-small-mobile-max) {
         padding-right: em(10);
       }
+    }
+
+    &__paragraph {
+      padding-bottom: em(15.68);
     }
   }
 
@@ -571,7 +579,7 @@
         line-height: em(31);
 
         @include breakpoint(desktop-max) {
-          left: em(130);
+          left: em(120);
         }
 
         @include breakpoint(portrait-mobile-max) {
@@ -598,6 +606,7 @@
       }
 
       @include breakpoint(mobile-max) {
+        max-width: 100%;
         margin: 0;
         padding: em(35) em(35) em(35) em(70);
       }
