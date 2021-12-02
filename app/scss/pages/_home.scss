@@ -630,10 +630,30 @@
   align-items: center;
   padding: em(170.03) em(261.81) em(123.79);
 
+  @include breakpoint(ipad-max) {
+    padding: em(87.76) em(189.94) em(63.89);
+  }
+
+  @include breakpoint(mobile-max) {
+    padding: em(67.92) em(104.58) em(49.45);
+  }
+
+  @include breakpoint(portrait-mobile-max) {
+    padding: em(50.92) em(47) em(37.07);
+  }
+
   &__title {
     font-size: em(34.15);
     font-weight: 700;
     color: $color-grap-dark;
+
+    @include breakpoint(portrait-mobile-max) {
+      font-size: em(32);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      font-size: em(27);
+    }
   }
 
   &__paragraph {
@@ -645,16 +665,18 @@
     margin-bottom: em(83.95, 16.36);
     padding-left: em(80, 16.36);
     padding-right: em(60, 16.36);
+
+    @include breakpoint(desktop-max) {
+      padding: 0;
+    }
   }
 
   &-box {
     display: flex;
     flex-wrap: wrap;
-    gap: em(34.86);
+    gap: em(25.86);
 
     & > * {
-      // TODO: ckeck after
-      flex-basis: 200px;
       flex-grow: 1;
     }
 
@@ -666,7 +688,7 @@
   &-card {
     $card: &;
     width: em(257.56);
-    // height: em(257.56);
+    height: em(262.8);
     border-radius: em(15);
     background: $color-white;
     padding: em(24.18) em(19.2) em(19.2) em(25.61);
@@ -705,5 +727,5 @@
   }
 }
 
-@include breakpoint(custom-small-mobile-max) {
+@include breakpoint(desktop-max) {
 }
