@@ -394,19 +394,6 @@
       padding-bottom: em(15.68);
     }
 
-    &__btn {
-      font-size: em(15.65);
-      font-weight: 400;
-      display: inline-block;
-      color: $color-blue-darkgrayish;
-      background: $color-white;
-      border-radius: em(32);
-      padding: em(10.9, 15.65) em(34.87, 15.65);
-
-      &:hover {
-        color: $color-blue-darkgrayish;
-      }
-    }
   }
 
   &-mission {
@@ -635,6 +622,13 @@
     }
   }
 }
+
+// -------------------why------------------- 
+.why{
+  border: 1px solid red;
+}
+
+
 
 @include breakpoint(custom-small-mobile-max) {
 }
