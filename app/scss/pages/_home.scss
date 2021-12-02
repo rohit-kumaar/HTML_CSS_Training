@@ -393,7 +393,6 @@
       padding-left: 16px;
       padding-bottom: em(15.68);
     }
-
   }
 
   &-mission {
@@ -623,12 +622,69 @@
   }
 }
 
-// -------------------why------------------- 
-.why{
+// -------------------why-------------------
+.why {
   border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    font-style: $primary-font;
+    color: $color-grap-dark;
+  }
+
+  &__paragraph {
+    font-size: 23px;
+    font-weight: 400;
+    font-size: $secondary-font;
+    color: $color-white-boulder;
+  }
+
+  &-card {
+    border: 1px solid #000;
+
+    width: 362.02px;
+    height: 369.39px;
+    border-radius: 15px;
+    background: $color-white;
+    padding-top: 34px;
+    padding-right: 27px;
+    padding-bottom: 27px;
+    padding-left: 36px;
+
+    &__logo {
+      img {
+        width: 79.98px;
+        height: 79.98px;
+      }
+    }
+
+    &__title {
+      font-size: 25px;
+      font-weight: 700;
+      font-style: $primary-font;
+      color: $color-blue-limed-spruce;
+      padding-top: 40px;
+      padding-bottom: 32px;
+    }
+
+    &__paragraph {
+      font-size: 19px;
+      font-weight: 400;
+      font-style: $secondary-font;
+      color: $color-blue-dark;
+    }
+
+    // TODO: color not working 
+    &--color {
+      background: $color-brown-old-brick;
+      color: $color-white;
+    }
+  }
 }
-
-
 
 @include breakpoint(custom-small-mobile-max) {
 }
