@@ -738,16 +738,23 @@
   flex-direction: column;
   align-items: center;
   max-width: 100%;
-  height: em(773);
+  min-height: em(773);
   background: $color-white;
-  padding: em(80.39) em(101.73) em(80.39) em(78.26);
+  padding: em(80.39) 0 em(80.39) 0;
+  // padding-right: em(101.73);
+  // padding-left: em(78.26);
   z-index: 1;
   overflow-x: hidden;
+  // overflow-y: hidden;
 
   & > * {
-    // position: relative;
     z-index: 20;
   }
+
+  @include breakpoint(ipad-max) {
+    background: $color-pink-lavender-blush;
+  }
+  
 
   &:after,
   &::before {
@@ -755,6 +762,11 @@
     position: absolute;
     width: 110%;
     height: em(440);
+
+    @include breakpoint(ipad-max) {
+      display: none;
+     
+    }
   }
 
   &:before {
@@ -777,6 +789,11 @@
     font-size: em(34.15);
     font-weight: 700;
     color: $color-grap-dark;
+
+    @include breakpoint(custom-small-mobile-max) {
+      font-size: em(28.8);
+    }
+    
   }
 
   &__paragraph {
@@ -786,22 +803,35 @@
     color: $color-white-boulder;
     padding-top: em(24.9, 16.36);
     padding-bottom: em(106.71, 16.36);
+
+    @include breakpoint(ipad-max) {
+      padding: em(24.9, 16.36) em(50, 16.36) em(106.71, 16.36);
+    }
   }
 
   &-box {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     gap: em(33);
+
+    @include breakpoint(desktop-max) {
+      justify-content: center;
+    }
+
+    @include breakpoint(mobile-max) {
+      gap: em(22);
+    }
+    
   }
 
   &-card {
-    border: 1px solid red;
+    $card: &;
     position: relative;
     max-width: em(266.79);
     height: em(248);
     & > * {
-      border: 1px solid green;
-      flex-grow: 1;
+      // flex-grow: 1;
     }
 
     &__img {
@@ -810,19 +840,45 @@
     }
 
     &__figcaption {
-      border: 1px solid red;
       position: absolute;
-      // display: inline-block;
       width: 100%;
       font-size: em(17.78);
       font-weight: 500;
       text-align: center;
       color: $color-blue-limed-spruce;
+      border-radius: em(5);
       background: $color-white;
+      box-shadow: 0 em(24) em(17) -1.375em #777;
       padding: em(22.05, 17.78) 0;
+    }
+
+    &--color {
+      #{$card}__figcaption {
+        background: $color-brown-old-brick;
+        color: $color-white;
+      }
+    }
+
+    .dottedcircle {
+      border: 1px solid red;
+      position: absolute;
+      right: -36px;
+      bottom: -48px;
+      width: 16.3em;
+      line-height: 1.8125em;
+      letter-spacing: 21px;
+
+      .dot {
+        width: 0.14em;
+        height: 0.14em;
+        display: inline-block;
+        background: $color-brown-old-brick;
+        border-radius: 50%;
+      }
     }
   }
 }
 
-@include breakpoint(ipad-max) {
+@include breakpoint(custom-small-mobile-max) {
+  
 }
