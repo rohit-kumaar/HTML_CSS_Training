@@ -1,23 +1,20 @@
+
+
 @font-face {
-  font-family: "#{$icomoon-font-family}";
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vxenop");
-  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?vxenop#iefix")
-      format("embedded-opentype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?vxenop")
-      format("truetype"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?vxenop")
-      format("woff"),
-    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?vxenop##{$icomoon-font-family}")
-      format("svg");
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4vjlf3');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?4vjlf3#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?4vjlf3') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?4vjlf3') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?4vjlf3##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "#{$icomoon-font-family}" !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -30,43 +27,79 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-call {
-  &:before {
-    content: $icon-call;
-  }
-}
-.icon-letter {
-  &:before {
-    content: $icon-letter;
-  }
-}
 .icon-arrow_down {
   &:before {
-    content: $icon-arrow_down;
-  }
-}
-.icon-search {
-  &:before {
-    content: $icon-search;
-  }
-}
-.icon-arrow_right {
-  &:before {
-    content: $icon-arrow_right;
+    content: $icon-arrow_down; 
   }
 }
 .icon-arrow_left {
   &:before {
-    content: $icon-arrow_left;
+    content: $icon-arrow_left; 
+  }
+}
+.icon-arrow_right {
+  &:before {
+    content: $icon-arrow_right; 
+  }
+}
+.icon-book {
+  &:before {
+    content: $icon-book; 
+  }
+}
+.icon-call {
+  &:before {
+    content: $icon-call; 
+  }
+}
+.icon-circle {
+  &:before {
+    content: $icon-circle; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-file {
+  &:before {
+    content: $icon-file; 
+  }
+}
+.icon-home {
+  &:before {
+    content: $icon-home; 
+  }
+}
+.icon-letter {
+  &:before {
+    content: $icon-letter; 
   }
 }
 .icon-location {
   &:before {
-    content: $icon-location;
+    content: $icon-location; 
   }
 }
-.icon-mail {
+.icon-madel {
   &:before {
-    content: $icon-mail;
+    content: $icon-madel; 
   }
 }
+.icon-search {
+  &:before {
+    content: $icon-search; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-youtube {
+  &:before {
+    content: $icon-youtube; 
+  }
+}
+

@@ -12,11 +12,14 @@ $color-black-russian: #1f1f24;
 $color-silver: #bdbdbd;
 $color-green-atlantis: #70c217;
 $color-green-dark-jungle: #212121;
+$color-green-soft: #70CE88;
 $color-blue-oxford: #002147;
 $color-blue-darkgrayish: #212529;
 $color-blue-dark: #1C2021;
 $color-blue-limed-spruce:#37474F;
+$color-blue-cornflower:#5C96FF;
 $color-yellow-orange: #ffba49;
+$color-yellow-texas-rose: #FFBA49;
 $color-grap-very-light: #ddd;
 $color-grap-dark: #373737;
 $color-pink-soft-peach: #EEDDDC;
@@ -34,14 +37,25 @@ $fonts-path: "../fonts" !default;
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../fonts/icomoon" !default;
 
-$icon-call: "\e900";
-$icon-letter: "\e901";
-$icon-arrow_down: "\e902";
-$icon-search: "\e903";
-$icon-arrow_right: "\e904";
-$icon-arrow_left: "\e905";
-$icon-location: "\e906";
-$icon-mail: "\e907";
+$icon-arrow_down: "\e900";
+$icon-arrow_left: "\e901";
+$icon-arrow_right: "\e902";
+$icon-book: "\e903";
+$icon-call: "\e904";
+$icon-circle: "\e905";
+$icon-facebook: "\e906";
+$icon-file: "\e907";
+$icon-home: "\e908";
+$icon-letter: "\e909";
+$icon-location: "\e90a";
+$icon-madel: "\e90b";
+$icon-search: "\e90c";
+$icon-twitter: "\e90d";
+$icon-youtube: "\e90e";
+
+
+
+
 
 // ------------------font size------------------
 $browser-context: 16;

@@ -665,14 +665,15 @@
   }
 
   &__paragraph {
-    font-size: em(16.36);
-    font-weight: 400;
-    font-family: $secondary-font;
-    color: $color-white-boulder;
-    margin-top: em(32.01, 16.36);
-    margin-bottom: em(83.95, 16.36);
     padding-left: em(80, 16.36);
     padding-right: em(60, 16.36);
+    margin-top: em(32.01, 16.36);
+    margin-bottom: em(83.95, 16.36);
+    color: $color-white-boulder;
+    font-family: $secondary-font;
+    font-size: em(16.36);
+    font-weight: 400;
+    text-align: center;
 
     @include breakpoint(desktop-max) {
       padding: 0;
@@ -706,12 +707,34 @@
       img {
         width: em(56.9);
         height: em(56.9);
+        border-radius: 50%;
+      }
+      [class*="icon-"] {
+        display: grid;
+        place-items: center;
+        width: em(56.91, 25.61);
+        height: em(56.91, 25.61);
+        border-radius: 50%;
+        color: $color-white;
+        font-size: em(25.61);
+      }
+
+      .icon {
+        &-file {
+          background: $color-green-soft;
+        }
+        &-home {
+          background: $color-blue-cornflower;
+        }
+        &-madel {
+          background: $color-yellow-texas-rose;
+        }
       }
     }
 
     &__title {
       font-size: em(17.78);
-      font-weight: 700;
+      font-weight: 500;
       color: $color-blue-limed-spruce;
       padding-top: em(28.45, 17.78);
       padding-bottom: em(22.76, 17.78);
@@ -724,7 +747,7 @@
       color: $color-blue-dark;
     }
 
-    &--color {
+    &:hover {
       background: $color-brown-old-brick;
 
       #{$card}__paragraph,
@@ -824,7 +847,7 @@
     .dottedcircle {
       position: absolute;
       right: em(-36);
-      bottom: em(-48);
+      bottom: -2em;
       width: 16.3em;
       line-height: 1.8125em;
       letter-spacing: em(21);
@@ -844,29 +867,29 @@
     position: relative;
     max-width: em(266.79);
     height: em(248);
-    & > * {
-      // flex-grow: 1;
-    }
 
     &__img {
       width: em(266.79);
       height: em(173.59);
+      border-top-left-radius: em(5);
+      border-top-right-radius: em(5);
     }
 
     &__figcaption {
       position: absolute;
       width: 100%;
-      font-size: em(17.78);
-      font-weight: 500;
-      text-align: center;
-      color: $color-blue-limed-spruce;
       border-radius: em(5);
       background: $color-white;
       box-shadow: 0 em(24) em(17) -1.375em #777;
       padding: em(22.05, 17.78) 0;
+      margin-top: em(-3);
+      color: $color-blue-limed-spruce;
+      font-size: em(17.78);
+      font-weight: 500;
+      text-align: center;
     }
 
-    &--color {
+    &:hover {
       #{$card}__figcaption {
         background: $color-brown-old-brick;
         color: $color-white;
@@ -884,8 +907,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: em(60.47) em(71.14) em(60.47) em(107.43);
-
+  padding: em(60.47) 0 em(60.47) 0;
+  // em(71.14) em(107.43)
   &__title {
     color: $color-grap-dark;
     font-size: em(34.15);
@@ -902,11 +925,32 @@
     font-size: em(16.36);
     font-weight: 400;
     text-align: center;
+
+    @include breakpoint(desktop-max) {
+      padding: 0 em(100, 16.36);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      padding: 0 em(20, 16.36);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      margin-bottom: em(80, 16.36);
+    }
   }
 
   &-box {
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint(ipad-max) {
+      align-items: center;
+      justify-content: center;
+    }
+    // @include breakpoint(mobile-max) {
+    //   align-items: center;
+    //   justify-content: center;
+    // }
   }
 
   &-card {
@@ -917,6 +961,31 @@
     border-radius: em(10.67);
     box-shadow: 0 0 em(24.9) em(10.67) $color-white-porcelain;
     cursor: pointer;
+
+    &:nth-child(2) {
+      margin: 0 em(33.6);
+
+      @include breakpoint(mobile-max) {
+        margin: 0;
+      }
+    }
+
+    @include breakpoint(desktop-max) {
+      width: em(302);
+    }
+
+    @include breakpoint(mobile-max) {
+      width: em(366.1);
+      margin: em(33.6) 0;
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      padding: em(27.74) em(24.9) em(35.57);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      width: em(320);
+    }
 
     &__top {
       display: flex;
