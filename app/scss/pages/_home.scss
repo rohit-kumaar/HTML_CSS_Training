@@ -55,6 +55,10 @@
   &__front-img {
     background: linear-gradient(#1f1f24d6, #000000b8);
     z-index: 3;
+
+    @include breakpoint(custom-small-mobile-max) {
+      display: none;
+    }
   }
 
   .container {
@@ -741,11 +745,8 @@
   min-height: em(773);
   background: $color-white;
   padding: em(80.39) 0 em(80.39) 0;
-  // padding-right: em(101.73);
-  // padding-left: em(78.26);
   z-index: 1;
   overflow-x: hidden;
-  // overflow-y: hidden;
 
   & > * {
     z-index: 20;
@@ -754,7 +755,6 @@
   @include breakpoint(ipad-max) {
     background: $color-pink-lavender-blush;
   }
-  
 
   &:after,
   &::before {
@@ -765,7 +765,6 @@
 
     @include breakpoint(ipad-max) {
       display: none;
-     
     }
   }
 
@@ -793,7 +792,6 @@
     @include breakpoint(custom-small-mobile-max) {
       font-size: em(28.8);
     }
-    
   }
 
   &__paragraph {
@@ -822,7 +820,23 @@
     @include breakpoint(mobile-max) {
       gap: em(22);
     }
-    
+
+    .dottedcircle {
+      position: absolute;
+      right: em(-36);
+      bottom: em(-48);
+      width: 16.3em;
+      line-height: 1.8125em;
+      letter-spacing: em(21);
+
+      .dot {
+        width: 0.14em;
+        height: 0.14em;
+        display: inline-block;
+        background: $color-brown-old-brick;
+        border-radius: 50%;
+      }
+    }
   }
 
   &-card {
@@ -859,26 +873,11 @@
       }
     }
 
-    .dottedcircle {
-      border: 1px solid red;
-      position: absolute;
-      right: -36px;
-      bottom: -48px;
-      width: 16.3em;
-      line-height: 1.8125em;
-      letter-spacing: 21px;
-
-      .dot {
-        width: 0.14em;
-        height: 0.14em;
-        display: inline-block;
-        background: $color-brown-old-brick;
-        border-radius: 50%;
-      }
+    &--index {
+      z-index: 19;
     }
   }
 }
 
 @include breakpoint(custom-small-mobile-max) {
-  
 }
