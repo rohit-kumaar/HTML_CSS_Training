@@ -53,8 +53,8 @@
   }
 
   &__front-img {
-    background: linear-gradient(#1f1f24d6, #000000b8);
     z-index: 3;
+    background: linear-gradient(#1f1f24d6, #000000b8);
 
     @include breakpoint(custom-small-mobile-max) {
       display: none;
@@ -63,10 +63,10 @@
 
   .container {
     position: absolute;
+    z-index: 3;
     width: em(530);
     margin-top: em(146.56);
     margin-left: 7.83em;
-    z-index: 3;
     @include breakpoint(desktop-max) {
       margin-top: em(82.56);
       margin-left: em(93.28);
@@ -90,9 +90,9 @@
   }
 
   &__header {
+    color: $color-white;
     font-size: 3.11em;
     font-weight: 700;
-    color: $color-white;
 
     @include breakpoint(desktop-max) {
       font-size: em(43.71);
@@ -113,16 +113,16 @@
   }
 
   &__para {
-    font-size: 0.97em;
-    font-weight: 500;
-    color: $color-white-boulder;
     padding-top: 2.25em;
     padding-right: em(30);
     padding-bottom: 1.84em;
+    color: $color-white-boulder;
+    font-size: 0.97em;
+    font-weight: 500;
 
     @include breakpoint(desktop-max) {
-      font-size: em(13.73);
       padding-right: em(161, 13.73);
+      font-size: em(13.73);
     }
 
     @include breakpoint(ipad-max) {
@@ -136,26 +136,26 @@
     }
 
     @include breakpoint(portrait-mobile-max) {
-      padding-right: 0;
       padding-top: em(20);
+      padding-right: 0;
       padding-bottom: em(20);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      font-size: em(11);
       padding-top: 1.1em;
       padding-bottom: 1em;
+      font-size: em(11);
     }
   }
 
   &__btn {
     width: em(186.4, 15.65);
+    padding: em(16.36, 15.65) em(38.41, 15.65);
+    border-radius: em(32, 15.65);
+    background: $color-brown-old-brick;
+    color: $color-white;
     font-size: em(15.65);
     font-weight: 900;
-    color: $color-white;
-    background: $color-brown-old-brick;
-    border-radius: em(32, 15.65);
-    padding: em(16.36, 15.65) em(38.41, 15.65);
 
     @include breakpoint(desktop-max) {
       font-size: em(13.73);
@@ -170,8 +170,8 @@
     }
 
     .icon-arrow_right {
-      font-size: em(13);
       padding-left: 0.83em;
+      font-size: em(13);
     }
 
     &:hover {
@@ -192,7 +192,6 @@
   @include breakpoint(ipad-max) {
     flex-direction: column;
     padding-bottom: em(151);
-    // padding: em(97) em(205) em(151) em(151);
     align-items: center;
   }
 
@@ -218,10 +217,10 @@
     left: -37px;
     width: 7.19em;
     height: 7.19em;
+    border: 1.61em solid $color-brown-old-brick;
     display: inline-block;
     background-color: transparent;
     border-radius: 50%;
-    border: 1.61em solid $color-brown-old-brick;
   }
 
   &__img {
@@ -256,8 +255,8 @@
     }
 
     @include breakpoint(mobile-max) {
-      margin-top: 1.875em;
       padding-top: 0;
+      margin-top: 1.875em;
     }
 
     @include breakpoint(portrait-mobile-max) {
@@ -286,40 +285,40 @@
     }
 
     @include breakpoint(mobile-max) {
-      right: 3px;
       top: -24px;
+      right: 3px;
     }
 
     @include breakpoint(portrait-mobile-max) {
-      right: 59px;
       top: 12px;
+      right: 59px;
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      right: 19px;
       top: 12px;
+      right: 19px;
     }
 
     .dot {
+      display: inline-block;
       width: 0.14em;
       height: 0.14em;
-      display: inline-block;
+      margin-left: 0.5em;
       background: $color-brown-old-brick;
       border-radius: 50%;
-      margin-left: 0.5em;
     }
   }
 
   &__title {
-    font-size: em(34);
-    font-weight: 700;
-    color: $color-blue-oxford;
     padding-right: 0.83em;
     padding-bottom: 0.87em;
+    color: $color-blue-oxford;
+    font-size: em(34);
+    font-weight: 700;
 
     @include breakpoint(ipad-max) {
-      padding-right: 0;
       padding-bottom: em(21, 34);
+      padding-right: 0;
     }
 
     @include breakpoint(mobile-max) {
@@ -336,9 +335,9 @@
 // -------------------goal-------------------
 .goal {
   position: relative;
+  z-index: 1;
   width: 100%;
   background: $color-brown-old-brick;
-  z-index: 1;
 
   &:before,
   &:after {
@@ -367,10 +366,10 @@
     color: $color-white;
 
     &__img {
+      z-index: 2;
       width: 19.08em;
       height: 24.37em;
       border-radius: 1.125em;
-      z-index: 2;
 
       @include breakpoint(mobile-max) {
         margin-left: em(70);
@@ -383,19 +382,19 @@
     }
 
     &__paragraph {
+      padding-top: em(21.34);
       font-size: em(15.65);
       font-weight: 400;
       font-family: $secondary-font;
-      padding-top: em(21.34);
     }
 
     &__list {
+      padding-left: 16px;
+      padding-bottom: em(15.68);
+      margin-bottom: 0;
       font-size: em(15.65);
       font-weight: 400;
       font-family: $secondary-font;
-      margin-bottom: 0;
-      padding-left: 16px;
-      padding-bottom: em(15.68);
     }
   }
 
@@ -414,12 +413,12 @@
       position: absolute;
       top: em(120.94);
       left: em(108.85);
+      display: inline-block;
       width: em(61);
       height: em(61);
-      display: inline-block;
+      border: em(3.55) solid $color-yellow-orange;
       background-color: transparent;
       border-radius: 50%;
-      border: em(3.55) solid $color-yellow-orange;
 
       @include breakpoint(desktop-max) {
         left: em(10);
@@ -430,15 +429,15 @@
 
     &__bigcircle {
       position: absolute;
+      z-index: 1;
       top: 11.5em;
       left: em(120.94);
+      display: inline-block;
       width: em(266);
       height: em(266);
-      display: inline-block;
+      border: em(3.55) solid $color-yellow-orange;
       background-color: transparent;
       border-radius: 50%;
-      border: em(3.55) solid $color-yellow-orange;
-      z-index: 1;
 
       @include breakpoint(desktop-max) {
         left: 0;
@@ -460,12 +459,12 @@
         }
 
         .dot {
+          margin-left: em(27);
+          display: inline-block;
           width: em(4.24);
           height: em(4.24);
-          display: inline-block;
           background: $color-green-atlantis;
           border-radius: 50%;
-          margin-left: em(27);
         }
       }
     }
@@ -491,9 +490,9 @@
       }
 
       @include breakpoint(mobile-max) {
-        max-width: 100%;
-        margin: 0;
         padding: em(35) em(35) em(35) em(70);
+        margin: 0;
+        max-width: 100%;
       }
 
       @include breakpoint(portrait-mobile-max) {
@@ -512,8 +511,8 @@
 
   &-vision {
     position: relative;
-    margin-top: em(51.93);
     padding-right: em(231.22);
+    margin-top: em(51.93);
 
     @include breakpoint(desktop-max) {
       padding-right: 0;
@@ -527,12 +526,12 @@
       position: absolute;
       top: em(-63);
       right: em(450);
+      display: inline-block;
       width: em(61);
       height: em(61);
-      display: inline-block;
+      border: em(3.55) solid $color-yellow-orange;
       background-color: transparent;
       border-radius: 50%;
-      border: em(3.55) solid $color-yellow-orange;
 
       @include breakpoint(desktop-max) {
         right: em(300);
@@ -543,15 +542,15 @@
 
     &__bigcircle {
       position: absolute;
+      z-index: 1;
       top: em(-52);
       right: em(66);
+      display: inline-block;
       width: em(266);
       height: em(266);
-      display: inline-block;
+      border: em(3.55) solid $color-yellow-orange;
       background-color: transparent;
       border-radius: 50%;
-      border: em(3.55) solid $color-yellow-orange;
-      z-index: 1;
 
       @include breakpoint(desktop-max) {
         right: em(33);
@@ -562,10 +561,10 @@
       .dottedcircle {
         position: relative;
         top: em(145);
+        right: em(31);
         left: em(72);
         display: inline-block;
         width: 10.25em;
-        right: em(31);
         line-height: em(31);
 
         @include breakpoint(desktop-max) {
@@ -577,12 +576,12 @@
         }
 
         .dot {
+          margin-left: em(27);
+          display: inline-block;
           width: em(4.24);
           height: em(4.24);
-          display: inline-block;
-          background: $color-green-atlantis;
           border-radius: 50%;
-          margin-left: em(27);
+          background: $color-green-atlantis;
         }
       }
     }
@@ -597,8 +596,8 @@
 
       @include breakpoint(mobile-max) {
         max-width: 100%;
-        margin: 0;
         padding: em(35) em(35) em(35) em(70);
+        margin: 0;
       }
 
       @include breakpoint(portrait-mobile-max) {
@@ -633,10 +632,10 @@
 
 // -------------------why-------------------
 .why {
+  padding: em(170.03) em(261.81) em(123.79);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: em(170.03) em(261.81) em(123.79);
 
   @include breakpoint(ipad-max) {
     padding: em(87.76) em(189.94) em(63.89);
@@ -651,9 +650,9 @@
   }
 
   &__title {
+    color: $color-grap-dark;
     font-size: em(34.15);
     font-weight: 700;
-    color: $color-grap-dark;
 
     @include breakpoint(portrait-mobile-max) {
       font-size: em(32);
@@ -696,11 +695,11 @@
 
   &-card {
     $card: &;
+    padding: em(24.18) em(19.2) em(19.2) em(25.61);
     width: em(257.56);
     height: em(262.8);
     border-radius: em(15);
     background: $color-white;
-    padding: em(24.18) em(19.2) em(19.2) em(25.61);
     box-shadow: 0 0 em(24) em(18) $color-white-anti-flash;
 
     &__logo {
@@ -733,18 +732,18 @@
     }
 
     &__title {
-      font-size: em(17.78);
-      font-weight: 500;
-      color: $color-blue-limed-spruce;
       padding-top: em(28.45, 17.78);
       padding-bottom: em(22.76, 17.78);
+      color: $color-blue-limed-spruce;
+      font-size: em(17.78);
+      font-weight: 500;
     }
 
     &__paragraph {
+      color: $color-blue-dark;
+      font-family: $secondary-font;
       font-size: em(13.51);
       font-weight: 400;
-      font-family: $secondary-font;
-      color: $color-blue-dark;
     }
 
     &:hover {
@@ -764,12 +763,12 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
   max-width: 100%;
   min-height: em(773);
   padding: em(80.39) 0 em(80.39) 0;
-  align-items: center;
   background: $color-white;
-  overflow-x: hidden;
 
   & > * {
     z-index: 20;
@@ -792,25 +791,25 @@
   }
 
   &:before {
+    z-index: 2;
     top: 0;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     background: $color-pink-lavender-blush;
-    z-index: 2;
   }
 
   &:after {
+    z-index: 1;
     bottom: 0;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
     background: #eedddcb5;
-    z-index: 1;
   }
 
   &__title {
+    color: $color-grap-dark;
     font-size: em(34.15);
     font-weight: 700;
-    color: $color-grap-dark;
 
     @include breakpoint(custom-small-mobile-max) {
       font-size: em(28.8);
@@ -818,12 +817,12 @@
   }
 
   &__paragraph {
-    font-size: em(16.36);
-    font-weight: 400;
-    font-family: $secondary-font;
-    color: $color-white-boulder;
     padding-top: em(24.9, 16.36);
     padding-bottom: em(106.71, 16.36);
+    color: $color-white-boulder;
+    font-family: $secondary-font;
+    font-size: em(16.36);
+    font-weight: 400;
 
     @include breakpoint(ipad-max) {
       padding: em(24.9, 16.36) em(50, 16.36) em(106.71, 16.36);
@@ -853,11 +852,11 @@
       letter-spacing: em(21);
 
       .dot {
+        display: inline-block;
         width: 0.14em;
         height: 0.14em;
-        display: inline-block;
-        background: $color-brown-old-brick;
         border-radius: 50%;
+        background: $color-brown-old-brick;
       }
     }
   }
@@ -878,11 +877,11 @@
     &__figcaption {
       position: absolute;
       width: 100%;
-      border-radius: em(5);
-      background: $color-white;
-      box-shadow: 0 em(24) em(17) -1.375em #777;
       padding: em(22.05, 17.78) 0;
       margin-top: em(-3);
+      border-radius: em(5);
+      box-shadow: 0 em(24) em(17) -1.375em #777;
+      background: $color-white;
       color: $color-blue-limed-spruce;
       font-size: em(17.78);
       font-weight: 500;
@@ -904,10 +903,10 @@
 
 // ---------------Testimonial---------------
 .testimonial {
+  padding: em(60.47) 0 em(60.47) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: em(60.47) 0 em(60.47) 0;
   &__title {
     color: $color-grap-dark;
     font-size: em(34.15);
@@ -994,11 +993,13 @@
 
   .slider {
     width: 85%;
+    
     @include breakpoint(portrait-mobile-max) {
       width: 100%;
       padding-left: 0;
     }
   }
+
   .slick-slide {
     width: em(366);
   }

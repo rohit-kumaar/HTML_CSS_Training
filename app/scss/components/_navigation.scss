@@ -3,9 +3,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  color: $color-blue-oxford;
-  background: $color-white-snow;
   padding: 0.8em 2.85em 0.8em 3.868em;
+  background: $color-white-snow;
+  color: $color-blue-oxford;
   @include breakpoint(portrait-mobile-max) {
     padding: 0.8em em(15) 0.8em ;
   }
@@ -28,10 +28,10 @@
   }
 
   &__name {
+    margin-left: 0.49em;
+    color: $color-blue-oxford;
     font-size: 1.06em;
     font-weight: 900;
-    color: $color-blue-oxford;
-    margin-left: 0.49em;
 
     @include breakpoint(desktop-max) {
       width: 6.5em;
@@ -53,13 +53,13 @@
     }
 
     .nav-link {
+      padding: 0 0 0 1.563em;
+      color: $color-blue-oxford;
       font-size: 0.88em;
       font-weight: 500;
-      color: $color-blue-oxford;
-      padding: 0 0 0 1.563em;
       @include breakpoint(desktop-max) {
-        font-size: 0.78em;
         padding: 0 0 0 1.3em;
+        font-size: 0.78em;
       }
 
       &.firstchild {
@@ -78,10 +78,10 @@
     }
 
     .dropbtn {
+      padding: 0.63em 1.4em 0.3em;
       border: 1px solid $color-silver;
       border-radius: 3.375em;
       margin-left: 2.1em;
-      padding: 0.63em 1.4em 0.3em;
       cursor: pointer;
 
       @include breakpoint(desktop-max) {
@@ -89,8 +89,6 @@
       }
 
       .icon-search {
-        // font-size: 1.08em;
-        // font-weight: 500;
         color: $color-blue-darkgrayish;
       }
     }
@@ -99,31 +97,31 @@
       position: relative;
       display: inline-block;
       &-content {
-        display: none;
         position: absolute;
-        right: 0;
-        background-color: $color-white;
-        min-width: 230px;
-        overflow: auto;
-        border: 1px solid $color-grap-very-light;
         z-index: 20;
+        right: 0;
+        display: none;
+        min-width: 230px;
+        border: 1px solid $color-grap-very-light;
+        background-color: $color-white;
+        overflow: auto;
         a {
-          color: $color-black;
-          padding: 12px 16px;
-          text-decoration: none;
           display: block;
+          padding: 12px 16px;
+          color: $color-black;
+          text-decoration: none;
           &:hover {
             background-color: $color-grap-very-light;
           }
         }
       }
       &__search {
-        background-position: 0.87em 0.75em;
-        background-repeat: no-repeat;
-        font-size: 1em;
         padding: 0.87em 1.25em 0.75em 2.81em;
         border: none;
         border-bottom: 1px solid $color-grap-very-light;
+        background-position: 0.87em 0.75em;
+        background-repeat: no-repeat;
+        font-size: 1em;
         &:focus {
           outline: 1.81em solid $color-grap-very-light;
         }
@@ -136,7 +134,7 @@
   }
 
   .navbar-toggler{
-    color: #a7383f;
+    color: $color-brown-pale-carmine;
   }
 
   .navbar-toggler,
@@ -150,9 +148,9 @@
   }
 
   .offcanvas-title {
+    color: $color-blue-oxford;
     font-size: 1.06em;
     font-weight: 900;
-    color: $color-blue-oxford;
   }
 
   .dropdown-toggle::after {

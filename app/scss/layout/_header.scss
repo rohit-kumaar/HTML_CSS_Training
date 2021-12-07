@@ -1,15 +1,13 @@
 //  -------------header section-------------
 .header {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background: $color-brown-old-brick;
+  width: 100%;
   padding: 0.998em 2.801em 0.82em 3.868em;
+  background: $color-brown-old-brick;
 
-  @include breakpoint(mobile-max) {
-    // flex-direction: column;
-  }
+ 
   @include breakpoint(portrait-mobile-max) {
     padding: 0.998em em(15) 0.82em ;
   }
@@ -32,9 +30,9 @@
   &__email {
     display: flex;
     align-items: center;
+    color: $color-silver;
     font-size: 0.8125em;
     font-weight: 500;
-    color: $color-silver;
 
     @include breakpoint(mobile-max) {
       margin-right: auto;
@@ -65,16 +63,15 @@
   }
 
   &__language {
+    padding: 0.615em 0 0.49em 1.33em;
+    border-radius: 1.8em;
+    background: transparent;
+    color: $color-white;
+    font-family: $primary-font;
     font-size: 0.786em;
     font-weight: 500;
-    font-family: $primary-font;
-    border-radius: 1.8em;
-    color: $color-white;
     border: 1px solid $color-white;
-    background: transparent;
-    padding: 0.615em 0 0.49em 1.33em;
     @include breakpoint(mobile-max) {
-      // display: block;
       margin-top: 10px;
     }
     option:not(:first-child) {
