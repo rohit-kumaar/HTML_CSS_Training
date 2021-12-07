@@ -908,7 +908,6 @@
   flex-direction: column;
   align-items: center;
   padding: em(60.47) 0 em(60.47) 0;
-  // em(71.14) em(107.43)
   &__title {
     color: $color-grap-dark;
     font-size: em(34.15);
@@ -919,7 +918,6 @@
     padding-left: em(280, 16.36);
     padding-right: em(185, 16.36);
     margin-top: em(32.01, 16.36);
-    margin-bottom: em(115.96, 16.36);
     color: $color-white-boulder;
     font-family: $secondary-font;
     font-size: em(16.36);
@@ -933,24 +931,6 @@
     @include breakpoint(portrait-mobile-max) {
       padding: 0 em(20, 16.36);
     }
-
-    @include breakpoint(custom-small-mobile-max) {
-      margin-bottom: em(80, 16.36);
-    }
-  }
-
-  &-box {
-    display: flex;
-    flex-wrap: wrap;
-
-    @include breakpoint(ipad-max) {
-      align-items: center;
-      justify-content: center;
-    }
-    // @include breakpoint(mobile-max) {
-    //   align-items: center;
-    //   justify-content: center;
-    // }
   }
 
   &-card {
@@ -958,44 +938,31 @@
     flex-direction: column;
     width: em(366.1);
     padding: em(27.74) em(44.11) em(35.57) em(24.9);
+    margin: em(115.96) em(30) em(61.18);
     border-radius: em(10.67);
     box-shadow: 0 0 em(24.9) em(10.67) $color-white-porcelain;
     cursor: pointer;
 
-    &:nth-child(2) {
-      margin: 0 em(33.6);
-
-      @include breakpoint(mobile-max) {
-        margin: 0;
-      }
-    }
-
-    @include breakpoint(desktop-max) {
-      width: em(302);
-    }
-
-    @include breakpoint(mobile-max) {
-      width: em(366.1);
-      margin: em(33.6) 0;
-    }
-
     @include breakpoint(portrait-mobile-max) {
-      padding: em(27.74) em(24.9) em(35.57);
-    }
-
-    @include breakpoint(custom-small-mobile-max) {
-      width: em(320);
+      padding-right: em(24.9);
+      margin: em(68) em(0) em(61.18);
     }
 
     &__top {
       display: flex;
-      flex-wrap: wrap;
+
+      @include breakpoint(portrait-mobile-max) {
+        flex-direction: column;
+      }
     }
 
     &__img {
       max-width: em(45.12);
       max-height: em(45.12);
       margin-right: em(19.92);
+      @include breakpoint(portrait-mobile-max) {
+        margin-bottom: em(19.92);
+      }
     }
 
     &__right {
@@ -1025,32 +992,40 @@
     }
   }
 
-  &-carousel {
-    display: flex;
-    margin-top: em(60.47);
-  }
-
-  &__carouselbtn {
-    width: em(7.27);
-    height: em(7.27);
-    background: $color-white-concord;
-    border-radius: 50%;
-    &:nth-child(2) {
-      margin: 0 em(15.65, 7.27);
+  .slider {
+    width: 85%;
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+      padding-left: 0;
     }
   }
-
-  .bg-color {
-    background: $color-white-porcelain;
+  .slick-slide {
+    width: em(366);
   }
 
-  .width {
-    width: em(9);
-    height: em(9);
-    background: $color-brown-old-brick;
-    border-radius: 50%;
+  .slick-prev,
+  .slick-next,
+  button {
+    display: none !important;
+  }
+  ul {
+    .slick-dots {
+      display: flex;
+      gap: em(23);
+      justify-content: center;
+      padding: 0;
+      font-size: em(30);
+
+      li {
+        color: $color-white-concord;
+      }
+    }
   }
 }
 
-@include breakpoint(custom-small-mobile-max) {
+@include breakpoint(portrait-mobile-max) {
+}
+
+main {
+  margin-bottom: 1000px;
 }
