@@ -1123,6 +1123,7 @@
   }
 
   &__link {
+    display: table;
     color: $color-grap-dark;
     font-size: em(19.92);
     font-weight: 500;
