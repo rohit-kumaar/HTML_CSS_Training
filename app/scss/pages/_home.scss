@@ -1023,7 +1023,117 @@
   }
 }
 
-@include breakpoint(portrait-mobile-max) {
+// -------------------info-------------------
+.info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  padding: em(112.41);
+  background: $color-pink-lavender-blush;
+
+  @include breakpoint(desktop-max) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @include breakpoint(ipad-max) {
+    padding-right: em(30.4);
+    padding-left: em(35);
+  }
+
+  @include breakpoint(custom-small-mobile-max) {
+    padding-right: em(20);
+    padding-left: em(25);
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: em(20.63);
+    background: $color-white;
+  }
+
+  &:before {
+    top: 0;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  &:after {
+    bottom: 0;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+  }
+
+  &__title {
+    margin-right: em(102.45, 34.15);
+    color: $color-brown-merlot;
+    font-size: em(34.15);
+    font-weight: 700;
+
+    @include breakpoint(ipad-max) {
+      margin: 0;
+      text-align: center;
+    }
+  }
+
+  &-box {
+    display: flex;
+    margin-top: em(36.28);
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: em(110.27);
+    height: em(110.27);
+    margin-right: em(29.88);
+
+    @include breakpoint(custom-small-mobile-max) {
+      margin-bottom: em(20);
+    }
+  }
+
+  .bottom {
+    margin-top: em(12.09);
+    line-height: em(25);
+
+    @include breakpoint(ipad-max) {
+      line-height: 2em;
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      line-height: 2.3em;
+    }
+
+    li {
+      &::marker {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__link {
+    color: $color-grap-dark;
+    font-size: em(19.92);
+    font-weight: 500;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-grap-dark;
+    }
+  }
+}
+
+@include breakpoint(custom-small-mobile-max) {
 }
 
 main {
