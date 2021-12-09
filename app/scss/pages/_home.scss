@@ -1140,6 +1140,29 @@
 }
 
 // -----------------services-----------------
+.service{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__title{
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @include breakpoint(custom-small-mobile-max) {
 }
