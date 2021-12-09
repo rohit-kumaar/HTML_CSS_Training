@@ -1,4 +1,4 @@
-//  ---------------hero banner---------------
+// hero banner
 .hero-banner {
   position: relative;
   height: 40.75em;
@@ -56,7 +56,7 @@
     z-index: 3;
     background: linear-gradient(#1f1f24d6, #000000b8);
 
-    @include breakpoint(custom-small-mobile-max) {
+    @include breakpoint(portrait-mobile-max) {
       display: none;
     }
   }
@@ -180,7 +180,7 @@
   }
 }
 
-// ----------------supervisor----------------
+// supervisor
 .supervisor {
   display: flex;
   padding: 8.32em 15.92em 0 17.04em;
@@ -332,7 +332,7 @@
   }
 }
 
-// -------------------goal-------------------
+// goal
 .goal {
   position: relative;
   z-index: 1;
@@ -630,7 +630,7 @@
   }
 }
 
-// -------------------why-------------------
+// why
 .why {
   padding: em(170.03) em(261.81) em(123.79);
   display: flex;
@@ -757,7 +757,7 @@
   }
 }
 
-// ----------------curriculum----------------
+// curriculum
 .curriculum {
   position: relative;
   z-index: 1;
@@ -784,6 +784,7 @@
     position: absolute;
     width: 110%;
     height: em(440);
+    overflow-x: hidden;
 
     @include breakpoint(ipad-max) {
       display: none;
@@ -901,7 +902,7 @@
   }
 }
 
-// ---------------Testimonial---------------
+// Testimonial
 .testimonial {
   padding: em(60.47) 0 em(60.47) 0;
   display: flex;
@@ -1028,7 +1029,7 @@
   }
 }
 
-// -------------------info-------------------
+// info
 .info {
   position: relative;
   display: flex;
@@ -1139,34 +1140,172 @@
   }
 }
 
-// -----------------services-----------------
-.service{
+// services
+.services {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: em(76.12) em(99.51) em(82.52);
 
-  &__title{
+  
 
+  &__title {
+    color: $color-grap-dark;
+    font-size: em(34.15);
+    font-weight: 500;
+  }
+
+  &__paragraph {
+    padding-left: 165px;
+    padding-right: 157px;
+    margin-top: em(33.59, 16.36);
+    margin-bottom: em(83.24, 16.36);
+    color: $color-white-boulder;
+    font-family: $secondary-font;
+    font-size: em(16.36);
+    font-weight: 400;
+    text-align: center;
+    line-height: em(26, 16.36);
+
+    @include breakpoint(mobile-max) {
+     padding: 0 em(72);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      padding: 0 em(20);
+    }
+    
+  }
+
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > *{
+      flex-grow: 1;
+    }
+  }
+
+  &-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: em(333.67);
+    padding: em(24.18) em(26) em(58.33) em(41.97);
+
+  
+
+    &:hover {
+      border-top-left-radius: em(100);
+      border-top-right-radius: em(8);
+      border-bottom-right-radius: em(101);
+      border-bottom-left-radius: em(8);
+      box-shadow: 0 0 em(56) em(10) $color-pink-lavender-blush;
+    }
+
+   
+
+    .services-chart {
+      width: em(127.35);
+    }
+
+    .circular-chart {
+      display: block;
+      max-height: em(177.86);
+      margin: em(7.11) auto;
+      border-radius: 50%;
+
+      &.pink-lavender {
+        background: $color-pink-lavender-blush;
+
+        & .circle {
+          stroke: $color-brown-merlot;
+        }
+      }
+
+      &.green-aqua {
+        background: $color-green-aqua-spring;
+
+        & .circle {
+          stroke: $color-green-soft;
+        }
+      }
+
+      &.yellow-orange {
+        background: $color-grey-pale;
+
+        & .circle {
+          stroke: $color-yellow-orange;
+        }
+      }
+    }
+
+    .circle-bg {
+      fill: none;
+      stroke-width: 3.8;
+    }
+
+    .circle {
+      fill: none;
+      stroke-width: 2.8;
+      stroke-linecap: round;
+      animation: progress 1s ease-out forwards;
+    }
+
+    @keyframes progress {
+      0% {
+        stroke-dasharray: 0 100;
+      }
+    }
+
+   
+
+    
+
+    .percentage {
+      font-family: $primary-font;
+      font-size: 0.5em;
+      text-anchor: middle;
+
+      &.brown-merlot {
+        fill: $color-brown-merlot;
+      }
+  
+      &.green-soft {
+        fill: $color-green-soft;
+      }
+  
+      &.yellow-orange {
+        fill: $color-yellow-orange;
+      }
+      
+    }
+
+  
+
+    // TODO: ---------
+
+    &__title {
+      margin-top: em(28.45, 17.07);
+      margin-bottom: em(46.24, 17.07);
+      color: $color-blue-bayoux;
+      font-size: em(17.07);
+      font-weight: 500;
+
+     
+    }
+
+    &__paragraph {
+      color: $color-white-boulder;
+      font-size: em(14.22);
+      font-weight: 500;
+      text-align: center;
+    }
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@include breakpoint(custom-small-mobile-max) {
+@include breakpoint(portrait-mobile-max) {
 }
 
-main {
-  margin-bottom: 1000px;
-}

@@ -22,6 +22,7 @@ function filterFunction() {
 // ------------for testimonial section------------
 
 $(".slider").slick({
+  infinite: true,
   dots: true,
   slidesToShow: 3,
   slidesToScroll: 3,

@@ -1,4 +1,4 @@
-// ------------navigation section------------
+// navigation section
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -44,6 +44,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    list-style-type:none;
     @include breakpoint(ipad-max) {
       display: none;
     }
