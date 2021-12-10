@@ -224,23 +224,23 @@
   }
 
   &__img {
-    width: 24.06em;
+    max-width: 24.06em;
     height: auto;
 
     @include breakpoint(ipad-max) {
-      width: em(540);
+      max-width: em(540);
     }
 
     @include breakpoint(mobile-max) {
-      width: 500px;
+      max-width: em(500);
     }
 
     @include breakpoint(portrait-mobile-max) {
-      width: em(360);
+      max-width: em(340);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      width: em(320);
+      max-width: em(300);
     }
   }
 
@@ -260,11 +260,11 @@
     }
 
     @include breakpoint(portrait-mobile-max) {
-      width: em(360);
+      width: em(340);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      width: em(320);
+      width: em(300);
     }
   }
 
@@ -477,6 +477,10 @@
       @include breakpoint(portrait-mobile-max) {
         margin: 0 auto;
       }
+
+      @include breakpoint(custom-small-mobile-max) {
+        width: em(295);
+      }
     }
 
     .container {
@@ -625,6 +629,10 @@
 
       @include breakpoint(portrait-mobile-max) {
         margin: 0 auto;
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        width: em(295);
       }
     }
   }
@@ -1059,7 +1067,7 @@
   &:after {
     content: "";
     position: absolute;
-    width: 100%;
+    max-width: 100%;
     height: em(20.63);
     background: $color-white;
   }
@@ -1160,8 +1168,8 @@
   }
 
   &__paragraph {
-    padding-left: 165px;
-    padding-right: 157px;
+    padding-left: em(165, 16.36);
+    padding-right: em(157, 16.36);
     margin-top: em(33.59, 16.36);
     margin-bottom: em(83.24, 16.36);
     color: $color-white-boulder;
@@ -1201,6 +1209,10 @@
       width: em(330);
     }
 
+    @include breakpoint(custom-small-mobile-max) {
+      width: em(300);
+    }
+
     &:hover {
       border-top-left-radius: em(100);
       border-top-right-radius: em(8);
@@ -1208,8 +1220,6 @@
       border-bottom-left-radius: em(8);
       box-shadow: 0 0 em(56) em(10) $color-pink-lavender-blush;
     }
-
-    // TODO: progress bar
 
     .services-chart {
       width: em(127.35);
@@ -1282,8 +1292,6 @@
       }
     }
 
-    // TODO: ---------
-
     &__title {
       margin-top: em(28.45, 17.07);
       margin-bottom: em(46.24, 17.07);
@@ -1304,5 +1312,3 @@
     }
   }
 }
-
-
