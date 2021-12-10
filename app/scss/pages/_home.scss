@@ -1148,7 +1148,10 @@
   justify-content: center;
   padding: em(76.12) em(99.51) em(82.52);
 
-  
+  @include breakpoint(desktop-max) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
   &__title {
     color: $color-grap-dark;
@@ -1195,7 +1198,9 @@
     width: em(333.67);
     padding: em(24.18) em(26) em(58.33) em(41.97);
 
-  
+    @include breakpoint(desktop-max) {
+      width: em(330);
+    }
 
     &:hover {
       border-top-left-radius: em(100);
@@ -1205,7 +1210,7 @@
       box-shadow: 0 0 em(56) em(10) $color-pink-lavender-blush;
     }
 
-   
+    // TODO: progress bar
 
     .services-chart {
       width: em(127.35);
@@ -1294,7 +1299,10 @@
       font-size: em(17.07);
       font-weight: 500;
 
-     
+      @include breakpoint(mobile-max) {
+        margin-bottom: em(19, 17.07);
+      }
+      
     }
 
     &__paragraph {
@@ -1309,3 +1317,6 @@
 @include breakpoint(portrait-mobile-max) {
 }
 
+footer {
+  margin-bottom: 1000px;
+}
