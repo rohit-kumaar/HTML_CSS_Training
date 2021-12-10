@@ -1172,20 +1172,19 @@
     line-height: em(26, 16.36);
 
     @include breakpoint(mobile-max) {
-     padding: 0 em(72);
+      padding: 0 em(72);
     }
 
     @include breakpoint(portrait-mobile-max) {
       padding: 0 em(20);
     }
-    
   }
 
   &-box {
     display: flex;
     flex-wrap: wrap;
 
-    & > *{
+    & > * {
       flex-grow: 1;
     }
   }
@@ -1265,10 +1264,6 @@
       }
     }
 
-   
-
-    
-
     .percentage {
       font-family: $primary-font;
       font-size: 0.5em;
@@ -1277,18 +1272,15 @@
       &.brown-merlot {
         fill: $color-brown-merlot;
       }
-  
+
       &.green-soft {
         fill: $color-green-soft;
       }
-  
+
       &.yellow-orange {
         fill: $color-yellow-orange;
       }
-      
     }
-
-  
 
     // TODO: ---------
 
@@ -1302,7 +1294,6 @@
       @include breakpoint(mobile-max) {
         margin-bottom: em(19, 17.07);
       }
-      
     }
 
     &__paragraph {
@@ -1315,7 +1306,3 @@
 }
 
 
-
-footer {
-  margin-bottom: 1000px;
-}
