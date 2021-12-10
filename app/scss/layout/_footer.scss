@@ -17,7 +17,7 @@
   &-top {
     display: flex;
     flex-wrap: wrap;
-    padding: 250px 189px 178px 159px;
+    padding: em(177.86) em(50.7) em(126.63) ;
 
     ul {
       list-style-type: none;
@@ -25,57 +25,65 @@
   }
 
   &-dist {
-    width: 325px;
+    position: relative;
+    width: em(234);
     padding: 0;
+   
 
     &__header {
       display: flex;
+      margin-bottom: em(25.61);
     }
 
     &__title {
       display: grid;
       place-items: center;
       color: $color-white;
-      font-size: 23px;
+      font-size: em(16.36);
       font-weight: 900;
     }
 
     &__logo {
-      width: 58px;
-      height: 57px;
+      width: em(41.26);
+      height: em(41.26);
     }
 
-    &__address {
+    &-address {
+      position: absolute;
+      margin-left: em(46.95);
+
       li {
         & > * {
-          display: inline;
-        }
-        &:nth-child(2) {
-          margin-top: 25px;
-          margin-bottom: 48px;
+          display: inline-block;
         }
       }
       [class*="icon-"] {
-        width: 29px;
-        height: 29px;
+        width: em(20.63);
+        height: em(20.63);
         color: $color-white;
       }
     }
+    .email {
+      margin-top: em(17.78);
+      margin-bottom: em(34.15);
+    }
 
     &__details {
-      border: 1px solid yellow;
-      margin-left: 12px;
-      height: 200px;
+      margin-left: em(73, 12.8);
       color: $color-white;
-      font-size: 18px;
+      font-size: em(12.8);
       font-weight: 500;
     }
 
+    &-bottom {
+      margin-left: em(46.95);
+    }
+
     &__followus {
-      margin-top: 77px;
-      margin-bottom: 39px;
+      margin-top: em(54.78, 16.36);
+      margin-bottom: em(27.74, 16.36);
       color: $color-white;
-      font-size: 23px;
+      font-size: em(16.36);
       font-weight: 900;
     }
 
@@ -84,8 +92,61 @@
       &youtube,
       &twitter {
         display: inline-block;
-        padding: 14px 14px;
+        padding: em(9.96);
         border: 1px solid $color-white;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &-schools,
+  &-distinfo,
+  &-more,
+  &-listen {
+    padding: 0;
+    margin-left: em(117);
+
+    & > * {
+      margin-bottom: em(23.47);
+      color: $color-white;
+    }
+
+    &__header {
+      margin-bottom: em(25.61, 17.78);
+      font-size: em(17.78);
+      font-weight: 700;
+    }
+
+    &__details {
+      & > * {
+        font-size: em(12.80);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &-distinfo {
+    margin-left: em(77.54);
+  }
+
+  &-more {
+    margin-left: em(89.64);
+  }
+
+  &-listen {
+    margin-left: em(76.83, 17.78);
+
+    // &--bg{
+    //   // TODO:
+    // }
+
+    &--font {
+      font-size: em(17.78);
+      font-weight: 700;
+    }
+
+    &--border {
+      img {
         border-radius: 50%;
       }
     }
@@ -94,11 +155,14 @@
   &__bottom {
     display: grid;
     place-items: center;
-    padding: 37px 0;
+    padding: em(26.32) 0;
     border-top: 1px solid $color-white;
     color: $color-white-soft-peach;
     font-family: $secondary-font;
-    font-size: 18px;
+    font-size: em(12.80);
     font-weight: 300;
   }
+}
+
+@include breakpoint(portrait-mobile-max) {
 }
