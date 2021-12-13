@@ -1,10 +1,7 @@
 .footer {
   position: relative;
-  min-width: 100%;
+  max-width: 100%;
   background: $color-brown-old-brick;
-
-  
-  
 
   &::before,
   &::after {
@@ -29,175 +26,199 @@
   &-top {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 em(48) em(103.16);
+    justify-content: center;
+    padding: 0 0 em(126.63) 0;
 
-    @include breakpoint(mobile-max) {
-      padding: 0 0 em(103.16);
-    }
+    &-hw {
+      width: em(240);
+      margin-top: em(89.64);
 
-    @include breakpoint(portrait-mobile-max) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-    }
-
-    ul {
-      list-style-type: none;
-    }
-  }
-
-  &-dist {
-    position: relative;
-    width: em(241.59);
-    padding: em(89.64) 0 0 0;
-
-    @include breakpoint(mobile-max) {
-      margin-left: 20px;
-    }
-
-    &__header {
-      display: flex;
-      margin-bottom: em(25.61);
-    }
-
-    &__title {
-      display: grid;
-      place-items: center;
-      margin-left: em(8.53);
-      color: $color-white;
-      font-size: em(16.36);
-      font-weight: 900;
-    }
-
-    &__logo {
-      width: em(41.26);
-      height: em(41.26);
-    }
-
-    &-address {
-      position: absolute;
-      margin-left: em(46.95);
-
-      li {
-        & > * {
-          display: inline-block;
+      &__header {
+        margin-bottom: em(25.61, 16.36);
+        color: $color-white;
+        font-size: em(16.36);
+        font-weight: 900;
+        img {
+          width: em(41.26);
+          height: em(41.26);
         }
       }
-      [class*="icon-"] {
-        width: em(20.63);
-        height: em(20.63);
+
+      &__address {
+        margin-left: em(40);
+        p {
+          display: flex;
+          color: $color-white;
+          font-size: em(12.8);
+          font-weight: 500;
+
+          &:nth-child(2) {
+            margin-top: em(17.78);
+            margin-bottom: em(34.15);
+          }
+
+          .icon {
+            &-location,
+            &-letter,
+            &-call {
+              position: relative;
+              top: em(2.13);
+              margin-right: em(10);
+            }
+          }
+
+          .icon-location {
+            margin-right: em(5, 20);
+            font-size: em(20);
+          }
+        }
+      }
+
+      &__follow {
+        margin-left: em(40);
+        cursor: pointer;
+        h2 {
+          margin-top: em(54.78, 16.36);
+          margin-bottom: em(27.74, 16.36);
+          color: $color-white;
+          font-size: em(16.36);
+          font-weight: 900;
+        }
+
+        .icon- {
+          &facebook,
+          &youtube,
+          &twitter {
+            display: inline-block;
+            padding: em(9.96);
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            color: $color-white;
+          }
+        }
+      }
+    }
+
+    &-schools,
+    &-info,
+    &-more,
+    &-listen,
+    &-reporting {
+      margin-top: em(89.64);
+      margin-left: em(119.52);
+
+      &__header {
+        margin-bottom: em(43.39, 17.78);
         color: $color-white;
+        font-size: em(17.78);
+        font-weight: 700;
+      }
+
+      p {
+        a {
+          margin-bottom: em(22.76, 12.8);
+          color: $color-white;
+          font-size: em(12.8);
+          font-weight: 500;
+        }
+        &:last-child {
+          a {
+            margin-bottom: 0;
+          }
+        }
       }
     }
-    .email {
-      margin-top: em(17.78);
-      margin-bottom: em(34.15);
-    }
 
-    &__details {
-      margin-left: em(73, 12.8);
-      color: $color-white;
-      font-size: em(12.8);
-      font-weight: 500;
-    }
+    &-info {
+      margin-left: em(76.83);
 
-    &-bottom {
-      margin-left: em(46.95);
-    }
-
-    &__followus {
-      margin-top: em(54.78, 16.36);
-      margin-bottom: em(27.74, 16.36);
-      color: $color-white;
-      font-size: em(16.36);
-      font-weight: 900;
-    }
-
-    .icon- {
-      &facebook,
-      &youtube,
-      &twitter {
-        display: inline-block;
-        padding: em(9.96);
-        border: 1px solid $color-white;
-        border-radius: 50%;
-        color: $color-white;
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: -3.19813em;
       }
     }
-  }
 
-  &-schools,
-  &-distinfo,
-  &-more,
-  &-listen {
-    padding: em(89.64) 0 0 0;
-    margin-left: em(117);
+    &-more {
+      margin-left: em(75.41);
 
-    & > * {
-      margin-bottom: em(23.47);
-      color: $color-white;
-    }
+      @include breakpoint(mobile-max) {
+        margin-left: em(18);
+      }
 
-    &__header {
-      margin-top: em(10);
-      margin-bottom: em(25.61, 17.78);
-      font-size: em(17.78);
-      font-weight: 700;
-    }
-
-    &__details {
-      margin-top: em(10);
-
-      & > * {
-        display: inline-block;
-        font-size: em(12.8);
-        font-weight: 500;
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: -1.875em;
       }
     }
-  }
 
-  &-distinfo {
-    margin-left: em(77.54);
-  }
-
-  &-more {
-    margin-left: em(89.64);
-
-    @include breakpoint(mobile-max) {
-      margin-left: em(60);
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      margin-left: em(30);
-    }
-  }
-
-  &-listen {
-    margin-left: em(76.83, 17.78);
-
-    @include breakpoint(portrait-mobile-max) {
-      margin-left: em(48);
-    }
-
-    &--font {
-      margin-top: em(54);
-      font-size: em(17.78);
-      font-weight: 700;
-    }
-
-    &--border {
+    &-reporting {
+      margin-top: em(52.64);
       img {
         border-radius: 50%;
       }
+      p {
+        a {
+          margin-top: em(19.92);
+        }
+      }
     }
-  }
 
-  &-top {
-    & > * {
-      @include breakpoint(portrait-mobile-max) {
+    .last {
+      margin-top: em(89.64);
+      margin-left: em(61.18);
+
+      @include breakpoint(desktop-max) {
+        display: flex;
+      }
+
+      @include breakpoint(mobile-max) {
         margin-left: 0;
       }
+
+      @include breakpoint(portrait-mobile-max) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      
+    }
+
+    &-listen,
+    &-reporting {
+      margin-top: 0;
+      margin-left: 0;
+    }
+
+    &-reporting {
+      margin-top: em(52);
+
+      @include breakpoint(desktop-max) {
+        margin-top: 0;
+        margin-left: em(119.25);
+      }
+
+      @include breakpoint(mobile-max) {
+        margin-left: em(71.25);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        margin-top: em(52);
+
+      }
+    }
+
+    &-schools {
+      @include breakpoint(mobile-max) {
+        margin-left: em(32);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: -3em;
+      }
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      align-items: center;
+      flex-direction: column;
     }
   }
 
@@ -212,5 +233,5 @@
   }
 }
 
-@include breakpoint(desktop-max) {
+@include breakpoint(portrait-mobile-max) {
 }
