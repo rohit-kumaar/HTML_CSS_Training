@@ -839,42 +839,33 @@
   }
 
   &-box {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: em(33);
+    border: 1px solid red;
+    width: 90%;
+    // .dottedcircle {
+    //   position: absolute;
+    //   right: em(-36);
+    //   bottom: -2em;
+    //   width: 16.3em;
+    //   line-height: 1.8125em;
+    //   letter-spacing: em(21);
 
-    @include breakpoint(desktop-max) {
-      justify-content: center;
-    }
-
-    @include breakpoint(mobile-max) {
-      gap: em(22);
-    }
-
-    .dottedcircle {
-      position: absolute;
-      right: em(-36);
-      bottom: -2em;
-      width: 16.3em;
-      line-height: 1.8125em;
-      letter-spacing: em(21);
-
-      .dot {
-        display: inline-block;
-        width: 0.14em;
-        height: 0.14em;
-        border-radius: 50%;
-        background: $color-brown-old-brick;
-      }
-    }
+    //   .dot {
+    //     display: inline-block;
+    //     width: 0.14em;
+    //     height: 0.14em;
+    //     border-radius: 50%;
+    //     background: $color-brown-old-brick;
+    //   }
+    // }
   }
 
   &-card {
     $card: &;
-    position: relative;
     max-width: em(266.79);
     height: em(248);
+    margin-left: em(34.15);
+
+   
 
     &__img {
       width: em(266.79);
@@ -884,12 +875,11 @@
     }
 
     &__figcaption {
-      position: absolute;
-      width: 100%;
+      position: relative;
       padding: em(22.05, 17.78) 0;
       margin-top: em(-3);
       border-radius: em(5);
-      box-shadow: 0 em(24) em(17) -1.375em #777;
+      box-shadow: 0 em(15, 17.78) em(20, 17.78) 0 rgba(118, 130, 183, 0.18);
       background: $color-white;
       color: $color-blue-limed-spruce;
       font-size: em(17.78);
@@ -905,7 +895,21 @@
     }
 
     &--index {
-      z-index: 19;
+      // z-index: 19;
+    }
+  }
+
+  .icon-arrow {
+    &_right {
+      margin-left: em(35);
+      color: $color-brown-old-brick;
+    }
+
+    &_left {
+      position: relative;
+      top: em(288);
+      margin-left: em(70);
+      color: $color-brown-old-brick;
     }
   }
 }
@@ -1311,4 +1315,7 @@
       text-align: center;
     }
   }
+}
+
+@include breakpoint(medium-large-desktop-max) {
 }

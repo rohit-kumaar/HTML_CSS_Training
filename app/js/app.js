@@ -1,4 +1,4 @@
-// ---------------for navigation bar---------------
+// navigation bar
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
@@ -19,29 +19,57 @@ function filterFunction() {
   }
 }
 
-// ------------for testimonial section------------
 
-$(".slider").slick({
-  infinite: true,
-  dots: true,
-  slidesToShow: 3,
-  slidesToScroll: 3,
-  responsive: [
-    {
-      breakpoint: 1200,
-      settings: {
-        dots: true,
-        slidesToShow: 2,
-        slidesToScroll: 3,
+
+$(document).ready(function () {
+
+  // testimonial section
+
+  $(".slider").slick({
+    infinite: true,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          dots: true,
+          slidesToShow: 2,
+          slidesToScroll: 3,
+        },
       },
-    },
-    {
-      breakpoint: 769,
-      settings: {
-        dots: true,
-        slidesToShow: 1,
-        slidesToScroll: 3,
+      {
+        breakpoint: 769,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 3,
+        },
       },
-    },
-  ],
+    ],
+  });
+
+  // curriculum
+  $(".curriculum-box").slick({
+    infinite: false,
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    nextArrow: '<span class="icon-arrow_right"></span>',
+    prevArrow: '<span class="icon-arrow_left"></span>',
+    dots: false,
+    responsive: [
+      {
+        // breakpoint: 1201,
+        // settings: {
+        //   slidesToShow: 3,
+        //   slidesToScroll: 3,
+        
+        // },
+      },
+   
+    ],
+  });
+
 });
