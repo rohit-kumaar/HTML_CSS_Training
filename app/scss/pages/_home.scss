@@ -794,9 +794,9 @@
     height: em(440);
     overflow-x: hidden;
 
-    @include breakpoint(ipad-max) {
-      display: none;
-    }
+    // @include breakpoint(ipad-max) {
+    //   display: none;
+    // }
   }
 
   &:before {
@@ -839,45 +839,39 @@
   }
 
   &-box {
-    border: 1px solid red;
-    width: 90%;
-    // .dottedcircle {
-    //   position: absolute;
-    //   right: em(-36);
-    //   bottom: -2em;
-    //   width: 16.3em;
-    //   line-height: 1.8125em;
-    //   letter-spacing: em(21);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left:em(124);
 
-    //   .dot {
-    //     display: inline-block;
-    //     width: 0.14em;
-    //     height: 0.14em;
-    //     border-radius: 50%;
-    //     background: $color-brown-old-brick;
-    //   }
-    // }
+   
+    @include breakpoint(portrait-mobile-max) {
+      padding-left: em(30);
+    }
   }
 
   &-card {
     $card: &;
+    position: relative;
     max-width: em(266.79);
     height: em(248);
-    margin-left: em(34.15);
-
-   
+    margin: 0 em(40) 0 0;
+    
 
     &__img {
       width: em(266.79);
       height: em(173.59);
       border-top-left-radius: em(5);
       border-top-right-radius: em(5);
+
     }
 
     &__figcaption {
-      position: relative;
+      position: absolute;
+      bottom: em(23, 17.78);
+      width: em(266.78, 17.78);
       padding: em(22.05, 17.78) 0;
-      margin-top: em(-3);
+      margin-top: em(-3, 17.78);
       border-radius: em(5);
       box-shadow: 0 em(15, 17.78) em(20, 17.78) 0 rgba(118, 130, 183, 0.18);
       background: $color-white;
@@ -893,23 +887,24 @@
         color: $color-white;
       }
     }
-
-    &--index {
-      // z-index: 19;
-    }
+    
   }
 
   .icon-arrow {
-    &_right {
-      margin-left: em(35);
+    &_right,
+    &_left {
       color: $color-brown-old-brick;
+      cursor: pointer;
+    }
+
+    &_right {
+      margin-top: em(15);
     }
 
     &_left {
       position: relative;
-      top: em(288);
-      margin-left: em(70);
-      color: $color-brown-old-brick;
+      top: 17.5em;
+      margin-left: 2.375em;
     }
   }
 }
@@ -1317,5 +1312,5 @@
   }
 }
 
-@include breakpoint(medium-large-desktop-max) {
+@include breakpoint(portrait-mobile-max) {
 }

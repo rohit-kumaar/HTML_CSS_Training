@@ -53,7 +53,6 @@ $(document).ready(function () {
   // curriculum
   $(".curriculum-box").slick({
     infinite: false,
-    dots: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     nextArrow: '<span class="icon-arrow_right"></span>',
@@ -61,12 +60,28 @@ $(document).ready(function () {
     dots: false,
     responsive: [
       {
-        // breakpoint: 1201,
-        // settings: {
-        //   slidesToShow: 3,
-        //   slidesToScroll: 3,
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
         
-        // },
+        },
+      },
+      {
+        breakpoint: 1090,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+        
+        },
+      },
+      {
+        breakpoint: 577,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 3,
+        
+        },
       },
    
     ],
