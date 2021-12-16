@@ -842,9 +842,8 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    padding-left:em(124);
+    padding-left: em(124);
 
-   
     @include breakpoint(portrait-mobile-max) {
       padding-left: em(30);
     }
@@ -856,14 +855,12 @@
     max-width: em(266.79);
     height: em(248);
     margin: 0 em(40) 0 0;
-    
 
     &__img {
       width: em(266.79);
       height: em(173.59);
       border-top-left-radius: em(5);
       border-top-right-radius: em(5);
-
     }
 
     &__figcaption {
@@ -887,7 +884,6 @@
         color: $color-white;
       }
     }
-    
   }
 
   .icon-arrow {
@@ -905,6 +901,24 @@
       position: relative;
       top: 17.5em;
       margin-left: 2.375em;
+    }
+  }
+
+  .dottedcircle {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 200px;
+    width: 16.3em;
+    line-height: 1.8125em;
+    letter-spacing: 1.3125em;
+
+    .dot {
+      display: inline-block;
+      width: 0.14em;
+      height: 0.14em;
+      border-radius: 50%;
+      background: $color-brown-old-brick;
     }
   }
 }
@@ -1013,8 +1027,7 @@
   }
 
   .slick-prev,
-  .slick-next,
-  button {
+  .slick-next {
     display: none !important;
   }
   ul {
@@ -1030,10 +1043,28 @@
       }
     }
   }
+}
 
-  .slick-active::marker {
-    color: $color-brown-old-brick;
-  }
+.testimonial .slick-prev,
+.testimonial .slick-next,
+.testimonial button {
+  width: 14.3px;
+  height: 14.3px;
+  border: none;
+  border-radius: 50%;
+  font-size: 0;
+}
+
+li.slick-active button {
+  background-color: $color-brown-old-brick;
+}
+
+.testimonial .slick-active::marker {
+  color: transparent;
+}
+
+.testimonial ul .slick-dots li {
+  color: transparent;
 }
 
 // info
