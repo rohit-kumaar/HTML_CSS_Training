@@ -1,0 +1,69 @@
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-thin-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-thin-webfont.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-extralight-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-extralight-webfont.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-light-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-regular-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-medium-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-semibold-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-semibold-webfont.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-bold-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-extrabold-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-extrabold-webfont.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: $primary-font;
+  src: url("#{$fonts-path}/montserrat-black-webfont.woff2") format("woff2"),
+    url("#{$fonts-path}/montserrat-black-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}

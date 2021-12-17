@@ -1,0 +1,131 @@
+.contact {
+  background: #000a2d;
+  width: 100%;
+
+  .contact-us {
+    display: flex;
+    padding-top: 45.6px;
+    padding-bottom: 26.4px;
+    @include breakpoint(portrait-mobile-max) {
+      flex-direction: column;
+    }
+
+   
+  }
+
+  &__logo {
+    width: 163.63px;
+    font-size: 19.2px;
+    font-weight: 700;
+
+    a {
+      color: $color-orange;
+
+      text-decoration: none;
+    }
+  }
+
+  &-products,
+  &-links,
+  &-contacts {
+    position: relative;
+
+    
+    &__title {
+      color: $color-blue-French-Gray;
+      font-size: 14.3px;
+      font-weight: 500;
+      @include breakpoint(portrait-mobile-max) {
+        margin-top: 30px;
+      }
+    }
+    p {
+      color: $color-blue-French-Gray;
+      padding-top: 10px;
+      @include breakpoint(portrait-mobile-max) {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: flex;
+      color: $color-blue-French-Gray;
+      font-size: 12.8px;
+      font-weight: 400;
+      text-decoration: none;
+      padding-top: 10px;
+      @include breakpoint(custom-small-mobile-max) {
+      }
+    }
+    a,
+    p,
+    &__title {
+      @include breakpoint(portrait-mobile-max) {
+        width: 280px;
+      }
+    }
+
+    &__title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 28px;
+      height: 2px;
+      background-color: $color-orange;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      margin-top: 16px;
+    }
+  }
+
+  &-products {
+    width: 411px;
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+    }
+  }
+
+  &-links {
+    width: 128.8px;
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+    }
+  }
+  &-contacts {
+    width: 360px;
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  background: #2d2d2d;
+  padding-top: 12px;
+  padding-bottom: 8.6px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icon {
+    a {
+      color: $color-white;
+      text-decoration: none;
+      padding-left: 27px;
+      &:first-child{
+        padding-left: 0;
+      }
+     
+      @include breakpoint(custom-small-mobile-max) {
+        padding-left: 11px;
+      }
+    }
+  }
+  &__copyright {
+    color: $color-white;
+    font-size: 10.7px;
+    font-weight: 300;
+  }
+}

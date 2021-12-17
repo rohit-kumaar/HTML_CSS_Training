@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  z-index: 10;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16.8px 15px 14.67px 15px;
+    @include breakpoint(mobile-max) {
+      position: relative;
+    }
+   
+    #menu {
+      display: none;
+      color: $color-white;
+      font-size: 35px;
+      @include breakpoint(mobile-max) {
+        display: block;
+      }
+    }
+  }
+  &__logo {
+    color: $color-orange;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+
+  &-navBar {
+    @include breakpoint(mobile-max) {
+      position: absolute;
+      top: 66px;
+      left: -15px;
+      width: 100vw;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    .active {
+      @include breakpoint(mobile-max) {
+        display: block;
+      }
+    }
+    &-nav {
+      display: flex;
+      @include breakpoint(mobile-max) {
+        flex-direction: column;
+        display: none;
+      }
+    }
+    &-item {
+      list-style: none;
+      margin-right: 44.11px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &__link {
+      color: $color-white;
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: none;
+      @include breakpoint(mobile-max) {
+        color: $color-orange;
+      }
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
