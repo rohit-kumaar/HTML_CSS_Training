@@ -23,8 +23,8 @@ function filterFunction() {
 
 $(document).ready(function () {
 
+  
   // testimonial section
-
   $(".slider").slick({
     infinite: true,
     dots: true,

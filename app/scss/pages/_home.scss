@@ -1055,6 +1055,12 @@
   font-size: 0;
 }
 
+.testimonial ul .slick-dots {
+  @include breakpoint(portrait-mobile-max) {
+    gap: 3px;
+  }
+}
+
 li.slick-active button {
   background-color: $color-brown-old-brick;
 }
