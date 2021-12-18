@@ -1,0 +1,100 @@
+.header {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: em(14.715) em(42.18) em(35.965) em(42.68);
+  background: linear-gradient(
+    to bottom,
+    $color-green-burnham,
+    rgba(0, 0, 0, 0)
+  );
+
+  &-top {
+    height: em(19.19);
+    color: $color-white;
+
+    &__info {
+      display: inline-block;
+      font-size: em(15);
+      font-weight: 700;
+    }
+
+    &__price {
+      margin: 0 em(6.4) 0 em(4.98);
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .triangle {
+      display: inline-block;
+      // width: em(12.8);
+      // height: em(11.38);
+      border-right: em(10) solid transparent;
+      border-bottom: 1em solid #39a97c;
+      border-left: em(10) solid transparent;
+      margin: 0 em(8.53) 0 em(6.4);
+      // vertical-align: middle;
+
+     
+    }
+
+    &__growth {
+      font-size: 1rem;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    margin-top: em(16.36);
+    a {
+      color: $color-white;
+      &:not(:first-child) {
+        margin-left: em(25.61);
+      }
+      a:hover {
+        color: $color-white;
+      }
+    }
+
+    .bx-search {
+      position: relative;
+      margin-left: em(25.61);
+      color: #645555;
+      font-size: em(21);
+      .circle {
+        position: absolute;
+        width: em(8);
+        height: em(8);
+        border-radius: 50%;
+        margin-top: 0.13em;
+        margin-left: -0.83em;
+        background: $color-white;
+        box-shadow: 0 0 em(10) $color-white;
+      }
+    }
+  }
+
+  &-right {
+    display: flex;
+    height: em(34.93);
+    color: $color-white;
+
+    &__header {
+      margin-top: em(15.76, 19.7);
+      font-size: em(19.7);
+    }
+  }
+}
+// background-image: linear-gradient(to bottom, #052f1c, rgba(0, 0, 0, 0)), url('../images/herobanner.jpg');
+
+.hero {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  &-img {
+    width: 100%;
+  }
+}

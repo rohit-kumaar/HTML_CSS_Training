@@ -1,12 +1,14 @@
-// ----------------colors----------------
+// Color
+$color-black: #000;
+$color-white: #fff;
+$color-green-burnham:#052f1c;
+$color-green-shamrock: #009759;
 
+// font family
+$primary-font: "Helvetica Neue";
 
-// ----------------font family------------
-
-// ----------------fonts path-------------
+// fonts path
 $fonts-path: "../fonts" !default;
 
-// ----------------icomoon variables------
-
-// ------------------font size------------------
+// font size
 $browser-context: 16;
