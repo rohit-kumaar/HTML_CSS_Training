@@ -1,0 +1,92 @@
+.hero {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  &-img {
+    width: 100%;
+  }
+
+  &-content {
+    position: absolute;
+    top: 0;
+    margin-top: em(247);
+    margin-left: em(180);
+    color: $color-white;
+
+    &_top {
+      font-size: em(70);
+      font-weight: 300;
+
+      .shadow {
+        text-shadow: em(8, 70) 0 0 $color-white;
+      }
+    }
+
+    &_bottom {
+      font-size: em(80);
+      font-weight: 700;
+    }
+
+    &_btn {
+      padding: em(7.72, 20) em(27.74, 20) em(6.29, 20) em(28.45, 20);
+      border-radius: em(40);
+      margin-top: em(17.07, 20);
+      background-image: linear-gradient(
+        to right,
+        $color-orange-burning,
+        $color-orange-beer
+      );
+      color: $color-white;
+      font-size: em(20);
+      font-weight: 700;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+
+  &-turnover {
+    position: absolute;
+    right: em(60);
+    bottom: em(88.7);
+    color: $color-white;
+
+    &__title {
+      position: relative;
+      top: em(22, 22);
+      right: em(8, 22);
+      font-size: em(22);
+      font-weight: 700;
+      text-align: right;
+    }
+    &__number {
+      height: em(75, 80);
+      font-size: em(80);
+      font-weight: 950;
+      text-align: right;
+    }
+    &-unit {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 em(7);
+    }
+
+    &__qty {
+      font-size: em(15);
+      font-weight: 700;
+    }
+
+    &__price {
+      font-size: em(15);
+      font-weight: 700;
+    }
+  }
+}
+
+.main {
+  margin-bottom: 500px;
+}
+
+@include breakpoint(portrait-mobile-max) {
+}

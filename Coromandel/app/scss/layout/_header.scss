@@ -4,15 +4,31 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: em(14.765) em(42.18) em(35.965) em(42.68);
+  padding: em(29.93) em(59.3) em(59.72) em(60);
   background: linear-gradient(
     to bottom,
     $color-green-burnham,
     rgba(0, 0, 0, 0)
   );
 
+  @include breakpoint(mobile-max) {
+    padding-right: em(40);
+    padding-left: em(40);
+  }
+
+  @include breakpoint(portrait-mobile-max) {
+    flex-direction: column-reverse;
+    padding-right: em(29);
+    padding-left: em(29);
+  }
+
+  &-left {
+    @include breakpoint(portrait-mobile-max) {
+      margin-top: em(8);
+    }
+  }
+
   &-top {
-    height: em(19.19);
     color: $color-white;
 
     &__info {
@@ -25,6 +41,10 @@
       margin: 0 em(6.4) 0 em(4.98);
       font-size: 1rem;
       font-weight: 700;
+
+      @include breakpoint(portrait-mobile-max) {
+        display: none;
+      }
     }
 
     .triangle {
@@ -34,6 +54,11 @@
       border-bottom: 1.2em solid $color-white;
       border-left: em(12) solid transparent;
       margin: 0 em(8.53) 0 0;
+
+      @include breakpoint(portrait-mobile-max) {
+        display: none;
+      }
+
       &__inner {
         position: absolute;
         top: 0.2em;
@@ -48,6 +73,10 @@
 
     &__growth {
       font-size: 1rem;
+
+      @include breakpoint(portrait-mobile-max) {
+        display: none;
+      }
     }
   }
 
@@ -55,8 +84,17 @@
     display: flex;
     align-items: center;
     padding-top: em(16.36);
+
+    @include breakpoint(portrait-mobile-max) {
+      padding-top: 0;
+    }
     &__title {
       color: $color-white;
+
+      @include breakpoint(desktop-max) {
+        display: none;
+      }
+
       &:not(:first-child) {
         margin-left: em(25.61);
       }
@@ -65,12 +103,71 @@
       }
     }
 
+    .dropdown {
+      position: relative;
+      display: inline-block;
+
+      &:hover {
+        .dropbtn {
+          background: transparent;
+        }
+      }
+
+      &__dropbtn {
+        border: none;
+        background: transparent;
+        color: $color-white;
+        cursor: pointer;
+
+        @include breakpoint(medium-large-desktop-max) {
+          display: none;
+        }
+
+        @include breakpoint(desktop-max) {
+          display: block;
+        }
+      }
+
+      &-content {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        max-width: 100%;
+        border-radius: em(4);
+        background: $color-white-seashell;
+        box-shadow: 0 em(8) em(16) 0 rgba(0, 0, 0, 0.2);
+
+        &__title {
+          padding: em(6) em(17);
+          color: $color-black;
+
+          &:hover {
+            background: $color-white-gainsboro;
+          }
+        }
+      }
+    }
+
+    .active-dropdown-content {
+      display: block;
+    }
+
     .bx-search {
       position: relative;
       margin-left: em(25.61);
       color: $color-red-wenge;
       font-size: 1.5em;
       cursor: pointer;
+
+      @include breakpoint(desktop-max) {
+        top: em(1);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        top: 1.0625em;
+        right: 167px;
+      }
+
       .circle {
         position: absolute;
         width: em(8);
@@ -83,36 +180,51 @@
       }
     }
 
-    .search{
-    display: none;
+    .search {
+      display: none;
+      border: none;
     }
 
-    .active{
+    .active-search {
       display: block;
-      height: 22px;
-      border-radius: 20px;
+      height: em(22);
+      border-radius: em(20);
+
+      @include breakpoint(mobile-max) {
+        width: em(160);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        //  display: inline-block;
+        //  margin-top: 40px;
+      }
     }
   }
 
   &-right {
     display: flex;
-    height: em(34.93);
+    height: em(49);
     color: $color-white;
 
-    &__header {
-      margin-top: em(15.76, 19.7);
-      margin-right: em(4, 19.7);
-      font-size: em(19.7);
+    @include breakpoint(portrait-mobile-max) {
+      display: -webkit-box;
+      flex-direction: row-reverse;
     }
-  }
-}
-// background-image: linear-gradient(to bottom, #052f1c, rgba(0, 0, 0, 0)), url('../images/herobanner.jpg');
 
-.hero {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  &-img {
-    width: 100%;
+    &__header {
+      margin-top: em(23, 27);
+      margin-right: em(4, 27);
+      font-size: em(27);
+
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: em(10);
+      }
+    }
+
+    &__img {
+      @include breakpoint(portrait-mobile-max) {
+        height: em(34.93);
+      }
+    }
   }
 }
