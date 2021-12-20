@@ -2,6 +2,7 @@
   position: relative;
   z-index: 1;
   top: 0;
+
   &-img {
     width: 100%;
   }
@@ -13,9 +14,44 @@
     margin-left: em(180);
     color: $color-white;
 
+    @include breakpoint(desktop-max) {
+      margin-top: em(216.8);
+      margin-left: em(158);
+    }
+
+    @include breakpoint(ipad-max) {
+      margin-left: em(130.58);
+    }
+
+    @include breakpoint(mobile-max) {
+      margin-top: em(170);
+      margin-left: em(65);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      margin-top: em(135);
+      margin-left: em(28);
+    }
+
     &_top {
       font-size: em(70);
       font-weight: 300;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(61.44);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(39.3);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        font-size: em(28);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        font-size: em(23);
+      }
 
       .shadow {
         text-shadow: em(8, 70) 0 0 $color-white;
@@ -25,6 +61,22 @@
     &_bottom {
       font-size: em(80);
       font-weight: 700;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(70.21);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(44.91);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        font-size: em(30);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        font-size: em(27);
+      }
     }
 
     &_btn {
@@ -40,6 +92,18 @@
       font-size: em(20);
       font-weight: 700;
 
+      @include breakpoint(desktop-max) {
+        font-size: em(17.55);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(11.22);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        margin-top: 0;
+      }
+
       &:hover {
         color: $color-white;
       }
@@ -52,6 +116,19 @@
     bottom: em(88.7);
     color: $color-white;
 
+    @include breakpoint(ipad-max) {
+      right: em(40);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      right: em(29);
+      bottom: em(20);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      right: em(23);
+    }
+
     &__title {
       position: relative;
       top: em(22, 22);
@@ -59,12 +136,28 @@
       font-size: em(22);
       font-weight: 700;
       text-align: right;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(19.31);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(12.35);
+      }
     }
     &__number {
       height: em(75, 80);
       font-size: em(80);
       font-weight: 950;
       text-align: right;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(70.21);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(44.91);
+      }
     }
     &-unit {
       display: flex;
@@ -75,11 +168,27 @@
     &__qty {
       font-size: em(15);
       font-weight: 700;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(13.16);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(8.42);
+      }
     }
 
     &__price {
       font-size: em(15);
       font-weight: 700;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(13.16);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(8.42);
+      }
     }
   }
 }
@@ -88,5 +197,5 @@
   margin-bottom: 500px;
 }
 
-@include breakpoint(portrait-mobile-max) {
+@include breakpoint(custom-small-mobile-max) {
 }

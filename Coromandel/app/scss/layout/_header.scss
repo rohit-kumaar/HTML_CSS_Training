@@ -18,8 +18,7 @@
 
   @include breakpoint(portrait-mobile-max) {
     flex-direction: column-reverse;
-    padding-right: em(29);
-    padding-left: em(29);
+    padding: em(8) em(29) em(4);
   }
 
   &-left {
@@ -191,12 +190,7 @@
       border-radius: em(20);
 
       @include breakpoint(mobile-max) {
-        width: em(160);
-      }
-
-      @include breakpoint(portrait-mobile-max) {
-        //  display: inline-block;
-        //  margin-top: 40px;
+        width: em(112);
       }
     }
   }
@@ -217,13 +211,7 @@
       font-size: em(27);
 
       @include breakpoint(portrait-mobile-max) {
-        margin-left: em(10);
-      }
-    }
-
-    &__img {
-      @include breakpoint(portrait-mobile-max) {
-        height: em(34.93);
+        margin-left: em(5);
       }
     }
   }
