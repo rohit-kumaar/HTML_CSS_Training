@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: em(14.715) em(42.18) em(35.965) em(42.68);
+  padding: em(14.765) em(42.18) em(35.965) em(42.68);
   background: linear-gradient(
     to bottom,
     $color-green-burnham,
@@ -28,16 +28,22 @@
     }
 
     .triangle {
+      position: relative;
       display: inline-block;
-      // width: em(12.8);
-      // height: em(11.38);
-      border-right: em(10) solid transparent;
-      border-bottom: 1em solid #39a97c;
-      border-left: em(10) solid transparent;
-      margin: 0 em(8.53) 0 em(6.4);
-      // vertical-align: middle;
-
-     
+      border-right: em(12) solid transparent;
+      border-bottom: 1.2em solid $color-white;
+      border-left: em(12) solid transparent;
+      margin: 0 em(8.53) 0 0;
+      &__inner {
+        position: absolute;
+        top: 0.2em;
+        left: -0.49em;
+        display: inline-block;
+        border-right: em(8) solid transparent;
+        border-bottom: 0.9em solid $color-green-shamrock;
+        border-left: em(8) solid transparent;
+        margin: 0 em(8.53) 0 0;
+      }
     }
 
     &__growth {
@@ -48,13 +54,13 @@
   &-bottom {
     display: flex;
     align-items: center;
-    margin-top: em(16.36);
-    a {
+    padding-top: em(16.36);
+    &__title {
       color: $color-white;
       &:not(:first-child) {
         margin-left: em(25.61);
       }
-      a:hover {
+      &:hover {
         color: $color-white;
       }
     }
@@ -62,8 +68,9 @@
     .bx-search {
       position: relative;
       margin-left: em(25.61);
-      color: #645555;
-      font-size: em(21);
+      color: $color-red-wenge;
+      font-size: 1.5em;
+      cursor: pointer;
       .circle {
         position: absolute;
         width: em(8);
@@ -75,6 +82,16 @@
         box-shadow: 0 0 em(10) $color-white;
       }
     }
+
+    .search{
+    display: none;
+    }
+
+    .active{
+      display: block;
+      height: 22px;
+      border-radius: 20px;
+    }
   }
 
   &-right {
@@ -84,6 +101,7 @@
 
     &__header {
       margin-top: em(15.76, 19.7);
+      margin-right: em(4, 19.7);
       font-size: em(19.7);
     }
   }
