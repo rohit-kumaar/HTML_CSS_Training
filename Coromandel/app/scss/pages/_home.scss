@@ -79,36 +79,6 @@
         font-size: em(27);
       }
     }
-
-    &_btn {
-      padding: em(7.72, 20) em(27.74, 20) em(6.29, 20) em(28.45, 20);
-      border-radius: em(40);
-      margin-top: em(17.07, 20);
-      background-image: linear-gradient(
-        to right,
-        $color-orange-burning,
-        $color-orange-beer
-      );
-      color: $color-white;
-      font-size: em(20);
-      font-weight: 700;
-
-      @include breakpoint(desktop-max) {
-        font-size: em(17.55);
-      }
-
-      @include breakpoint(mobile-max) {
-        font-size: em(11.22);
-      }
-
-      @include breakpoint(custom-small-mobile-max) {
-        margin-top: 0;
-      }
-
-      &:hover {
-        color: $color-white;
-      }
-    }
   }
 
   &-turnover {
@@ -197,6 +167,7 @@
 // Co. Growth Section
 .co-growth {
   position: relative;
+  min-height: em(1054.53);
 
   &-topimg {
     position: absolute;
@@ -230,7 +201,7 @@
     display: flex;
     width: 100%;
     padding: em(57) em(50) 0 em(63);
-    margin-top: 57px;
+    margin-top: em(57);
     background: $color-white-alabaster;
 
     @include breakpoint(portrait-mobile-max) {
@@ -323,6 +294,56 @@
       margin-top: em(5, 18);
       font-size: em(18);
       color: $color-grey-greenish;
+    }
+  }
+}
+
+// Solution Section
+.solution {
+  position: relative;
+
+  & > * {
+    position: absolute;
+  }
+
+  &__topimg {
+    z-index: 2;
+    width: 100%;
+  }
+
+  &__img {
+    z-index: 1;
+    width: 100%;
+  }
+
+  &__farmerimg {
+    z-index: 2;
+    margin-top: 215px;
+    margin-left: 59px;
+  }
+
+  &__bottomimg {
+    z-index: 3;
+    width: 100%;
+    margin-top: 633px;
+  }
+
+  &-container {
+    z-index: 1;
+    right: 155px;
+    top: 188px;
+    width: 423px;
+    color: $color-white;
+  }
+
+  &-header {
+    &__top {
+      font-size: 44px;
+    }
+
+    &__bottom {
+      font-size: 59px;
+      font-weight: 700;
     }
   }
 }

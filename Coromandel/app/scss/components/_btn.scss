@@ -1,0 +1,34 @@
+// Hero Section
+.hero {
+  &-content {
+    &_btn {
+      padding: em(7.72, 20) em(27.74, 20) em(6.29, 20) em(28.45, 20);
+      border-radius: em(40);
+      margin-top: em(17.07, 20);
+      background-image: linear-gradient(
+        to right,
+        $color-orange-burning,
+        $color-orange-beer
+      );
+      color: $color-white;
+      font-size: em(20);
+      font-weight: 700;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(17.55);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(11.22);
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        margin-top: 0;
+      }
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+  }
+}
