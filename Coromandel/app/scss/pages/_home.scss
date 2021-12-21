@@ -167,37 +167,36 @@
 // Co. Growth Section
 .co-growth {
   position: relative;
-  min-height: em(1054.53);
 
   &-topimg {
     position: absolute;
     z-index: 2;
-    top: em(-30);
+    top: em(-88);
     width: 100%;
 
     @include breakpoint(desktop-max) {
-      top: em(-25);
+      top: em(-83);
     }
 
     @include breakpoint(ipad-max) {
-      top: em(-18);
+      top: em(-76);
     }
 
     @include breakpoint(mobile-max) {
-      top: em(-13);
+      top: em(-71);
     }
 
     @include breakpoint(portrait-mobile-max) {
-      top: em(-9);
+      top: em(-66);
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      top: em(-8);
+      top: em(-65);
     }
   }
 
   &-container {
-    position: absolute;
+    position: relative;
     display: flex;
     width: 100%;
     padding: em(57) em(50) 0 em(63);
@@ -301,49 +300,129 @@
 // Solution Section
 .solution {
   position: relative;
+  min-height: em(760);
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: em(133);
+  }
+
+  &::before {
+    top: 0;
+    background-image: url("../images/nutrition-solution-top.png");
+  }
+
+  &::after {
+    bottom: 0;
+    background-image: url("../images/plant-nutrition-man-bottom.png");
+  }
 
   & > * {
     position: absolute;
   }
 
-  &__topimg {
-    z-index: 2;
-    width: 100%;
-  }
-
   &__img {
     z-index: 1;
     width: 100%;
-  }
-
-  &__farmerimg {
-    z-index: 2;
-    margin-top: 215px;
-    margin-left: 59px;
-  }
-
-  &__bottomimg {
-    z-index: 3;
-    width: 100%;
-    margin-top: 633px;
+    height: em(662);
   }
 
   &-container {
-    z-index: 1;
-    right: 155px;
-    top: 188px;
-    width: 423px;
+    position: relative;
+    display: flex;
+
+    & > * {
+      position: absolute;
+    }
+  }
+
+  &-left {
+    z-index: 2;
+    margin-top: em(200);
+    margin-left: em(59);
+
+    @include breakpoint(desktop-max) {
+      margin-left: 0;
+    }
+
+    @include breakpoint(mobile-max) {
+      margin-top: em(390);
+    }
+
+    &__img {
+      @include breakpoint(desktop-max) {
+        width: em(547);
+        height: em(430);
+      }
+
+      @include breakpoint(ipad-max) {
+        width: em(450);
+        height: em(355);
+      }
+
+      @include breakpoint(mobile-max) {
+        width: em(350);
+        height: em(275);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        opacity: 0.7;
+      }
+
+      @include breakpoint(custom-small-mobile-max) {
+        width: em(320);
+      }
+    }
+  }
+
+  &-right {
+    z-index: 2;
+    right: em(155);
+    top: em(188);
+    width: em(423);
     color: $color-white;
+
+    @include breakpoint(desktop-max) {
+      right: 0;
+    }
+
+    @include breakpoint(ipad-max) {
+      width: em(312);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      padding: 0 em(20);
+    }
   }
 
   &-header {
     &__top {
-      font-size: 44px;
+      font-size: em(44);
+
+      @include breakpoint(ipad-max) {
+        font-size: em(32);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(24);
+      }
     }
 
     &__bottom {
-      font-size: 59px;
+      font-size: em(59);
       font-weight: 700;
+
+      @include breakpoint(ipad-max) {
+        font-size: em(43);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(33);
+      }
     }
   }
 }
@@ -352,5 +431,5 @@
   margin-bottom: 2000px;
 }
 
-@include breakpoint(custom-small-mobile-max) {
+@include breakpoint(portrait-mobile-max) {
 }
