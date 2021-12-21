@@ -201,8 +201,28 @@
   &-topimg {
     position: absolute;
     z-index: 2;
-    top: em(-34);
+    top: em(-30);
     width: 100%;
+
+    @include breakpoint(desktop-max) {
+      top: em(-25);
+    }
+
+    @include breakpoint(ipad-max) {
+      top: em(-18);
+    }
+
+    @include breakpoint(mobile-max) {
+      top: em(-13);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      top: em(-9);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      top: em(-8);
+    }
   }
 
   &-container {
@@ -212,14 +232,29 @@
     padding: em(57) em(50) 0 em(63);
     margin-top: 57px;
     background: $color-white-alabaster;
+
+    @include breakpoint(portrait-mobile-max) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: em(57) 0 0;
+    }
   }
 
   &-left {
+    @include breakpoint(portrait-mobile-max) {
+      margin-bottom: em(57);
+    }
+
     &__title {
       width: em(134, 44);
       margin-top: em(23.7, 44);
       font-size: em(44);
       color: $color-grey-carbon;
+
+      @include breakpoint(portrait-mobile-max) {
+        width: 100%;
+      }
     }
 
     &__know-more {
@@ -239,10 +274,30 @@
     gap: em(21);
     padding-right: em(50);
     padding-left: em(154);
+
+    @include breakpoint(desktop-max) {
+      padding-left: em(120);
+    }
+
+    @include breakpoint(mobile-max) {
+      padding-left: em(38);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      flex-direction: column;
+      gap: 0;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
   }
 
   &-card {
     width: em(276);
+
+    @include breakpoint(portrait-mobile-max) {
+      margin-bottom: em(20);
+    }
 
     &__img {
       &--yellow {
