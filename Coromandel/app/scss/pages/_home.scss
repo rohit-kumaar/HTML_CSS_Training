@@ -8,7 +8,7 @@
     width: 100%;
   }
 
-  &-content {
+  &-header {
     position: absolute;
     top: 0;
     margin-top: em(247);
@@ -52,10 +52,6 @@
 
       @include breakpoint(custom-small-mobile-max) {
         font-size: em(23);
-      }
-
-      .shadow {
-        text-shadow: em(8, 70) 0 0 $color-white;
       }
     }
 
@@ -199,7 +195,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    padding: em(57) em(50) 0 em(63);
+    padding: em(57) em(60) 0 ;
     margin-top: em(57);
     background: $color-white-alabaster;
 
@@ -242,8 +238,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: em(21);
-    padding-right: em(50);
-    padding-left: em(154);
+    padding-left: em(225);
 
     @include breakpoint(desktop-max) {
       padding-left: em(120);
@@ -269,10 +264,8 @@
       margin-bottom: em(20);
     }
 
-    &__img {
-      &--yellow {
-        box-shadow: em(-11) em(11) 0 em(2) #ffb016;
-      }
+    &__img:hover {
+      box-shadow: em(-11) em(11) 0 em(2) #ffb016;
     }
 
     &__date {
