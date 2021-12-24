@@ -100,22 +100,26 @@
         border-radius: 50px;
         margin-bottom: 15px;
         background: transparent;
-        border: 1px solid white;
+        border: 1px solid $color-white;
+
+        &::placeholder {
+          color: $color-white;
+        }
       }
 
       &__btn {
         width: 133px;
 
         padding: 7.5px 20px 5.5px;
-        color: white;
+        color: $color-white;
 
         border-radius: 50px;
-        border: solid 1px #fff;
+        border: solid 1px $color-white;
 
         &:hover {
-          color: white;
+          color: $color-white;
           background: transparent;
-          border: solid 1px #fff;
+          border: solid 1px $color-white;
         }
       }
     }
