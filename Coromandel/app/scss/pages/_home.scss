@@ -477,10 +477,29 @@
     width: 840px;
     margin-left: 150px;
     color: $color-grey-carbon;
-    .seed {
-      position: absolute;
-      right: 0;
-      bottom: 0;
+
+    @include breakpoint(mobile-max) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @include breakpoint(desktop-max) {
+      right: 32%;
+    }
+
+    @include breakpoint(ipad-max) {
+      left: 106px;
+      bottom: -169px;
     }
   }
 
@@ -498,11 +517,26 @@
 
   // CSS For Manual slide Navigation
   .navigation-manual {
-    z-index: 20;
+    position: absolute;
+    z-index: 1;
+    top: 84px;
+    right: 250px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 100%;
-    margin-top: -40px;
+    width: 100px;
+    height: 200px;
+
+    @include breakpoint(ipad-max) {
+      right: 118px;
+    }
+
+    @include breakpoint(mobile-max) {
+      top: 343px;
+      left: -71px;
+      flex-direction: row;
+      width: 100%;
+    }
   }
 
   .manual-btn {
@@ -510,21 +544,35 @@
     z-index: 2;
     top: -19px;
     left: 67px;
-    // z-index: 20;
-    // padding: 5px;
-    width: 55px;
-    height: 55px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    // border: 1px solid red;
-    // border-radius: 10px;
-    background: red;
+    background: $color-grey-carbon;
     cursor: pointer;
     transition: 1s;
-    &:not(:last-child) {
-      margin-right: 40px;
+    margin: 10px;
+
+    @include breakpoint(mobile-min) {
+      // display: none;
     }
-    &:hover {
-      // background: transparent;
+
+    &:nth-child(1) {
+      margin-left: -10px;
+    }
+    &:nth-child(2) {
+      margin-left: 10px;
+    }
+    &:nth-child(3) {
+      margin-left: 22px;
+    }
+    &:nth-child(4) {
+      margin-left: 23px;
+    }
+    &:nth-child(5) {
+      margin-left: 17px;
+    }
+    &:nth-child(6) {
+      margin-left: 3px;
     }
   }
 
@@ -543,15 +591,16 @@
   // CSS For Automatic Navigation
   .navigation-auto {
     position: absolute;
+    left: 63%;
     display: flex;
     justify-content: center;
-    width: 100%;
-    margin-top: 395px;
+    width: auto;
+    margin-top: 120px;
+
+    @include breakpoint(desktop-max) {
+      // display: none;
+    }
     div {
-      // padding: 5px;
-      // border: 1px solid yellow;
-      // border-radius: 10px;
-      // transition: 1s;
       &:not(:last-child) {
         margin-right: 50px;
         margin-top: -20px;
@@ -562,124 +611,128 @@
   #radio1:checked ~ .navigation-auto .auto-btn1 {
     position: relative;
     z-index: 3;
-    width: 57.2px;
-    height: 57.2px;
+    left: 190px;
+    top: -27px;
+    width: 40px;
+    height: 40px;
     background: #ffb016;
     border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
-      font-size: 27px;
+      font-size: 24px;
       font-weight: 950;
       color: white;
     }
 
     &::before {
       content: "<";
-      left: 14px;
-      top: 3px;
+      left: 10px;
+      top: -2px;
       transform: rotate(36deg);
     }
 
     &::after {
       content: "<";
-      top: 14px;
-      left: 28px;
+      top: 8px;
+      left: 22px;
       transform: rotate(220deg);
     }
   }
   #radio2:checked ~ .navigation-auto .auto-btn2 {
     position: relative;
     z-index: 3;
-    left: 45px;
-    width: 57.2px;
-    height: 57.2px;
+    left: 159px;
+    top: 2px;
+    width: 40px;
+    height: 40px;
     background: #ffb016;
     border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
-      font-size: 27px;
+      font-size: 24px;
       color: white;
       font-weight: 950;
     }
 
     &::before {
       content: "<";
-      left: 14px;
-      top: 3px;
+      left: 10px;
+      top: -2px;
       transform: rotate(36deg);
     }
 
     &::after {
       content: "<";
-      top: 14px;
-      left: 28px;
+      top: 8px;
+      left: 22px;
       transform: rotate(220deg);
     }
   }
   #radio3:checked ~ .navigation-auto .auto-btn3 {
     position: relative;
     z-index: 3;
-    left: 90px;
-    width: 57.2px;
-    height: 57.2px;
+    left: 123px;
+    top: 29px;
+    width: 40px;
+    height: 40px;
     background: #ffb016;
     border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
-      font-size: 27px;
+      font-size: 24px;
       color: white;
       font-weight: 950;
     }
 
     &::before {
       content: "<";
-      left: 14px;
-      top: 3px;
+      left: 10px;
+      top: -2px;
       transform: rotate(36deg);
     }
 
     &::after {
       content: "<";
-      top: 14px;
-      left: 28px;
+      top: 8px;
+      left: 22px;
       transform: rotate(220deg);
     }
   }
   #radio4:checked ~ .navigation-auto .auto-btn4 {
     position: relative;
     z-index: 3;
-    left: 135px;
-    top: -21px;
-    width: 57.2px;
-    height: 57.2px;
+    top: 59px;
+    left: 70px;
+    width: 40px;
+    height: 40px;
     background: #ffb016;
     border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
-      font-size: 27px;
+      font-size: 24px;
       color: white;
       font-weight: 950;
     }
 
     &::before {
       content: "<";
-      left: 14px;
-      top: 3px;
+      left: 10px;
+      top: -2px;
       transform: rotate(36deg);
     }
 
     &::after {
       content: "<";
-      top: 14px;
-      left: 28px;
+      top: 8px;
+      left: 22px;
       transform: rotate(220deg);
     }
   }
@@ -1232,7 +1285,4 @@
       margin: 0 auto;
     }
   }
-}
-
-@include breakpoint(custom-small-mobile-max) {
 }
