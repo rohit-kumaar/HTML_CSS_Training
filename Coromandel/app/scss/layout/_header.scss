@@ -192,6 +192,10 @@
       @include breakpoint(mobile-max) {
         width: em(112);
       }
+
+      @include breakpoint(custom-small-mobile-max) {
+        display: none;
+      }
     }
   }
 
