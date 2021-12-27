@@ -1,11 +1,29 @@
-// -----------------em calculation----------------- 
+// em calculation
 @function em($pixels, $context: $browser-context) {
   @return ($pixels / $context) * 1em;
 }
 
+// Button
+@mixin button() {
+  display: inline-block;
+  padding: em(7.72, 20) em(27.74, 20) em(6.29, 20) em(28.45, 20);
+  border-radius: em(40);
+  margin-top: em(17.07, 20);
+  background-image: linear-gradient(
+    to right,
+    $color-orange-burning,
+    $color-orange-beer
+  );
+  color: $color-white;
+  font-size: em(20);
+  font-weight: 700;
 
+  &:hover {
+    color: $color-white;
+  }
+}
 
-// -------------------Responsive------------------- 
+// Responsive 
 $breakpoints: (
   'custom-small-mobile-max': (max-width: 359px),
   'portrait-mobile-max': (max-width: 575px),
@@ -30,6 +48,3 @@ $breakpoints: (
     @warn "Couldn't find a breakpoint named `#{$name}`.";
   }
 }
-
-
-

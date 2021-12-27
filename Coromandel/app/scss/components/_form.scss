@@ -1,0 +1,12 @@
+.footer-top-contant__search {
+  height: em(39);
+  padding: em(3.5) em(16);
+  border-radius: em(50);
+  margin-bottom: em(15);
+  background: transparent;
+  border: em(1) solid $color-white;
+
+  &::placeholder {
+    color: $color-white;
+  }
+}

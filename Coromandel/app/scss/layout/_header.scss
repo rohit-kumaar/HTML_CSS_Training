@@ -87,7 +87,7 @@
     @include breakpoint(portrait-mobile-max) {
       padding-top: 0;
     }
-    &__title {
+    &__link {
       color: $color-white;
 
       @include breakpoint(desktop-max) {
@@ -136,7 +136,7 @@
         background: $color-white-seashell;
         box-shadow: 0 em(8) em(16) 0 rgba(0, 0, 0, 0.2);
 
-        &__title {
+        &__link {
           padding: em(6) em(17);
           color: $color-black;
 
@@ -169,11 +169,11 @@
 
       .circle {
         position: absolute;
+        left: em(3);
         width: em(8);
         height: em(8);
         border-radius: 50%;
         margin-top: 0.13em;
-        margin-left: -0.83em;
         background: $color-white;
         box-shadow: 0 0 em(10) $color-white;
       }

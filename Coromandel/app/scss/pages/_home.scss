@@ -34,7 +34,7 @@
       margin-left: em(28);
     }
 
-    &_top {
+    &__main {
       font-size: em(70);
       font-weight: 300;
 
@@ -55,7 +55,7 @@
       }
     }
 
-    &_bottom {
+    &__sub {
       font-size: em(80);
       font-weight: 700;
 
@@ -393,7 +393,7 @@
   }
 
   &-header {
-    &__top {
+    &__main {
       font-size: em(44);
 
       @include breakpoint(ipad-max) {
@@ -405,7 +405,7 @@
       }
     }
 
-    &__bottom {
+    &__sub {
       font-size: em(59);
       font-weight: 700;
 
@@ -423,7 +423,6 @@
 // Growth Journey
 .growth-journey {
   position: relative;
-  top: em(-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -793,26 +792,6 @@
       }
     }
 
-    &__btn {
-      border: 1px solid #f57629;
-      padding: em(6.72, 20) em(27.74, 20) em(5.29, 20);
-      margin-top: em(25, 20);
-      background: transparent;
-      color: #f57629;
-
-      @include breakpoint(portrait-mobile-max) {
-        font-size: em(20);
-      }
-
-      @include breakpoint(custom-small-mobile-max) {
-        font-size: em(17);
-      }
-
-      &:hover {
-        color: #f57629;
-      }
-    }
-
     .arrow {
       position: relative;
       left: em(75);
@@ -1058,10 +1037,6 @@
         margin-bottom: 20px;
       }
     }
-
-    &__btn {
-      font-size: em(20);
-    }
   }
 }
 
@@ -1070,10 +1045,10 @@
   width: 100%;
   padding: em(175) em(36) 0 em(63);
 
-  &__product {
+  &__our-product {
     display: flex;
-    flex-flow: row wrap;
     align-items: center;
+    overflow-x: scroll;
 
     img:first-child {
       width: em(161);

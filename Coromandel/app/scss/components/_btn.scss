@@ -1,34 +1,101 @@
 // Hero Section
-.hero {
-  &-content {
-    &_btn {
-      padding: em(7.72, 20) em(27.74, 20) em(6.29, 20) em(28.45, 20);
-      border-radius: em(40);
-      margin-top: em(17.07, 20);
+.hero__btn {
+  @include button();
+
+  @include breakpoint(desktop-max) {
+    font-size: em(17.55);
+  }
+
+  @include breakpoint(mobile-max) {
+    font-size: em(11.22);
+  }
+
+  @include breakpoint(custom-small-mobile-max) {
+    margin-top: 0;
+  }
+}
+
+// Solution Section
+.solution__btn {
+  @include button();
+
+  @include breakpoint(desktop-max) {
+    font-size: em(17.55);
+  }
+
+  @include breakpoint(mobile-max) {
+    font-size: em(11.22);
+  }
+
+  @include breakpoint(custom-small-mobile-max) {
+    margin-top: 0;
+  }
+}
+
+// Awards & Rec Section
+.awards {
+  &-reco__btn {
+    @include button();
+    border: 1px solid $color-orange-burning;
+    padding: em(6.72, 20) em(27.74, 20) em(5.29, 20);
+    margin-top: em(25, 20);
+    background: transparent;
+    color: $color-orange-burning;
+
+    @include breakpoint(desktop-max) {
+      font-size: em(17.55);
+    }
+
+    @include breakpoint(mobile-max) {
+      font-size: em(11.22);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      font-size: em(20);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      font-size: em(17);
+    }
+
+    &:hover {
       background-image: linear-gradient(
         to right,
         $color-orange-burning,
         $color-orange-beer
       );
-      color: $color-white;
-      font-size: em(20);
-      font-weight: 700;
-
-      @include breakpoint(desktop-max) {
-        font-size: em(17.55);
-      }
-
-      @include breakpoint(mobile-max) {
-        font-size: em(11.22);
-      }
-
-      @include breakpoint(custom-small-mobile-max) {
-        margin-top: 0;
-      }
-
-      &:hover {
-        color: $color-white;
-      }
+      color: $color-white
     }
+  }
+
+  &-protection__btn {
+    @include button();
+
+    @include breakpoint(desktop-max) {
+      font-size: em(17.55);
+    }
+
+    @include breakpoint(mobile-max) {
+      font-size: em(11.22);
+    }
+
+    @include breakpoint(custom-small-mobile-max) {
+      margin-top: 0;
+    }
+  }
+}
+
+// Footer
+.footer-top__btn {
+  width: em(133);
+  border: 1px solid $color-white;
+  border-radius: 50px;
+  padding: em(7.5) em(20) em(5.5);
+  color: $color-white;
+
+  &:hover {
+    border: 1px solid $color-white;
+    color: $color-white;
+    background: transparent;
   }
 }
