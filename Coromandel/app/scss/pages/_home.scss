@@ -263,7 +263,8 @@
     padding-left: em(225);
 
     @include breakpoint(desktop-max) {
-      padding-left: em(120);
+      justify-content: center;
+      padding-left: 0;
     }
 
     @include breakpoint(ipad-max) {
@@ -272,7 +273,7 @@
     }
 
     @include breakpoint(mobile-max) {
-      margin-top: 30px;
+      margin-top: em(30);
       padding-left: em(38);
     }
 
