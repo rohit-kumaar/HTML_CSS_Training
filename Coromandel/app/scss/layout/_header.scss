@@ -34,16 +34,20 @@
       display: inline-block;
       font-size: em(15);
       font-weight: 700;
+
+      @include breakpoint(ipad-max) {
+        margin-left: em(17, 15);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: 0;
+      }
     }
 
     &__price {
       margin: 0 em(6.4) 0 em(4.98);
       font-size: 1rem;
       font-weight: 700;
-
-      @include breakpoint(portrait-mobile-max) {
-        display: none;
-      }
     }
 
     .triangle {
@@ -53,10 +57,6 @@
       border-bottom: 1.2em solid $color-white;
       border-left: em(12) solid transparent;
       margin: 0 em(8.53) 0 0;
-
-      @include breakpoint(portrait-mobile-max) {
-        display: none;
-      }
 
       &__inner {
         position: absolute;
@@ -72,10 +72,6 @@
 
     &__growth {
       font-size: 1rem;
-
-      @include breakpoint(portrait-mobile-max) {
-        display: none;
-      }
     }
   }
 
@@ -83,6 +79,32 @@
     display: flex;
     align-items: center;
     padding-top: em(16.36);
+
+    @include breakpoint(mobile-max) {
+      padding-top: em(5);
+    }
+
+    .navbar {
+      display: none;
+      padding: 0;
+
+      .container-fluid {
+        display: table;
+        padding: 0;
+      }
+
+      &-toggler {
+        border: em(1) solid $color-white;
+
+        .bx-menu {
+          font-size: em(28);
+        }
+      }
+
+      @include breakpoint(desktop-max) {
+        display: block;
+      }
+    }
 
     @include breakpoint(portrait-mobile-max) {
       padding-top: 0;
@@ -102,51 +124,6 @@
       }
     }
 
-    .dropdown {
-      position: relative;
-      display: inline-block;
-
-      &:hover {
-        .dropbtn {
-          background: transparent;
-        }
-      }
-
-      &__dropbtn {
-        border: none;
-        background: transparent;
-        color: $color-white;
-        cursor: pointer;
-
-        @include breakpoint(medium-large-desktop-max) {
-          display: none;
-        }
-
-        @include breakpoint(desktop-max) {
-          display: block;
-        }
-      }
-
-      &-content {
-        position: absolute;
-        z-index: 1;
-        display: none;
-        max-width: 100%;
-        border-radius: em(4);
-        background: $color-white-seashell;
-        box-shadow: 0 em(8) em(16) 0 rgba(0, 0, 0, 0.2);
-
-        &__link {
-          padding: em(6) em(17);
-          color: $color-black;
-
-          &:hover {
-            background: $color-white-gainsboro;
-          }
-        }
-      }
-    }
-
     .active-dropdown-content {
       display: block;
     }
@@ -159,12 +136,7 @@
       cursor: pointer;
 
       @include breakpoint(desktop-max) {
-        top: em(1);
-      }
-
-      @include breakpoint(portrait-mobile-max) {
-        top: 1.0625em;
-        right: 167px;
+        display: none;
       }
 
       .circle {

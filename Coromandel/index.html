@@ -45,17 +45,45 @@
         <a href="javascript:void(0)" class="header-bottom__link">Media</a>
         <a href="javascript:void(0)" class="header-bottom__link">Career</a>
 
-        <div class="dropdown" id="dropdown">
-          <button class="dropdown__dropbtn"><b>More Information</b></button>
-          <div class="dropdown-content" id="dropdown-content">
-            <a href="javascript:void(0)" class="dropdown-content__link">About Us</a>
-            <a href="javascript:void(0)" class="dropdown-content__link">Our Businesses</a>
-            <a href="javascript:void(0)" class="dropdown-content__link">Investor Relations</a>
-            <a href="javascript:void(0)" class="dropdown-content__link">Sustainability</a>
-            <a href="javascript:void(0)" class="dropdown-content__link">Media</a>
-            <a href="javascript:void(0)" class="dropdown-content__link">Career</a>
+        <nav class="navbar navbar-light">
+          <div class="container-fluid">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+              <i class='bx bx-menu'></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Our Businesses</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Investor Relations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Sustainability</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Media</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Career</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
           </div>
-        </div>
+        </nav>
 
         <i class="bx bx-search">
           <i class="circle"></i>
@@ -79,7 +107,7 @@
     <!-- Hero  -->
     <section class="hero">
       <!-- Image  -->
-      <img src="app/images/hero.jpg" alt="Hero Banner" class="hero-img" />
+      <img src="app/images/hero.png" alt="Hero Banner" class="hero-img" />
       <!-- Header -->
       <div class="hero-header">
         <h2 class="hero-header__main">Our Farmer's</h2>
@@ -233,11 +261,9 @@
       <img src="app/images/nutrition-solution.jpg" alt="Image" class="solution__img" />
       <!-- Container  -->
       <div class="solution-container">
-        <!-- Left  -->
-        <div class="solution-left">
-          <!-- Image  -->
-          <img src="app/images/plant-nutrition-man.png" alt="Farmer" class="solution-left__img" />
-        </div>
+        <!-- Image  -->
+        <img src="app/images/plant-nutrition-man.png" alt="Farmer" class="solution-left__img" />
+      
         <!-- Right  -->
         <div class="solution-right">
           <!-- Header  -->
@@ -419,16 +445,16 @@
 
     <!-- GROMOR SURAKSHA  -->
     <section class="gromor-suraksha">
+      <img src="app/images/gromor-suraksha.png" alt="GROMOR SURAKSHA" />
+      
       <a  href="javascript:void(0)" class="gromor-suraksha__our-product">
         <!-- Images -->
-        <img src="app/images/gromor-suraksha.png" alt="GROMOR SURAKSHA" />
         <img src="app/images/gromor-suraksha-product-1.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-2.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-3.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-4.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-5.png" alt="GROMOR SURAKSHA Product" />
-        <img src="app/images/gromor-suraksha-product-5.png" alt="GROMOR SURAKSHA Product" />
-        <img src="app/images/gromor-suraksha-product-5.png" alt="GROMOR SURAKSHA Product" />
+       
       </a>
     </section>
 
@@ -471,7 +497,7 @@
         <div class="container footer-top">
           <!--Grid row-->
           <div class="row">
-            <!--Grid column-->
+            <!--Grid column Image-->
             <div class="col-lg-2 footer-top-contant">
               <div class="
                     bg-white
@@ -486,66 +512,66 @@
             </div>
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-top-contant">
-              <h5 class="text-uppercase mb-4 footer-top-contant__title">
+              <h5 class="text-uppercase  footer-top-contant__title">
                 Coromandel
               </h5>
 
               <ul class="list-unstyled">
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>About Us</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Our
                     Businesses</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white"><i class="fas fa-paw pe-3 footer-top-contant__item"></i>How to
                     adopt?</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Investor
                     Relations</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i
                       class="fas fa-paw pe-3"></i>Sustainability</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Media</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Career</a>
                 </li>
               </ul>
             </div>
             <!--Grid column-->
             <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-top-contant">
-              <h5 class="text-uppercase mb-4 footer-top-contant__title">
+              <h5 class="text-uppercase  footer-top-contant__title">
                 Quick Links
               </h5>
 
               <ul class="list-unstyled">
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Employee
                     login</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>About the
                     shelter</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Dealer
                     portal</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Sign up for
                     Alerts</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Social
                     Media</a>
                 </li>
-                <li class="mb-2">
+                <li>
                   <a href="#!" class="text-white footer-top-contant__item"><i class="fas fa-paw pe-3"></i>Contact Us</a>
                 </li>
               </ul>
@@ -560,7 +586,6 @@
                 <input type="text" id="formControlLg" class="
                       form-control
                       footer-top-contant__search
-                      form-control-lg
                     " placeholder="Name" />
               </div>
               <!-- Search  -->
@@ -568,7 +593,6 @@
                 <input type="text" id="formControlLg" class="
                       form-control
                       footer-top-contant__search
-                      form-control-lg
                     " placeholder="Email Id" />
               </div>
               <!-- Button  -->
@@ -580,7 +604,7 @@
           </div>
         </div>
         <!-- Copyright -->
-        <div class="text-center p-3 footer-bottom">
+        <div class="text-center  footer-bottom">
           <a class="text-white footer-bottom__title" href="#">All rights reserved by Coromandel. Copyright © 2020
           </a>
         </div>

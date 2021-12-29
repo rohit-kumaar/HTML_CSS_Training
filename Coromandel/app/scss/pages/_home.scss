@@ -6,6 +6,10 @@
 
   &-img {
     width: 100%;
+
+    @include breakpoint(portrait-mobile-max) {
+      height: 300px;
+    }
   }
 
   &-header {
@@ -21,17 +25,17 @@
     }
 
     @include breakpoint(ipad-max) {
-      margin-left: em(130.58);
+      margin-top: em(128);
+      margin-left: em(67);
     }
 
     @include breakpoint(mobile-max) {
-      margin-top: em(170);
-      margin-left: em(65);
+      margin-left: em(54);
     }
 
     @include breakpoint(portrait-mobile-max) {
-      margin-top: em(135);
-      margin-left: em(28);
+      margin-top: em(149);
+      margin-left: em(24);
     }
 
     &__main {
@@ -85,6 +89,7 @@
 
     @include breakpoint(ipad-max) {
       right: em(40);
+      bottom: 39px;
     }
 
     @include breakpoint(portrait-mobile-max) {
@@ -199,6 +204,15 @@
     margin-top: em(57);
     background: $color-white-alabaster;
 
+    @include breakpoint(ipad-max) {
+      padding-left: em(30);
+      padding-right: 0;
+    }
+
+    @include breakpoint(mobile-max) {
+      flex-direction: column;
+    }
+
     @include breakpoint(portrait-mobile-max) {
       flex-direction: column;
       align-items: center;
@@ -208,6 +222,10 @@
   }
 
   &-left {
+    @include breakpoint(mobile-max) {
+      margin: 0 auto;
+    }
+
     @include breakpoint(portrait-mobile-max) {
       margin-bottom: em(57);
     }
@@ -217,6 +235,10 @@
       margin-top: em(23.7, 44);
       font-size: em(44);
       color: $color-grey-carbon;
+
+      @include breakpoint(mobile-max) {
+        width: 100%;
+      }
 
       @include breakpoint(portrait-mobile-max) {
         width: 100%;
@@ -244,7 +266,13 @@
       padding-left: em(120);
     }
 
+    @include breakpoint(ipad-max) {
+      justify-content: center;
+      padding-left: 0;
+    }
+
     @include breakpoint(mobile-max) {
+      margin-top: 30px;
       padding-left: em(38);
     }
 
@@ -265,7 +293,7 @@
     }
 
     &__img:hover {
-      box-shadow: em(-11) em(11) 0 em(2) #ffb016;
+      box-shadow: em(-11) em(11) 0 em(2) $color-orange-beer;
     }
 
     &__date {
@@ -325,70 +353,56 @@
   }
 
   &-container {
-    position: relative;
     display: flex;
+    width: 100%;
+    height: 662px;
 
-    & > * {
-      position: absolute;
+    @include breakpoint(mobile-max) {
+      position: relative;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      & > * {
+        position: absolute;
+      }
     }
   }
 
-  &-left {
+  &-left__img {
     z-index: 2;
-    margin-top: em(200);
-    margin-left: em(59);
+    margin-top: 186px;
+    margin-left: 59px;
 
     @include breakpoint(desktop-max) {
+      width: 50%;
+    }
+
+    @include breakpoint(ipad-max) {
       margin-left: 0;
     }
 
     @include breakpoint(mobile-max) {
-      margin-top: em(390);
-    }
-
-    &__img {
-      @include breakpoint(desktop-max) {
-        width: em(547);
-        height: em(430);
-      }
-
-      @include breakpoint(ipad-max) {
-        width: em(450);
-        height: em(355);
-      }
-
-      @include breakpoint(mobile-max) {
-        width: em(350);
-        height: em(275);
-      }
-
-      @include breakpoint(portrait-mobile-max) {
-        opacity: 0.7;
-      }
-
-      @include breakpoint(custom-small-mobile-max) {
-        width: em(320);
-      }
+      width: 100%;
+      opacity: 0.8;
     }
   }
 
   &-right {
     z-index: 2;
-    right: em(155);
-    top: em(188);
     width: em(423);
+    margin-top: 155px;
+    margin-left: 18.7px;
     color: $color-white;
 
-    @include breakpoint(desktop-max) {
-      right: 0;
+    @include breakpoint(mobile-max) {
+      width: 100%;
+      padding: 0 30px;
+      margin: 0;
     }
 
-    @include breakpoint(ipad-max) {
-      width: em(312);
-    }
-
-    @include breakpoint(custom-small-mobile-max) {
-      padding: 0 em(20);
+    @include breakpoint(portrait-mobile-max) {
+      padding: 100px 30px 10px;
     }
   }
 
@@ -397,11 +411,15 @@
       font-size: em(44);
 
       @include breakpoint(ipad-max) {
-        font-size: em(32);
+        font-size: em(40);
       }
 
       @include breakpoint(mobile-max) {
-        font-size: em(24);
+        font-size: em(44);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        font-size: 34px;
       }
     }
 
@@ -414,7 +432,10 @@
       }
 
       @include breakpoint(mobile-max) {
-        font-size: em(33);
+        font-size: em(59);
+      }
+      @include breakpoint(portrait-mobile-max) {
+        font-size: 39px;
       }
     }
   }
@@ -514,7 +535,7 @@
   &__paragraph {
     width: em(415);
     margin-top: em(21);
-    color: #5e6052;
+    color: $color-grey-carbon;
     line-height: 2.13;
 
     @include breakpoint(portrait-mobile-max) {
@@ -622,7 +643,7 @@
     margin-top: em(120);
 
     @include breakpoint(ipad-max) {
-      left: 56%;
+      left: 53%;
     }
 
     [class*="auto-btn"] {
@@ -678,31 +699,31 @@
   #radio4:checked ~ .navigation-auto .auto-btn4 {
     position: relative;
     z-index: 3;
-    width: 40px;
-    height: 40px;
-    background: #ffb016;
+    width: em(40);
+    height: em(40);
+    background: $color-orange-beer;
     border-radius: 50%;
 
     &::before,
     &::after {
       position: absolute;
-      font-size: 24px;
-      font-weight: 950;
-      color: white;
+      font-size: em(20);
+      font-weight: 900;
+      color: $color-white;
     }
 
     &::before {
       content: "<";
-      left: 10px;
-      top: -2px;
-      transform: rotate(36deg);
+      left: em(10, 20);
+      top: 0;
+      transform: rotate(51deg);
     }
 
     &::after {
       content: "<";
-      top: 8px;
-      left: 22px;
-      transform: rotate(220deg);
+      top: em(11, 20);
+      left: em(19, 20);
+      transform: rotate(227deg);
     }
   }
 }
@@ -748,15 +769,19 @@
     padding: em(38.5) em(65) em(44.5) em(49);
     background: $color-white;
 
+    @include breakpoint(desktop-max) {
+      width: em(540);
+      padding: em(35);
+    }
+
     @include breakpoint(ipad-max) {
       width: em(479.53);
       padding: em(27.93) em(47.15) em(32.28) em(35.54);
     }
 
     @include breakpoint(mobile-max) {
-      width: em(360);
-      padding: em(20);
-      padding-bottom: em(5);
+      width: em(300);
+      padding: em(20) em(20) em(5) em(20);
     }
 
     @include breakpoint(portrait-mobile-max) {
@@ -765,11 +790,12 @@
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      padding: em(55) 0 em(28);
+      padding: em(55) em(10) em(28);
     }
 
     &__icon {
       position: absolute;
+      z-index: 2;
       top: 0;
       right: 0;
     }
@@ -784,7 +810,7 @@
       }
 
       @include breakpoint(portrait-mobile-max) {
-        font-size: em(37);
+        font-size: em(27);
       }
 
       @include breakpoint(custom-small-mobile-max) {
@@ -796,6 +822,10 @@
       position: relative;
       left: em(75);
       height: em(192);
+
+      @include breakpoint(desktop-max) {
+        left: 30px;
+      }
 
       @include breakpoint(ipad-max) {
         left: 0;
@@ -852,9 +882,13 @@
       right: em(65);
 
       @include breakpoint(mobile-max) {
-        right: em(65);
+        z-index: 1;
+        right: 0;
       }
 
+      @include breakpoint(portrait-mobile-max) {
+        right: em(65);
+      }
       @include breakpoint(custom-small-mobile-max) {
         right: 0;
       }
@@ -911,9 +945,18 @@
     padding: em(67) em(73) em(56) em(74);
     background: #ffb016;
 
+    @include breakpoint(desktop-max) {
+      width: 342px;
+      padding: 58px;
+    }
+
     @include breakpoint(ipad-max) {
       width: em(266.97);
       padding: em(48.6) em(52.95) em(40.62) em(53.68);
+    }
+
+    @include breakpoint(mobile-max) {
+      width: 250px;
     }
 
     @include breakpoint(portrait-mobile-max) {
@@ -1042,21 +1085,39 @@
 
 // GROMOR SURAKSHA
 .gromor-suraksha {
+  display: flex;
+  align-items: center;
   width: 100%;
   padding: em(175) em(36) 0 em(63);
 
+  @include breakpoint(portrait-mobile-max) {
+    flex-direction: column;
+  }
+
+  img:first-child {
+    width: em(161);
+    height: em(177);
+  }
+
   &__our-product {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    overflow-x: scroll;
 
-    img:first-child {
-      width: em(161);
-      height: em(177);
-
-      @include breakpoint(custom-small-mobile-max) {
-        margin-left: em(23);
+    & > * {
+      @include breakpoint(portrait-mobile-max) {
+        margin-left: 8px;
       }
+    }
+
+    @include breakpoint(desktop-max) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
+
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+      margin-left: 28px;
     }
   }
 }
@@ -1180,7 +1241,7 @@
     }
 
     @include breakpoint(custom-small-mobile-max) {
-      font-size: em(27);
+      font-size: em(25);
     }
   }
 

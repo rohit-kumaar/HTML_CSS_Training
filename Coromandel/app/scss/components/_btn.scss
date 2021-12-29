@@ -22,14 +22,6 @@
   @include breakpoint(desktop-max) {
     font-size: em(17.55);
   }
-
-  @include breakpoint(mobile-max) {
-    font-size: em(11.22);
-  }
-
-  @include breakpoint(custom-small-mobile-max) {
-    margin-top: 0;
-  }
 }
 
 // Awards & Rec Section
@@ -51,7 +43,7 @@
     }
 
     @include breakpoint(portrait-mobile-max) {
-      font-size: em(20);
+      font-size: em(12);
     }
 
     @include breakpoint(custom-small-mobile-max) {
