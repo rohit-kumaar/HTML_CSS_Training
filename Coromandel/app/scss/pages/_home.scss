@@ -1,41 +1,33 @@
 // Hero Section
 .hero {
   position: relative;
-  z-index: 1;
-  top: 0;
 
   &-img {
     width: 100%;
 
     @include breakpoint(portrait-mobile-max) {
-      height: 300px;
+      height: em(300);
     }
+  }
+
+  .container {
+    position: relative;
+    color: $color-white;
   }
 
   &-header {
     position: absolute;
-    top: 0;
-    margin-top: em(247);
-    margin-left: em(180);
-    color: $color-white;
-
-    @include breakpoint(desktop-max) {
-      margin-top: em(216.8);
-      margin-left: em(158);
-    }
+    left: em(135);
+    bottom: em(235);
 
     @include breakpoint(ipad-max) {
-      margin-top: em(128);
-      margin-left: em(67);
+      left: em(112);
+      bottom: em(155);
     }
 
     @include breakpoint(mobile-max) {
-      margin-left: em(54);
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      margin-top: em(149);
-      margin-left: em(24);
+      bottom: em(56);
+      left: em(15);
     }
 
     &__main {
@@ -83,22 +75,11 @@
 
   &-turnover {
     position: absolute;
-    right: em(60);
-    bottom: em(88.7);
-    color: $color-white;
+    bottom: em(110);
+    right: em(15);
 
-    @include breakpoint(ipad-max) {
-      right: em(40);
-      bottom: 39px;
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      right: em(29);
-      bottom: em(20);
-    }
-
-    @include breakpoint(custom-small-mobile-max) {
-      right: em(23);
+    @include breakpoint(mobile-max) {
+      bottom: em(50);
     }
 
     &__title {
@@ -117,6 +98,7 @@
         font-size: em(12.35);
       }
     }
+
     &__number {
       height: em(75, 80);
       font-size: em(80);
@@ -131,13 +113,14 @@
         font-size: em(44.91);
       }
     }
+
     &-unit {
       display: flex;
       justify-content: space-between;
       padding: 0 em(7);
     }
 
-    &__qty {
+    &__qtr {
       font-size: em(15);
       font-weight: 700;
 
@@ -168,6 +151,7 @@
 // Co. Growth Section
 .co-growth {
   position: relative;
+  background: $color-white-alabaster;
 
   &-topimg {
     position: absolute;
@@ -196,38 +180,24 @@
     }
   }
 
-  &-container {
-    position: relative;
+  .container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    padding: em(57) em(60) 0;
+    padding: em(57) em(15) 0;
     margin-top: em(57);
-    background: $color-white-alabaster;
-
-    @include breakpoint(ipad-max) {
-      padding-left: em(30);
-      padding-right: 0;
-    }
-
-    @include breakpoint(mobile-max) {
-      flex-direction: column;
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: em(57) 0 0;
-    }
   }
 
   &-left {
+    width: 12.56%;
+
     @include breakpoint(mobile-max) {
-      margin: 0 auto;
+      width: 17%;
     }
 
     @include breakpoint(portrait-mobile-max) {
-      margin-bottom: em(57);
+      width: 100%;
+      margin-bottom: 25px;
     }
 
     &__title {
@@ -236,12 +206,18 @@
       font-size: em(44);
       color: $color-grey-carbon;
 
+      @include breakpoint(ipad-max) {
+        font-size: em(40);
+      }
+
       @include breakpoint(mobile-max) {
-        width: 100%;
+        font-size: em(28);
       }
 
       @include breakpoint(portrait-mobile-max) {
         width: 100%;
+        margin-top: em(20, 44);
+        font-size: em(44);
       }
     }
 
@@ -249,6 +225,18 @@
       font-size: em(20);
       font-weight: 700;
       color: $color-orange-reddish;
+
+      @include breakpoint(desktop-max) {
+        font-size: em(17.9);
+      }
+
+      @include breakpoint(mobile-max) {
+        font-size: em(16);
+      }
+
+      @include breakpoint(portrait-mobile-max) {
+        font-size: em(20);
+      }
 
       &:hover {
         color: $color-orange-reddish;
@@ -259,42 +247,39 @@
   &-right {
     display: flex;
     flex-wrap: wrap;
-    gap: em(21);
-    padding-left: em(225);
-
-    @include breakpoint(desktop-max) {
-      justify-content: center;
-      padding-left: 0;
-    }
-
-    @include breakpoint(ipad-max) {
-      justify-content: center;
-      padding-left: 0;
-    }
+    justify-content: space-between;
+    width: 82.39%;
+    margin-left: 5.05%;
 
     @include breakpoint(mobile-max) {
-      margin-top: em(30);
-      padding-left: em(38);
+      margin-left: 0;
     }
 
     @include breakpoint(portrait-mobile-max) {
-      flex-direction: column;
-      gap: 0;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
+      width: 100%;
     }
   }
 
   &-card {
-    width: em(276);
+    display: inline-block;
+    width: 31.4%;
+    margin-bottom: em(20);
 
-    @include breakpoint(portrait-mobile-max) {
-      margin-bottom: em(20);
+    @include breakpoint(mobile-max) {
+      width: 48%;
     }
 
-    &__img:hover {
-      box-shadow: em(-11) em(11) 0 em(2) $color-orange-beer;
+    @include breakpoint(portrait-mobile-max) {
+      width: 100%;
+    }
+
+    &__img {
+      width: 100%;
+      transition: all 0.5s ease;
+
+      &:hover {
+        box-shadow: em(-11) em(11) 0 em(2) $color-orange-beer;
+      }
     }
 
     &__date {
@@ -322,7 +307,9 @@
 // Solution Section
 .solution {
   position: relative;
+  width: 100%;
   min-height: em(760);
+  background-image: url("../images/nutrition-solution.jpg");
 
   &::before,
   &::after {
@@ -343,67 +330,55 @@
     background-image: url("../images/plant-nutrition-man-bottom.png");
   }
 
-  & > * {
-    position: absolute;
-  }
-
   &__img {
     z-index: 1;
     width: 100%;
-    height: em(662);
   }
 
-  &-container {
+  .container {
     display: flex;
-    width: 100%;
-    height: 662px;
 
-    @include breakpoint(mobile-max) {
+    @include breakpoint(desktop-max) {
+      height: em(673);
+    }
+
+    @include breakpoint(portrait-mobile-max) {
       position: relative;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
 
       & > * {
         position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
       }
     }
   }
 
   &-left__img {
     z-index: 2;
-    margin-top: 186px;
-    margin-left: 59px;
+    width: 58.6%;
+    height: 74.25%;
+    margin-top: 17%;
 
-    @include breakpoint(desktop-max) {
-      width: 50%;
-    }
-
-    @include breakpoint(ipad-max) {
-      margin-left: 0;
-    }
-
-    @include breakpoint(mobile-max) {
-      width: 100%;
+    @include breakpoint(portrait-mobile-max) {
+      width: 89%;
+      padding-top: em(61);
       opacity: 0.8;
     }
   }
 
   &-right {
     z-index: 2;
-    width: em(423);
-    margin-top: 155px;
-    margin-left: 18.7px;
+    width: 39.719%;
+    margin-top: 13%;
+    margin-left: em(10);
     color: $color-white;
 
-    @include breakpoint(mobile-max) {
-      width: 100%;
-      padding: 0 30px;
-      margin: 0;
-    }
-
     @include breakpoint(portrait-mobile-max) {
-      padding: 100px 30px 10px;
+      width: 100%;
+      top: 26%;
+      padding: 0 em(15);
     }
   }
 
@@ -411,16 +386,11 @@
     &__main {
       font-size: em(44);
 
-      @include breakpoint(ipad-max) {
-        font-size: em(40);
-      }
-
       @include breakpoint(mobile-max) {
-        font-size: em(44);
+        font-size: em(38);
       }
-
       @include breakpoint(portrait-mobile-max) {
-        font-size: 34px;
+        font-size: em(34);
       }
     }
 
@@ -428,15 +398,11 @@
       font-size: em(59);
       font-weight: 700;
 
-      @include breakpoint(ipad-max) {
-        font-size: em(43);
-      }
-
       @include breakpoint(mobile-max) {
-        font-size: em(59);
+        font-size: em(45);
       }
       @include breakpoint(portrait-mobile-max) {
-        font-size: 39px;
+        font-size: em(39);
       }
     }
   }
@@ -1016,7 +982,7 @@
     margin-bottom: em(75);
     margin-left: em(63);
     background: transparent;
-    color: #fff;
+    color: $color-white;
 
     @include breakpoint(ipad-max) {
       margin-left: em(45.7);
@@ -1194,8 +1160,8 @@
     }
 
     @include breakpoint(portrait-mobile-max) {
-      width: 100%;
-      top: em(313);
+      width: 64%;
+      top: em(269);
       margin-top: 0;
     }
   }
@@ -1241,8 +1207,8 @@
       font-size: em(30);
     }
 
-    @include breakpoint(custom-small-mobile-max) {
-      font-size: em(25);
+    @include breakpoint(portrait-mobile-max) {
+      font-size: em(18);
     }
   }
 
@@ -1260,6 +1226,9 @@
   &__paragraph {
     @include breakpoint(mobile-max) {
       line-height: 21px;
+    }
+    @include breakpoint(portrait-mobile-max) {
+      // font-size: em(12);
     }
   }
 

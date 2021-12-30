@@ -25,79 +25,84 @@
 <body>
   <!-- Header  -->
   <header class="header">
-    <div class="header-left">
-      <div class="header-top">
-        <div class="header-top__info">
-          Share Price :
-          <b class="header-top__price">750</b>
-          <div class="triangle">
-            <div class="triangle__inner"></div>
+    <div class="container">
+      <div class="header-left">
+        <div class="header-top">
+          <div class="header-top__info">
+            Share Price :
+            <b class="header-top__price">750</b>
+            <div class="triangle">
+              <div class="triangle__inner"></div>
+            </div>
+            <b class="header-top__growth">+3</b>
           </div>
-          <b class="header-top__growth">+3</b>
+        </div>
+
+        <div class="header-bottom">
+          <a href="javascript:void(0)" class="header-bottom__link">About Us</a>
+          <a href="javascript:void(0)" class="header-bottom__link">Our Businesses</a>
+          <a href="javascript:void(0)" class="header-bottom__link">Investor Relations</a>
+          <a href="javascript:void(0)" class="header-bottom__link">Sustainability</a>
+          <a href="javascript:void(0)" class="header-bottom__link">Media</a>
+          <a href="javascript:void(0)" class="header-bottom__link">Career</a>
+
+          <nav class="navbar navbar-light">
+            <div class="container-fluid">
+              <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <i class='bx bx-menu'></i>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Our Businesses</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Investor Relations</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Sustainability</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Media</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Career</a>
+                    </li>
+                  </ul>
+                  <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <i class="bx bx-search">
+            <i class="circle"></i>
+          </i>
+
+          <form>
+            <input type="search" name="search" class="search" id="search" />
+          </form>
         </div>
       </div>
 
-      <div class="header-bottom">
-        <a href="javascript:void(0)" class="header-bottom__link">About Us</a>
-        <a href="javascript:void(0)" class="header-bottom__link">Our Businesses</a>
-        <a href="javascript:void(0)" class="header-bottom__link">Investor Relations</a>
-        <a href="javascript:void(0)" class="header-bottom__link">Sustainability</a>
-        <a href="javascript:void(0)" class="header-bottom__link">Media</a>
-        <a href="javascript:void(0)" class="header-bottom__link">Career</a>
-
-        <nav class="navbar navbar-light">
-          <div class="container-fluid">
-            <button class="navbar-toggler text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-              <i class='bx bx-menu'></i>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Our Businesses</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Investor Relations</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Sustainability</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Media</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Career</a>
-                  </li>
-                </ul>
-                <form class="d-flex">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </nav>
-
-        <i class="bx bx-search">
-          <i class="circle"></i>
-        </i>
-
-        <form>
-          <input type="search" name="search" class="search" id="search" />
-        </form>
+      <div class="header-right">
+        <h2 class="header-right__header"><b>Coromandel</b></h2>
+        <img src="app/images/icon.png" alt="Logo" class="header-right__img" />
       </div>
-    </div>
-
-    <div class="header-right">
-      <h2 class="header-right__header"><b>Coromandel</b></h2>
-      <img src="app/images/icon.png" alt="Logo" class="header-right__img" />
     </div>
   </header>
 
@@ -108,20 +113,23 @@
     <section class="hero">
       <!-- Image  -->
       <img src="app/images/hero.png" alt="Hero Banner" class="hero-img" />
-      <!-- Header -->
-      <div class="hero-header">
-        <h2 class="hero-header__main">Our Farmer's</h2>
-        <h1 class="hero-header__sub">First Approach</h1>
-        <!-- Button  -->
-        <a href="javascript:void(0)" class="hero__btn"> KNOW MORE </a>
-      </div>
-      <!-- Turnover  -->
-      <div class="hero-turnover">
-        <h3 class="hero-turnover__title">TURNOVER</h3>
-        <h1 class="hero-turnover__number">3224</h1>
-        <div class="hero-turnover-unit">
-          <div class="hero-turnover__qty">QTR 1</div>
-          <div class="hero-turnover__price">CRORE</div>
+
+      <div class="container">
+        <!-- Header -->
+        <div class="hero-header">
+          <h2 class="hero-header__main">Our Farmer's</h2>
+          <h1 class="hero-header__sub">First Approach</h1>
+          <!-- Button  -->
+          <a href="javascript:void(0)" class="hero__btn"> KNOW MORE </a>
+        </div>
+        <!-- Turnover  -->
+        <div class="hero-turnover">
+          <h3 class="hero-turnover__title">TURNOVER</h3>
+          <h1 class="hero-turnover__number">3224</h1>
+          <div class="hero-turnover-unit">
+            <div class="hero-turnover__qtr">QTR 1</div>
+            <div class="hero-turnover__price">CRORE</div>
+          </div>
         </div>
       </div>
     </section>
@@ -131,7 +139,7 @@
       <!-- Top Image  -->
       <img src="app/images/growth-top.png" alt="Top Design" class="co-growth-topimg" />
       <!-- Container  -->
-      <div class="co-growth-container">
+      <div class="container">
         <!-- Left Header  -->
         <div class="co-growth-left">
           <img src="app/images/icon.png" alt="Logo" class="co-growth-left__icon" />
@@ -148,108 +156,106 @@
           <!-- 1st Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/international-posts.jpg" alt=" Coromandel International posts"
-                class="co-growth-card__img" />
+            <img src="app/images/international-posts.jpg" alt=" Coromandel International posts"
+              class="co-growth-card__img" />
             <!-- Date -->
-              <h5 class="co-growth-card__date">24th July 2020</h5>
+            <h5 class="co-growth-card__date">24th July 2020</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel International posts Q1 results
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel International posts Q1 results
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Coromandel International Limited, India's leading agri
-                solutions provider is in the business of Fertilisers, Crop…
-              </p>
+            <p class="co-growth-card__paragraph">
+              Coromandel International Limited, India's leading agri
+              solutions provider is in the business of Fertilisers, Crop…
+            </p>
           </a>
           <!-- 2nd Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/steady-performance.jpg" alt="Steady Performance" class="co-growth-card__img" />
+            <img src="app/images/steady-performance.jpg" alt="Steady Performance" class="co-growth-card__img" />
             <!-- Date  -->
-              <h5 class="co-growth-card__date">27th April 2016</h5>
+            <h5 class="co-growth-card__date">27th April 2016</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel posts steady performance - Turnover crosses
-                Rs.11500 crores
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel posts steady performance - Turnover crosses
+              Rs.11500 crores
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Coromandel International Limited, India's second largest
-                Phosphatic fertiliser player, in the business segments of
-                Fertilisers,….
-              </p>
+            <p class="co-growth-card__paragraph">
+              Coromandel International Limited, India's second largest
+              Phosphatic fertiliser player, in the business segments of
+              Fertilisers,….
+            </p>
           </a>
           <!-- 3rd Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/international-posts-q1.jpg" alt="International posts Q1"
-                class="co-growth-card__img" />
+            <img src="app/images/international-posts-q1.jpg" alt="International posts Q1" class="co-growth-card__img" />
             <!-- Date -->
-              <h5 class="co-growth-card__date">24th July 2020</h5>
+            <h5 class="co-growth-card__date">24th July 2020</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel International posts Q1 results
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel International posts Q1 results
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry….
-              </p>
+            <p class="co-growth-card__paragraph">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry….
+            </p>
           </a>
           <!-- 4th Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/coromandel-international.jpg" alt="International posts Q1"
-                class="co-growth-card__img" />
+            <img src="app/images/coromandel-international.jpg" alt="International posts Q1"
+              class="co-growth-card__img" />
             <!-- Date  -->
-              <h5 class="co-growth-card__date">24th July 2020</h5>
+            <h5 class="co-growth-card__date">24th July 2020</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel International posts Q1 results
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel International posts Q1 results
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry….
-              </p>
+            <p class="co-growth-card__paragraph">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry….
+            </p>
           </a>
           <!-- 5th Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/international-posts-q1.jpg" alt="International posts Q1"
-                class="co-growth-card__img" />
+            <img src="app/images/international-posts-q1.jpg" alt="International posts Q1" class="co-growth-card__img" />
             <!-- Date -->
-              <h5 class="co-growth-card__date">24th July 2020</h5>
+            <h5 class="co-growth-card__date">24th July 2020</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel International posts Q1 results
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel International posts Q1 results
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Lorem Ipsum is simply dummy text of the printing Lorem Ipsum
-                is simply dummy text of the printing Lorem Ipsum is simply
-                dummy text of the printing Lorem Ipsum is simply dummy text of
-                the printing and typesetting industry….
-              </p>
+            <p class="co-growth-card__paragraph">
+              Lorem Ipsum is simply dummy text of the printing Lorem Ipsum
+              is simply dummy text of the printing Lorem Ipsum is simply
+              dummy text of the printing Lorem Ipsum is simply dummy text of
+              the printing and typesetting industry….
+            </p>
           </a>
           <!-- 6th Card  -->
           <a href="javascript:void(0)" class="co-growth-card">
             <!-- Image  -->
-              <img src="app/images/steady-performance.jpg" alt="Steady Performance" class="co-growth-card__img" />
+            <img src="app/images/steady-performance.jpg" alt="Steady Performance" class="co-growth-card__img" />
             <!-- Date  -->
-              <h5 class="co-growth-card__date">27th April 2016</h5>
+            <h5 class="co-growth-card__date">27th April 2016</h5>
             <!-- Header  -->
-              <h3 class="co-growth-card__header">
-                Coromandel posts steady performance - Turnover crosses
-                Rs.11500 crores
-              </h3>
+            <h3 class="co-growth-card__header">
+              Coromandel posts steady performance - Turnover crosses
+              Rs.11500 crores
+            </h3>
             <!-- Paragraph  -->
-              <p class="co-growth-card__paragraph">
-                Coromandel International Limited, India's second largest
-                Phosphatic fertiliser player, in the business segments of
-                Fertilisers,….
-              </p>
+            <p class="co-growth-card__paragraph">
+              Coromandel International Limited, India's second largest
+              Phosphatic fertiliser player, in the business segments of
+              Fertilisers,….
+            </p>
           </a>
         </div>
       </div>
@@ -258,12 +264,12 @@
     <!-- Solution  -->
     <section class="solution">
       <!-- Image  -->
-      <img src="app/images/nutrition-solution.jpg" alt="Image" class="solution__img" />
+      <!-- <img src="app/images/nutrition-solution.jpg" alt="Image" class="solution__img" /> -->
       <!-- Container  -->
-      <div class="solution-container">
+      <div class="container">
         <!-- Image  -->
         <img src="app/images/plant-nutrition-man.png" alt="Farmer" class="solution-left__img" />
-      
+
         <!-- Right  -->
         <div class="solution-right">
           <!-- Header  -->
@@ -446,15 +452,15 @@
     <!-- GROMOR SURAKSHA  -->
     <section class="gromor-suraksha">
       <img src="app/images/gromor-suraksha.png" alt="GROMOR SURAKSHA" />
-      
-      <a  href="javascript:void(0)" class="gromor-suraksha__our-product">
+
+      <a href="javascript:void(0)" class="gromor-suraksha__our-product">
         <!-- Images -->
         <img src="app/images/gromor-suraksha-product-1.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-2.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-3.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-4.png" alt="GROMOR SURAKSHA Product" />
         <img src="app/images/gromor-suraksha-product-5.png" alt="GROMOR SURAKSHA Product" />
-       
+
       </a>
     </section>
 
@@ -596,8 +602,7 @@
                     " placeholder="Email Id" />
               </div>
               <!-- Button  -->
-              <button type="button" class="btn btn-outline-warning footer-top__btn"
-                data-mdb-ripple-color="dark">
+              <button type="button" class="btn btn-outline-warning footer-top__btn" data-mdb-ripple-color="dark">
                 SUBSCRIBE
               </button>
             </div>

@@ -1,29 +1,27 @@
 .header {
   position: absolute;
   z-index: 2;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
-  padding: em(29.93) em(60) em(59.72);
   background: linear-gradient(
     to bottom,
     $color-green-burnham,
     rgba(0, 0, 0, 0)
   );
 
-  @include breakpoint(mobile-max) {
-    padding-right: em(40);
-    padding-left: em(40);
-  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: em(35);
+    padding-bottom: em(65);
 
-  @include breakpoint(portrait-mobile-max) {
-    flex-direction: column-reverse;
-    padding: em(8) em(29) em(4);
-  }
+    @include breakpoint(desktop-max) {
+      padding-top: em(23.86);
+      padding-bottom: em(53.65);
+    }
 
-  &-left {
     @include breakpoint(portrait-mobile-max) {
-      margin-top: em(8);
+      padding-top: em(12.61);
+      padding-bottom: em(42.4);
     }
   }
 
@@ -34,14 +32,6 @@
       display: inline-block;
       font-size: em(15);
       font-weight: 700;
-
-      @include breakpoint(ipad-max) {
-        margin-left: em(17, 15);
-      }
-
-      @include breakpoint(portrait-mobile-max) {
-        margin-left: 0;
-      }
     }
 
     &__price {
@@ -78,11 +68,7 @@
   &-bottom {
     display: flex;
     align-items: center;
-    padding-top: em(16.36);
-
-    @include breakpoint(mobile-max) {
-      padding-top: em(5);
-    }
+    padding-top: em(6);
 
     .navbar {
       display: none;
@@ -96,6 +82,10 @@
       &-toggler {
         border: em(1) solid $color-white;
 
+        @include breakpoint(custom-small-mobile-max) {
+          padding: 0 em(8);
+        }
+
         .bx-menu {
           font-size: em(28);
         }
@@ -106,9 +96,6 @@
       }
     }
 
-    @include breakpoint(portrait-mobile-max) {
-      padding-top: 0;
-    }
     &__link {
       color: $color-white;
 
@@ -176,18 +163,20 @@
     height: em(49);
     color: $color-white;
 
-    @include breakpoint(portrait-mobile-max) {
-      display: -webkit-box;
-      flex-direction: row-reverse;
-    }
-
     &__header {
       margin-top: em(23, 27);
       margin-right: em(4, 27);
       font-size: em(27);
 
-      @include breakpoint(portrait-mobile-max) {
-        margin-left: em(5);
+      @include breakpoint(custom-small-mobile-max) {
+        font-size: em(20);
+      }
+    }
+
+    &__img {
+      @include breakpoint(custom-small-mobile-max) {
+        width: em(33);
+        height: em(37);
       }
     }
   }
