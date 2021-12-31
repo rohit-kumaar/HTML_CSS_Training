@@ -1093,10 +1093,8 @@
 .co-chairman {
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
+  min-height: em(753);
 
   &::before {
     content: "";
@@ -1104,132 +1102,90 @@
     z-index: 2;
     top: 0;
     width: 100%;
-    height: em(175);
+    height: em(162);
     border-bottom-right-radius: em(200);
     background: $color-white;
 
-    @include breakpoint(desktop-max) {
-      height: em(114);
-    }
-
-    @include breakpoint(ipad-max) {
-      height: em(118);
-    }
-
     @include breakpoint(mobile-max) {
-      height: em(89);
+      height: em(215);
     }
-
     @include breakpoint(portrait-mobile-max) {
-      height: em(67);
+      height: em(306);
     }
   }
 
   &__bg-img {
     z-index: 1;
     width: 100%;
+    min-height: em(753);
+
+    @include breakpoint(mobile-max) {
+      min-height: em(1055);
+    }
 
     @include breakpoint(portrait-mobile-max) {
-      height: em(700);
+      min-height: em(1500);
     }
   }
 
   &-details {
     position: absolute;
-    z-index: 1;
-    top: 0;
-    width: em(855);
-    min-height: em(490);
-    margin-top: em(175);
+    top: 52.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 63.46%;
+    height: 63.51%;
     background: #00000040;
     color: $color-white;
-
-    @include breakpoint(desktop-max) {
-      width: em(759);
-      min-height: em(405);
-      margin-top: em(113);
-    }
-
-    @include breakpoint(ipad-max) {
-      width: em(483);
-      margin-top: em(44);
-    }
-
-    @include breakpoint(mobile-max) {
-      min-height: em(291);
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      width: 64%;
-      top: em(269);
-      margin-top: 0;
-    }
   }
 
   &-content {
-    width: em(471);
-    margin-top: em(140);
+    width: 54%;
+    margin-top: clamp(20px, 11vw, 140px);
     margin-left: em(57);
 
-    @include breakpoint(desktop-max) {
-      margin-top: em(75);
-    }
-
     @include breakpoint(ipad-max) {
-      position: absolute;
-      top: em(73);
-      width: em(439);
-      margin: 0;
+      width: 58%;
     }
 
     @include breakpoint(mobile-max) {
-      top: em(44);
+      width: 90%;
+      margin: em(304) em(23) 0;
     }
 
     @include breakpoint(portrait-mobile-max) {
-      width: 100%;
+      margin: em(433) em(9) 0;
     }
 
-    @include breakpoint(portrait-mobile-max) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: em(13);
+    @include breakpoint(custom-small-mobile-max) {
+      margin-top: em(385);
     }
   }
 
   &__name {
-    font-size: em(44);
+    font-size: clamp(24px, 3.2vw, 44px);
     font-weight: 700;
 
-    @include breakpoint(ipad-max) {
-      font-size: em(30);
-    }
-
-    @include breakpoint(portrait-mobile-max) {
-      font-size: em(18);
+    @include breakpoint(mobile-max) {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
-  &__position {
+  &__designation {
     margin-top: em(11, 20);
     margin-bottom: em(18, 20);
     font-size: em(20);
     font-weight: 700;
 
-    @include breakpoint(ipad-max) {
-      margin: 0;
+    @include breakpoint(portrait-mobile-max) {
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
 
   &__paragraph {
-    @include breakpoint(mobile-max) {
-      line-height: 21px;
-    }
-    @include breakpoint(portrait-mobile-max) {
-      // font-size: em(12);
-    }
+    text-align: justify;
   }
 
   &__img {
@@ -1237,28 +1193,28 @@
     z-index: 2;
     top: em(270);
     right: em(122);
-
-    @include breakpoint(desktop-max) {
-      top: em(178);
-      right: em(36);
-    }
+    width: 27.88%;
+    height: 50.54%;
 
     @include breakpoint(ipad-max) {
-      top: em(120);
-      right: em(10);
-      width: em(216);
-      height: em(244);
+      right: em(48);
+      width: 33.88%;
     }
 
     @include breakpoint(mobile-max) {
-      top: em(91);
-      right: em(1);
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 29%;
     }
 
     @include breakpoint(portrait-mobile-max) {
-      right: 0;
-      left: 0;
-      margin: 0 auto;
+      top: 36.1%;
+      width: 65%;
+      height: 27%;
+    }
+    @include breakpoint(custom-small-mobile-max) {
+      top: 34%;
     }
   }
 }
