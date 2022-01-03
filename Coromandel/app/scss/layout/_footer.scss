@@ -48,6 +48,10 @@
         display: flex;
         justify-content: center;
 
+        @include breakpoint(ipad-max) {
+          display: table;
+          width: 138px;
+        }
         @include breakpoint(portrait-mobile-max) {
           padding-left: em(10);
           margin-bottom: em(20);
@@ -57,6 +61,9 @@
       &:nth-child(3) {
         margin-left: 55px;
 
+        @include breakpoint(desktop-max) {
+          margin-left: 20px;
+        }
         @include breakpoint(portrait-mobile-max) {
           margin-left: 0;
         }
@@ -66,6 +73,10 @@
         margin-top: 41px;
         margin-left: 26px;
         text-align: right;
+
+        @include breakpoint(ipad-max) {
+          margin-left: 60px;
+        }
 
         @include breakpoint(portrait-mobile-max) {
           width: 100%;
