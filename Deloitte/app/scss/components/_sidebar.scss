@@ -106,14 +106,14 @@
       position: absolute;
       display: grid;
       place-items: center;
-      top: 103px;
-      right: -20px;
-      width: 30px;
+      top: rem(103);
+      right: rem(-20);
+      width: rem(30);
       aspect-ratio: 1 / 1;
       background: $color-green-apple-700;
       color: $color-white;
-      border-radius: 50px;
-      font-size: 23px;
+      border-radius: rem(50);
+      font-size: rem(23);
       text-align: center;
       transform: translateY(-50%);
       transition: all 0.5s ease;
@@ -123,7 +123,7 @@
 
   & i {
     color: $color-black;
-    font-size: 28px;
+    font-size: rem(28);
     text-align: center;
   }
 
@@ -167,13 +167,13 @@
       display: none;
       position: absolute;
       z-index: 3;
-      top: -20px;
+      top: rem(-20);
       left: calc(100% + 15px);
-      padding: 6px 12px;
-      border-radius: 4px;
-      background: #fff;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-      font-size: 15px;
+      padding: rem(6) rem(12);
+      border-radius: rem(4);
+      background: $color-white;
+      box-shadow: 0 rem(5) rem(10) rgba(0, 0, 0, 0.3);
+      font-size: rem(15);
       opacity: 0;
       white-space: nowrap;
       pointer-events: none;
@@ -185,7 +185,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    border-radius: 12px;
+    border-radius: rem(12);
     text-decoration: none;
     transition: all 0.4s ease;
 
@@ -200,18 +200,18 @@
   }
 
   & li i {
-    border-radius: 12px;
+    border-radius: rem(12);
     font-size: rem(14);
   }
 
   .settings {
     position: absolute;
     z-index: 20;
-    bottom: 55px;
+    bottom: rem(55);
     display: none;
-    width: 178px;
-    height: 100px;
-    border-radius: 10px;
+    width: rem(178);
+    height: rem(100);
+    border-radius: rem(10);
     margin-bottom: 0 !important;
     background: $color-white;
 
@@ -225,12 +225,12 @@
 
     #triangle-down {
       position: absolute;
-      right: -10px;
+      right: rem(-10);
       width: 0;
       height: 0;
-      border-top: 33px solid $color-white;
-      border-right: 24px solid transparent;
-      border-left: 5px solid transparent;
+      border-top: rem(33) solid $color-white;
+      border-right: rem(24) solid transparent;
+      border-left: rem(5) solid transparent;
       transform: rotate(332deg);
     }
   }
@@ -243,10 +243,10 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 221px;
-    height: 60px;
-    padding: 10px 14px;
-    border-top: 1px solid $color-grey-light;
+    width: rem(221);
+    height: rem(60);
+    padding: rem(10) rem(14);
+    border-top: rem(1) solid $color-grey-light;
     background: $color-white-cultured;
     transition: all 0.5s ease;
     overflow: hidden;
@@ -265,17 +265,15 @@
     }
 
     & #log_out {
-      display: block;
-      width: 50px;
-      background: none;
       position: absolute;
       top: 50%;
       right: 0;
-
-      height: 60px;
-      border-radius: 0px;
-
-      line-height: 60px;
+      display: block;
+      width: rem(50);
+      height: rem(60);
+      border-radius: 0;
+      background: none;
+      line-height: rem(60);
       transform: translateY(-50%);
       transition: all 0.5s ease;
       cursor: pointer;
@@ -291,7 +289,7 @@
   & li img {
     width: rem(34);
     height: rem(33);
-    border-radius: 6px;
+    border-radius: rem(6);
     margin-right: rem(11);
     object-fit: cover;
   }
