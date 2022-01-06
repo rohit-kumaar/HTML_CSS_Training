@@ -3,74 +3,71 @@
   z-index: 10;
   top: 0;
   left: 0;
-  width: 67px;
+  width: 221px;
   height: 100vh;
   padding: rem(33) rem(9) 0 rem(23);
-  background: $color-green-apple-700;
+  background: $color-white-cultured;
+
   transition: all 0.5s ease;
 
   &.open {
-    width: 221px;
-    background: $color-white-cultured;
+    width: 67px;
+    background: $color-green-apple-700;
+
+    & li:hover .tooltip {
+      display: block;
+    }
 
     & li a {
       &:hover {
         & .sidebar-list__name,
         & i {
-          color: $color-black;
-          font-weight: 700;
+          color: $color-white;
         }
       }
     }
 
     & .sidebar-logo .sidebar-logo__name {
-      opacity: 1;
+      opacity: 0;
     }
 
     & .sidebar-logo .sidebar-logo__name .circle {
-      position: relative;
-      display: inline-block;
-      top: rem(26);
-      right: 0;
-      width: 0.4375rem;
-      height: 0.4375rem;
-      border-radius: 3.125rem;
-      background: $color-green-apple-700;
-    }
-
-    & .sidebar-logo img {
       display: none;
     }
 
+    & .sidebar-logo img {
+      display: block;
+    }
+
     & .sidebar-logo #btn {
-      background: $color-green-apple-700;
+      background: $color-black;
       text-align: right;
     }
 
     & li .tooltip {
-      display: none;
+      display: block;
     }
 
     & li a .sidebar-list__name {
       pointer-events: auto;
-      opacity: 1;
+      opacity: 0;
     }
 
     & li.profile {
-      width: 221px;
-      border-top: 1px solid $color-grey-light;
-      background: $color-white-cultured;
+      width: 67px;
+      border-top: 1px solid $color-black;
+      background: $color-green-apple-700;
 
       & #log_out {
-        display: block;
-        width: 50px;
-        background: none;
+        display: none;
+        width: 100%;
+        background: #1d1b31;
       }
 
       & .profile-details .name_job .name,
       & .profile-details .name_job .job {
-        color: $color-black;
-        opacity: 1;
+        color: $color-white;
+        opacity: 0;
       }
     }
   }
@@ -80,7 +77,7 @@
     display: flex;
 
     img {
-      display: block;
+      display: none;
       margin-left: rem(-6);
       transition: all 0.1s ease;
     }
@@ -90,11 +87,18 @@
       font-size: rem(29.94px);
       font-weight: 900;
       color: $color-black;
-      opacity: 0;
+      opacity: 1;
       transition: all 0.01ms ease;
 
       .circle {
-        display: none;
+        position: relative;
+        display: inline-block;
+        top: rem(26);
+        right: 0;
+        width: 0.4375rem;
+        height: 0.4375rem;
+        border-radius: 3.125rem;
+        background: $color-green-apple-700;
       }
     }
 
@@ -106,7 +110,7 @@
       right: -20px;
       width: 30px;
       aspect-ratio: 1 / 1;
-      background: $color-black;
+      background: $color-green-apple-700;
       color: $color-white;
       border-radius: 50px;
       font-size: 23px;
@@ -134,7 +138,7 @@
       white-space: nowrap;
       pointer-events: none;
       transition: 0.4s;
-      opacity: 0;
+      opacity: 1;
     }
   }
 
@@ -151,6 +155,7 @@
     }
 
     &:hover .tooltip {
+      display: none;
       top: 50%;
       pointer-events: auto;
       transition: all 0.4s ease;
@@ -159,6 +164,7 @@
     }
 
     & .tooltip {
+      display: none;
       position: absolute;
       z-index: 3;
       top: -20px;
@@ -168,7 +174,6 @@
       background: #fff;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
       font-size: 15px;
-      font-weight: 400;
       opacity: 0;
       white-space: nowrap;
       pointer-events: none;
@@ -187,7 +192,8 @@
     &:hover {
       & .sidebar-list__name,
       & i {
-        color: $color-white;
+        color: $color-black;
+        font-weight: 700;
         transition: all 0.5s ease;
       }
     }
@@ -237,11 +243,11 @@
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 67px;
+    width: 221px;
     height: 60px;
     padding: 10px 14px;
-    border-top: 1px solid $color-black;
-    background: $color-green-apple-700;
+    border-top: 1px solid $color-grey-light;
+    background: $color-white-cultured;
     transition: all 0.5s ease;
     overflow: hidden;
 
@@ -249,9 +255,9 @@
     & .job {
       font-size: rem(13);
       font-weight: 600;
-      color: $color-white;
+      color: $color-black;
       white-space: nowrap;
-      opacity: 0;
+      opacity: 1;
     }
 
     & .job {
@@ -259,14 +265,16 @@
     }
 
     & #log_out {
+      display: block;
+      width: 50px;
+      background: none;
       position: absolute;
       top: 50%;
       right: 0;
-      display: none;
-      width: 100%;
+
       height: 60px;
       border-radius: 0px;
-      background: #1d1b31;
+
       line-height: 60px;
       transform: translateY(-50%);
       transition: all 0.5s ease;
@@ -294,8 +302,8 @@
   position: relative;
   z-index: 2;
   top: 0;
-  left: 67px;
-  width: calc(100% - 67px);
+  left: 221px;
+  width: calc(100% - 221px);
   min-height: 100vh;
   background: #ffffff;
   transition: all 0.5s ease;
@@ -309,8 +317,8 @@
   }
 }
 .sidebar.open ~ .dashboard {
-  left: 221px;
-  width: calc(100% - 221px);
+  left: 61px;
+  width: calc(100% - 61px);
 }
 
 // @media (max-width: 420px) {

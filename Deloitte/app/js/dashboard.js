@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function menuBtnChange() {
     if (sidebar.classList.contains("open")) {
-      closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");
-    } else {
       closeBtn.classList.replace("bx-chevron-left", "bx-chevron-right");
+    } else {
+      closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");
     }
   }
 });
