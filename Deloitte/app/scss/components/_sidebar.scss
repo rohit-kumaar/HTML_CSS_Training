@@ -58,6 +58,7 @@
 
     & li.profile {
       width: 221px;
+      border-top: 1px solid $color-grey-light;
       background: $color-white-cultured;
 
       & #log_out {
@@ -197,13 +198,49 @@
     font-size: rem(14);
   }
 
+  .settings {
+    position: absolute;
+    z-index: 20;
+    bottom: 55px;
+    display: none;
+    width: 178px;
+    height: 100px;
+    border-radius: 10px;
+    margin-bottom: 0 !important;
+    background: $color-white;
+
+    a {
+      width: auto;
+      margin-top: rem(12);
+      margin-left: rem(18);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    #triangle-down {
+      position: absolute;
+      right: -10px;
+      width: 0;
+      height: 0;
+      border-top: 33px solid $color-white;
+      border-right: 24px solid transparent;
+      border-left: 5px solid transparent;
+      transform: rotate(332deg);
+    }
+  }
+
+  .active {
+    display: block;
+  }
+
   & li.profile {
     position: fixed;
     left: 0;
-    bottom: -8px;
+    bottom: 0;
     width: 67px;
     height: 60px;
     padding: 10px 14px;
+    border-top: 1px solid $color-black;
     background: $color-green-apple-700;
     transition: all 0.5s ease;
     overflow: hidden;
