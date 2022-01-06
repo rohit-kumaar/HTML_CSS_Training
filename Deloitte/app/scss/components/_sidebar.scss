@@ -1,0 +1,233 @@
+.sidebar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 78px;
+  height: 100vh;
+  padding: rem(33) rem(9) 0 rem(23);
+  background: $color-green-apple-700;
+  color: $color-white;
+  transition: all 0.5s ease;
+
+  &.open {
+    width: 221px;
+
+    & .sidebar-logo .sidebar-logo__name {
+      opacity: 1;
+    }
+
+    & .sidebar-logo #btn {
+      text-align: right;
+    }
+
+    & li .tooltip {
+      display: none;
+    }
+
+    & li a .sidebar-list__name {
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    & li.profile {
+      width: 221px;
+
+      & #log_out {
+        width: 50px;
+        background: none;
+      }
+    }
+  }
+
+  &-logo {
+    position: relative;
+
+    &__name {
+      font-size: rem(29.94px);
+      font-weight: 900;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+
+    #btn {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      font-size: 23px;
+      text-align: center;
+      cursor: pointer;
+      transform: translateY(-50%);
+      transition: all 0.5s ease;
+    }
+  }
+
+  & i {
+    min-width: rem(45);
+    height: 60px;
+    color: $color-white;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  &-list {
+    margin-top: rem(61.63px);
+    height: 100%;
+
+    &__name {
+      font-size: rem(12px);
+      // font-weight: 400;
+      color: $color-white;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: 0.4s;
+      opacity: 0;
+    }
+  }
+
+  & li {
+    position: relative;
+    // margin-bottom: rem(13);
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: rem(8);
+    }
+
+    &:hover .tooltip {
+      top: 50%;
+      pointer-events: auto;
+      transition: all 0.4s ease;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+
+    & .tooltip {
+      position: absolute;
+      z-index: 3;
+      top: -20px;
+      left: calc(100% + 15px);
+      padding: 6px 12px;
+      border-radius: 4px;
+      background: #fff;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+      font-size: 15px;
+      font-weight: 400;
+      opacity: 0;
+      white-space: nowrap;
+      pointer-events: none;
+      transition: 0s;
+    }
+  }
+
+  & li a {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    background: #11101d;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background: #fff;
+
+      & .sidebar-list__name,
+      & i {
+        color: #11101d;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+
+  & li i {
+    height: 50px;
+    border-radius: 12px;
+    font-size: 18px;
+    line-height: 50px;
+  }
+
+  & li.profile {
+    position: fixed;
+    left: 0;
+    bottom: -8px;
+    width: 78px;
+    height: 60px;
+    padding: 10px 14px;
+    background: #1d1b31;
+    transition: all 0.5s ease;
+    overflow: hidden;
+
+    & .name,
+    & .job {
+      font-size: rem(13);
+      font-weight: 600;
+      color: $color-white;
+      white-space: nowrap;
+    }
+
+    & .job {
+      font-size: rem(12);
+    }
+
+    & #log_out {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 100%;
+      height: 60px;
+      border-radius: 0px;
+      background: #1d1b31;
+      line-height: 60px;
+      transform: translateY(-50%);
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+  }
+
+  & li .profile-details {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  & li img {
+    width: rem(34);
+    height: rem(33);
+    border-radius: 6px;
+    margin-right: rem(11);
+    object-fit: cover;
+  }
+}
+
+// TODO: DASHBBOARD
+.dashboard {
+  position: relative;
+  z-index: 2;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  min-height: 100vh;
+  background: #e4e9f7;
+  transition: all 0.5s ease;
+
+  &-text {
+    display: inline-block;
+    margin: 18px;
+    color: #11101d;
+    font-size: 25px;
+    font-weight: 500;
+  }
+}
+.sidebar.open ~ .dashboard {
+  left: 221px;
+  width: calc(100% - 221px);
+}
+
+// @media (max-width: 420px) {
+//   .sidebar li .tooltip {
+//     display: none;
+//   }
+// }

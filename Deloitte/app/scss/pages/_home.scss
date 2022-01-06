@@ -8,9 +8,7 @@
   }
 
   &__img {
-    @include breakpoint(mobile-max) {
-      height: 33.625rem;
-    }
+    height: 100vh;
   }
 
   &-content {

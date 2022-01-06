@@ -9,9 +9,6 @@
     border: 0.0625rem solid $color-grey-davys;
     border-radius: 0.625rem;
     background: $color-black;
-    // TODO: FOR JAVASCRIPT
-    // color: white;
-    // font-weight: 700;
     opacity: 0.5;
     @include breakpoint(portrait-mobile-max) {
       width: 17.1875rem;
