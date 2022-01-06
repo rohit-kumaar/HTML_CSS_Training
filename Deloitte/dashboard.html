@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="app/images/icon/deloitte.ico"
-      type="image/x-icon"
-    />
-    <title>Dashboard</title>
-    <!-- Boxicons -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- CSS -->
-    <link rel="stylesheet" href="app/css/style.css" />
-  </head>
 
-  <body>
-    <aside class="sidebar">
-      <div class="sidebar-logo">
-        <img src="app/images/icon/deloitte.ico" alt="logo" />
-        <h1 class="sidebar-logo__name">
-          Deloitte
-          <span class="circle"></span>
-        </h1>
-        <i class="bx bx-chevron-right" id="btn"></i>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="app/images/icon/deloitte.ico" type="image/x-icon" />
+  <title>Dashboard</title>
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="app/css/style.css" />
+</head>
 
-      <ul class="sidebar-list">
-        <li>
-          <a href="#">
-            <i class="bx bx-tachometer"></i>
-            <span class="sidebar-list__name">Dashboard</span>
-          </a>
-          <span class="tooltip">Dashboard</span>
-        </li>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="app/images/icon/deloitte.ico" alt="logo" />
+      <h1 class="sidebar-logo__name">
+        Deloitte
+        <span class="circle"></span>
+      </h1>
+      <i class="bx bx-chevron-right" id="btn"></i>
+    </div>
 
-        <li>
-          <a href="#">
-            <i class="bx bx-user"></i>
-            <span class="sidebar-list__name">User Management</span>
-          </a>
-          <span class="tooltip">User Management</span>
-        </li>
+    <ul class="sidebar-list">
+      <li>
+        <a href="#">
+          <i class="bx bx-tachometer"></i>
+          <span class="sidebar-list__name">Dashboard</span>
+        </a>
+        <span class="tooltip">Dashboard</span>
+      </li>
 
-        <li>
-          <a href="#">
-            <i class="bx bxs-wallet"></i>
-            <span class="sidebar-list__name">Asset Management</span>
-          </a>
-          <span class="tooltip">Asset Management</span>
-        </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-user"></i>
+          <span class="sidebar-list__name">User Management</span>
+        </a>
+        <span class="tooltip">User Management</span>
+      </li>
 
-        <li>
-          <a href="#">
-            <i class="bx bx-network-chart"></i>
-            <span class="sidebar-list__name">Container Management</span>
-          </a>
-          <span class="tooltip">Container Management</span>
-        </li>
+      <li>
+        <a href="#">
+          <i class="bx bxs-wallet"></i>
+          <span class="sidebar-list__name">Asset Management</span>
+        </a>
+        <span class="tooltip">Asset Management</span>
+      </li>
 
-        <li>
-          <a href="#">
-            <i class="bx bx-folder"></i>
-            <span class="sidebar-list__name">Assessment Master</span>
-          </a>
-          <span class="tooltip">Assessment Master</span>
-        </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-network-chart"></i>
+          <span class="sidebar-list__name">Container Management</span>
+        </a>
+        <span class="tooltip">Container Management</span>
+      </li>
 
-        <li>
-          <a href="#">
-            <i class="bx bx-pie-chart-alt-2"></i>
-            <span class="sidebar-list__name">Project Status Report</span>
-          </a>
-          <span class="tooltip">Project Status Report</span>
-        </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-folder"></i>
+          <span class="sidebar-list__name">Assessment Master</span>
+        </a>
+        <span class="tooltip">Assessment Master</span>
+      </li>
 
-        <li class="settings" id="settings">
-          <a href="javascript:void(0)">My Profile</a>
-          <a href="javascript:void(0)">Settings</a>
-          <a href="javascript:void(0)">Logout</a>
-          <span id="triangle-down"></span>
-        </li>
+      <li>
+        <a href="#">
+          <i class="bx bx-pie-chart-alt-2"></i>
+          <span class="sidebar-list__name">Project Status Report</span>
+        </a>
+        <span class="tooltip">Project Status Report</span>
+      </li>
 
-        <li class="profile">
-          <div class="profile-details">
-            <img src="app/images/profile-img.png" alt="profileImg" />
-            <div class="name_job">
-              <h2 class="name">Kinjal Jain</h2>
-              <div class="job">Administrator</div>
-            </div>
+      <li class="settings" id="settings">
+        <a href="javascript:void(0)">My Profile</a>
+        <a href="javascript:void(0)">Settings</a>
+        <a href="javascript:void(0)">Logout</a>
+        <span id="triangle-down"></span>
+      </li>
+
+      <li class="profile">
+        <div class="profile-details">
+          <img src="app/images/profile-img.png" alt="profileImg" />
+          <div class="name_job">
+            <h2 class="name">Kinjal Jain</h2>
+            <div class="job">Administrator</div>
           </div>
-          <i class="bx bx-chevron-up" id="log_out"></i>
-        </li>
-      </ul>
-    </aside>
+        </div>
+        <i class="bx bx-chevron-up" id="log_out"></i>
+      </li>
+    </ul>
+  </aside>
 
-    <section class="dashboard">
-      <h2 class="dashboard-text">Dashboard</h2>
-    </section>
-  </body>
-  <!-- Javascript  -->
-  <script src="app/js/dashboard.js"></script>
+  <section class="dashboard">
+    <h2 class="dashboard-text">Dashboard</h2>
+  </section>
+
+
+
+
+</body>
+<!-- Javascript  -->
+<script src="app/js/dashboard.js"></script>
+
 </html>

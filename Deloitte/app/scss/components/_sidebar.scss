@@ -7,9 +7,9 @@
   height: 100vh;
   padding: rem(33) rem(9) 0 rem(23);
   background: $color-white-cultured;
-
   transition: all 0.5s ease;
 
+  //  For small size
   &.open {
     width: 67px;
     background: $color-green-apple-700;
@@ -55,7 +55,7 @@
 
     & li.profile {
       width: 67px;
-      border-top: 1px solid $color-black;
+      border-top: 1px solid $color-grey-web;
       background: $color-green-apple-700;
 
       & #log_out {
@@ -84,7 +84,7 @@
 
     &__name {
       display: flex;
-      font-size: rem(29.94px);
+      font-size: rem(29.94);
       font-weight: 900;
       color: $color-black;
       opacity: 1;
@@ -317,8 +317,8 @@
   }
 }
 .sidebar.open ~ .dashboard {
-  left: 61px;
-  width: calc(100% - 61px);
+  left: 67px;
+  width: calc(100% - 67px);
 }
 
 // @media (max-width: 420px) {
