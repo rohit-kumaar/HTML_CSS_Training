@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let sidebar = document.querySelector(".sidebar");
+  const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("btn");
   const log_out = document.getElementById("log_out");
   const settings = document.getElementById("settings");
+  const darkModeBtn = document.getElementById("darkModeBtn");
+  const dashboard = document.getElementById("dashboard");
 
   /**
    * When the user clicks the close button, the sidebar should close.
@@ -52,4 +54,24 @@ document.addEventListener("DOMContentLoaded", function () {
       showPage(this.dataset.page);
     });
   });
+
+  /**
+  * *When the user clicks the "Dark Mode" button, the sidebar and the body of the page will toggle
+ their "darkmode" class.*
+  * 
+  * Now, let's add a button to the sidebar that will allow the user to switch back to the light
+ mode.
+  * @returns None
+  */
+
+  const dashboardHeader = document.querySelector(".dashboard-header");
+
+  darkModeBtn.addEventListener("click", () => {
+    darkmode(dashboard);
+    darkmode(dashboardHeader);
+  });
+
+  function darkmode(params) {
+    params.classList.toggle("darkmode");
+  }
 });

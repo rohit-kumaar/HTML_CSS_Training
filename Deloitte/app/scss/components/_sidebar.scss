@@ -300,7 +300,11 @@
 }
 
 //Inside Main Section
-section:not(:first-child) {
+.user-management,
+.asset-management,
+.container-management,
+.assessment-master,
+.project-status {
   display: none;
 }
 
@@ -311,14 +315,12 @@ section:not(:first-child) {
 .container-management,
 .assessment-master,
 .project-status {
-  border: 1px solid red;
   position: relative;
   z-index: 2;
   top: 0;
   left: 221px;
   width: calc(80% - 221px);
   min-height: 100vh;
-  background: #ffffff;
   transition: all 0.5s ease;
 
   &-text {
@@ -344,14 +346,20 @@ section:not(:first-child) {
 
 .dashboard {
   padding: rem(21) rem(7) rem(39) rem(41);
-  background: $color-white;
+
+  &.darkmode {
+    background: $color-black-eerie;
+  }
 
   &-header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: rem(109);
-    border: 1px solid red;
+
+    &.darkmode {
+      color: $color-white;
+    }
   }
 
   &-left {
@@ -434,13 +442,68 @@ section:not(:first-child) {
     }
   }
 
-  &-items {
-    border: 1px solid #000;
+  &-main {
     width: 100%;
-    height: 300px;
+    padding-right: rem(90);
     &__title {
-      color: #000;
+      font-size: rem(12);
+      opacity: 0.3;
     }
+  }
+
+  &-items {
+    // width: rem(618);
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(15);
+    margin-top: rem(8);
+
+    & > * {
+      flex-grow: 1;
+    }
+  }
+
+  &-card {
+    width: rem(196);
+    padding: rem(17) rem(16) rem(17) rem(22);
+    box-shadow: 0 rem(4) rem(24) #c4c5c340;
+
+    &:hover {
+      color: $color-black;
+    }
+    &__msg {
+      width: fit-content;
+      padding: rem(1) rem(7) rem(2);
+      border-radius: rem(20);
+      margin-left: auto;
+      background: $color-grey-davys;
+      color: $color-white;
+      font-size: rem(8);
+      font-weight: 600;
+
+      &--bg-white {
+        background: $color-silver;
+        color: $color-grey-davys-100;
+      }
+    }
+
+    &__header {
+      width: rem(112);
+      margin-top: rem(10);
+      margin-bottom: rem(4);
+      font-size: rem(14);
+      font-weight: 700;
+    }
+    &__sub-header {
+      font-size: rem(11);
+    }
+  }
+
+  .bxs-plus-square {
+    margin-top: rem(35);
+    background: $color-white-cultured;
+    color: $color-silver;
+    font-size: rem(78);
   }
 }
 

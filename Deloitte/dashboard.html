@@ -18,7 +18,7 @@
 
 <body>
 
-  <aside class="sidebar">
+  <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
       <img src="app/images/icon/deloitte.ico" alt="logo" />
       <h1 class="sidebar-logo__name">
@@ -98,7 +98,7 @@
   </aside>
 
 
-  <main class="main">
+  
     <section class="dashboard" id="dashboard">
       <header class="dashboard-header">
         <div class="dashboard-left">
@@ -125,7 +125,7 @@
             </ul>
           </div>
 
-          <div class="dashboard-dark-mode">
+          <div class="dashboard-dark-mode" id="darkModeBtn">
             <span class="black"></span>
             <span class="white"></span>
           </div>
@@ -135,11 +135,55 @@
         </div>
       </header>
 
-      <div class="dashboard-items">
-        <h2 class="dashboard-items__title">
+      <div class="dashboard-main">
+        <h2 class="dashboard-main__title">
           Discover the data
         </h2>
+        <div class="dashboard-items">
+          <a href="javascript:void(0)" class="dashboard-card">
+            <h3 class="dashboard-card__msg">
+              Compliance
+            </h3>
+            <img src="app/images/card.png" alt="" class="dashboard-card__img">
+            <h2 class="dashboard-card__header">
+              CISO & Business
+              Unit View
+            </h2>
+            <p class="dashboard-card__sub-header">
+              Dashboard with 360 degree view to the CISO
+            </p>
+          </a>
+
+          <a href="javascript:void(0)" class="dashboard-card">
+            <h3 class="dashboard-card__msg dashboard-card__msg--bg-white">
+              RISK
+            </h3>
+            <img src="app/images/card.png" alt="" class="dashboard-card__img">
+            <h2 class="dashboard-card__header">
+              Retail Sales Audit
+            </h2>
+            <p class="dashboard-card__sub-header">
+              Assessment & reconcilation of the retail sales against risk controls
+            </p>
+          </a>
+
+          <a href="javascript:void(0)" class="dashboard-card">
+            <h3 class="dashboard-card__msg dashboard-card__msg--bg-white">
+              TOPIC
+            </h3>
+            <img src="app/images/card.png" alt="" class="dashboard-card__img">
+            <h2 class="dashboard-card__header">
+              Assessment Master
+            </h2>
+            <p class="dashboard-card__sub-header">
+              Resords of all the assessments in available
+            </p>
+          </a>
+
+
+        </div>
       </div>
+      <i class='bx bxs-plus-square'></i>
 
 
     </section>
@@ -163,7 +207,7 @@
     <section class="project-status" id="project-status">
       <h2 class="dashboard-text">Project Status</h2>
     </section>
-  </main>
+  
 </body>
 <!-- Bootstrap Bundle with Popper -->
 <script src="app/js/bootstrap.bundle.min.js"
