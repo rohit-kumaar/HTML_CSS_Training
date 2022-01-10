@@ -93,7 +93,7 @@
       .circle {
         position: relative;
         display: inline-block;
-        top: rem(26);
+        top: rem(22);
         right: 0;
         width: 0.4375rem;
         height: 0.4375rem;
@@ -300,26 +300,18 @@
 }
 
 //Inside Main Section
-.user-management,
-.asset-management,
-.container-management,
-.assessment-master,
-.project-status {
+main section:not(:first-child) {
   display: none;
 }
 
 //DASHBBOARD
-.dashboard,
-.user-management,
-.asset-management,
-.container-management,
-.assessment-master,
-.project-status {
+main section {
+  border: 1px solid red;
   position: relative;
   z-index: 2;
   top: 0;
   left: 221px;
-  width: calc(80% - 221px);
+  width: calc(100% - 221px);
   min-height: 100vh;
   transition: all 0.5s ease;
 
@@ -332,16 +324,9 @@
   }
 }
 
-.sidebar.close ~ {
-  .dashboard,
-  .user-management,
-  .asset-management,
-  .container-management,
-  .assessment-master,
-  .project-status {
-    left: 67px;
-    width: calc(100% - 67px);
-  }
+.sidebar.close ~ main section {
+  left: 67px;
+  width: calc(100% - 67px);
 }
 
 .dashboard {
@@ -351,7 +336,7 @@
     background: $color-black-eerie;
   }
 
-  &-header {
+  &__header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -409,7 +394,7 @@
     }
   }
 
-  &-dark-mode {
+  &-darkmode {
     position: relative;
     width: rem(19.81);
     height: rem(19);
