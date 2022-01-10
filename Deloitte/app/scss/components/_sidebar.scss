@@ -306,7 +306,6 @@ main section:not(:first-child) {
 
 //DASHBBOARD
 main section {
-  border: 1px solid red;
   position: relative;
   z-index: 2;
   top: 0;
@@ -491,9 +490,3 @@ main section {
     font-size: rem(78);
   }
 }
-
-// @media (max-width: 420px) {
-//   .sidebar li .tooltip {
-//     display: none;
-//   }
-// }
