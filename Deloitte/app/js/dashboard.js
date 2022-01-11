@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const log_out = document.getElementById("log_out");
   const settings = document.getElementById("settings");
   const darkModeBtn = document.getElementById("darkModeBtn");
-  const dashboard = document.getElementById("dashboard");
+  const notificationBell = document.getElementById("notificationBell");
+  const notification = document.getElementById("notification");
+  const main = document.getElementById("main");
+  const section = main.querySelectorAll("section");
 
   closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("close");
@@ -37,9 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  const dashboardHeader = document.querySelector(".dashboard__header");
+  // const dashboardHeader = document.querySelector(".dashboard__header");
 
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("darkmode");
+  });
+
+  notificationBell.addEventListener("click", () => {
+    notification.classList.toggle("active");
+    section[0].classList.toggle("active");
   });
 });

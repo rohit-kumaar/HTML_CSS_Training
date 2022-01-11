@@ -55,8 +55,13 @@
 
     & li.profile {
       width: 67px;
-      border-top: 1px solid $color-grey-web;
       background: $color-green-apple-700;
+
+      &::before {
+        content: "";
+        width: 60%;
+        border-top: rem(2) solid $color-grey-web;
+      }
 
       & #log_out {
         display: none;
@@ -251,10 +256,18 @@
     width: rem(221);
     height: rem(60);
     padding: rem(10) rem(14);
-    border-top: rem(1) solid $color-grey-light;
     background: $color-white-cultured;
     transition: all 0.5s ease;
     overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 87%;
+      border-top: rem(2) solid $color-grey-light;
+      opacity: 0.6;
+    }
 
     & .name,
     & .job {
@@ -300,10 +313,8 @@
   }
 }
 
-//Inside Main Section
-main section:not(:first-child) {
-  display: none;
-}
+// //Inside Main Section
+// main section
 
 //DASHBBOARD
 main section {
@@ -311,19 +322,31 @@ main section {
   z-index: 2;
   top: 0;
   left: 221px;
-  width: calc(80% - 221px);
+  width: calc(100% - 266px);
   min-height: 100vh;
   transition: all 0.5s ease;
+
+  &.active {
+    width: calc(100% - 531px);
+  }
+
+  &:not(:first-child) {
+    display: none;
+  }
 }
 
 .sidebar.close ~ main section {
   left: 115px;
-  width: calc(80% - 115px);
+  width: calc(100% - 160px);
   transition: all 0.5s ease;
+
+  &.active {
+    width: calc(100% - 425px);
+  }
 }
 
 .dashboard {
-  padding: rem(21) rem(7) rem(39) rem(41);
+  padding: rem(21) 0 rem(39) rem(41);
 
   &.darkmode {
     background: $color-black-eerie;
@@ -355,6 +378,23 @@ main section {
     display: flex;
     align-items: center;
     height: rem(34.14);
+
+    &__add-assessment {
+      display: grid;
+      place-items: center;
+      width: 143px;
+      height: 30px;
+      border-radius: 5px;
+      margin-inline: rem(25);
+      background: $color-blue-star-command;
+      color: $color-white;
+      font-size: 10px;
+
+      &:hover {
+        color: $color-blue-sapphire;
+        font-weight: 700;
+      }
+    }
   }
 
   .dropdown {
@@ -512,4 +552,28 @@ main section {
   .dashboard-card:first-child
   .dashboard-card__message {
   margin-left: auto;
+}
+
+.notification {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: rem(45);
+  height: 100%;
+  padding: rem(25) 0 0 0;
+
+  &.active {
+    width: 310px;
+  }
+
+  &__bell {
+    position: absolute;
+    right: 22px;
+    cursor: pointer;
+    &::before {
+      content: "\e9d2";
+      color: $color-green-apple-700;
+      font-size: rem(24);
+    }
+  }
 }
