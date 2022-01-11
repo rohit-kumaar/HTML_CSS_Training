@@ -40,8 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // const dashboardHeader = document.querySelector(".dashboard__header");
-
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("darkmode");
   });

@@ -313,9 +313,6 @@
   }
 }
 
-// //Inside Main Section
-// main section
-
 //DASHBBOARD
 main section {
   position: relative;
@@ -555,20 +552,59 @@ main section {
 }
 
 .notification {
+  $notification: ".notification";
   position: fixed;
   top: 0;
   right: 0;
   width: rem(45);
   height: 100%;
-  padding: rem(25) 0 0 0;
+  padding: rem(25) rem(16) 0 rem(20);
+  transition: all 0.5s ease;
 
   &.active {
-    width: 310px;
+    width: rem(310);
+    transition: all 0.5s ease;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    padding-bottom: rem(17);
+
+    & > * {
+      transition: all 0.5s ease;
+    }
+
+    #{$notification}.active & {
+      border-bottom: rem(2) solid $color-grey-light;
+    }
+  }
+
+  &__left {
+    display: none;
+    border-bottom: none;
+
+    #{$notification}.active & {
+      display: block;
+    }
+  }
+
+  &__date {
+    font-size: rem(12);
+    font-weight: 600;
+  }
+
+  &__time {
+    font-size: rem(11);
+    font-weight: 600;
+    opacity: 0.5;
   }
 
   &__bell {
     position: absolute;
-    right: 22px;
+    right: rem(22);
     cursor: pointer;
     &::before {
       content: "\e9d2";
