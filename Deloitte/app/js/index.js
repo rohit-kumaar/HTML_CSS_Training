@@ -19,3 +19,4 @@ function style(textarea) {
     textarea.style.fontWeight = 400;
   }
 }
+

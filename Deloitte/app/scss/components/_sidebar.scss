@@ -12,7 +12,7 @@
   //  For small size
   &.close {
     width: 67px;
-    background: $color-green-apple-700;
+    background: $color-green-apple-700 !important;
 
     & li:hover .tooltip {
       display: block;
@@ -109,6 +109,7 @@
       top: rem(103);
       right: rem(-20);
       width: rem(30);
+      padding-top: rem(2);
       aspect-ratio: 1 / 1;
       background: $color-green-apple-700;
       color: $color-white;
@@ -310,22 +311,15 @@ main section {
   z-index: 2;
   top: 0;
   left: 221px;
-  width: calc(100% - 221px);
+  width: calc(80% - 221px);
   min-height: 100vh;
   transition: all 0.5s ease;
-
-  &-text {
-    display: inline-block;
-    margin: 18px;
-    color: #11101d;
-    font-size: 25px;
-    font-weight: 500;
-  }
 }
 
 .sidebar.close ~ main section {
-  left: 67px;
-  width: calc(100% - 67px);
+  left: 115px;
+  width: calc(80% - 115px);
+  transition: all 0.5s ease;
 }
 
 .dashboard {
@@ -351,7 +345,7 @@ main section {
       font-size: rem(20);
       font-weight: 700;
     }
-    &__msg {
+    &__message {
       font-size: rem(15);
       opacity: 0.7;
     }
@@ -365,6 +359,7 @@ main section {
 
   .dropdown {
     padding: 0 rem(13.23) 0 rem(13.66);
+    border-radius: rem(8);
     background: $color-white-cultured;
 
     &-toggle {
@@ -393,39 +388,6 @@ main section {
     }
   }
 
-  &-darkmode {
-    position: relative;
-    width: rem(19.81);
-    height: rem(19);
-    margin-left: rem(11.95);
-    margin-right: rem(6.19);
-    cursor: pointer;
-
-    & > * {
-      position: absolute;
-      width: 50%;
-      height: 100%;
-    }
-
-    .black {
-      border-top-left-radius: rem(10);
-      border-bottom-left-radius: rem(10);
-      background: $color-black;
-    }
-
-    .white {
-      border-top-right-radius: rem(10);
-      border-bottom-right-radius: rem(10);
-      margin-left: calc(100% - 50%);
-      background: $color-white-cultured;
-    }
-
-    &__text {
-      font-size: rem(13);
-      opacity: 0.4;
-    }
-  }
-
   &-main {
     width: 100%;
     padding-right: rem(90);
@@ -436,39 +398,69 @@ main section {
   }
 
   &-items {
-    // width: rem(618);
     display: flex;
     flex-wrap: wrap;
     gap: rem(15);
     margin-top: rem(8);
 
-    & > * {
+    & > :first-child {
+      width: 100%;
       flex-grow: 1;
     }
   }
 
   &-card {
+    $card: ".dashboard-card";
     width: rem(196);
     padding: rem(17) rem(16) rem(17) rem(22);
+    border-radius: rem(10);
     box-shadow: 0 rem(4) rem(24) #c4c5c340;
 
     &:hover {
       color: $color-black;
     }
-    &__msg {
+
+    &:first-child {
+      position: relative;
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      padding-bottom: 0;
+      &::before {
+        content: "";
+        position: absolute;
+        top: rem(17);
+        left: 0;
+        height: 73%;
+        border-left: rem(3) solid $color-green-apple-700;
+        border-top-left-radius: rem(10);
+        border-bottom-left-radius: rem(10);
+        transition: all 0.3s ease;
+      }
+
+      #{$card}__message {
+        grid-row: 4 / 5;
+        margin-left: 0;
+        background: $color-grey-davys;
+        color: $color-white;
+      }
+    }
+
+    &__message {
+      display: grid;
+      place-items: center;
       width: fit-content;
-      padding: rem(1) rem(7) rem(2);
+      height: 14px;
+      padding-inline: rem(7);
       border-radius: rem(20);
       margin-left: auto;
-      background: $color-grey-davys;
-      color: $color-white;
+      background: $color-platinum;
+      color: $color-grey-davys-100;
       font-size: rem(8);
       font-weight: 600;
+    }
 
-      &--bg-white {
-        background: $color-silver;
-        color: $color-grey-davys-100;
-      }
+    &__image {
+      width: rem(35);
     }
 
     &__header {
@@ -489,4 +481,35 @@ main section {
     color: $color-silver;
     font-size: rem(78);
   }
+}
+
+.sidebar.close
+  ~ main
+  .dashboard
+  .dashboard-main
+  .dashboard-items
+  .dashboard-card:first-child {
+  display: table;
+  flex-grow: 0;
+  width: rem(196);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: rem(91);
+    left: rem(96);
+    height: rem(178);
+    transition: all 0.3s ease;
+    transform: rotate(-90deg);
+  }
+}
+
+.sidebar.close
+  ~ main
+  .dashboard
+  .dashboard-main
+  .dashboard-items
+  .dashboard-card:first-child
+  .dashboard-card__message {
+  margin-left: auto;
 }
