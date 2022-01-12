@@ -93,7 +93,7 @@
           <span id="triangle-down"></span>
         </li>
 
-        <li class="profile">
+        <li class="profile" data-page="dashboard">
           <div class="profile-details">
             <img src="app/images/profile-img.png" alt="profileImg" />
             <div class="name_job">
@@ -107,6 +107,7 @@
     </aside>
 
     <main id="main">
+      <!-- Dashboard -->
       <section class="dashboard" id="dashboard">
         <header class="dashboard__header">
           <div class="dashboard-left">
@@ -199,23 +200,67 @@
 
         <i class="bx bxs-plus-square"></i>
       </section>
-
+      <!-- User Management -->
       <section class="user-management" id="user-management">
         <h2 class="dashboard-text">User Management</h2>
       </section>
-
+      <!-- Asset Management -->
       <section class="asset-management" id="asset-management">
         <h2 class="dashboard-text">Asset Management</h2>
       </section>
-
+      <!-- Container Management -->
       <section class="container-management" id="container-management">
         <h2 class="dashboard-text">Container Management</h2>
       </section>
+      <!-- Assessment Master -->
+      <section class="assessment dashboard" id="assessment-master">
+        <header class="dashboard__header">
+          <div class="dashboard-left">
+            <h2 class="dashboard-left__name">Assessment Master</h2>
+            <p class="dashboard-left__message">2 Assessment Domains in list</p>
+          </div>
 
-      <section class="assessment-master" id="assessment-master">
-        <h2 class="dashboard-text">Assessment Master</h2>
+          <div class="dashboard-right">
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Workspace
+                <i class="bx bx-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="dashboard-darkmode" id="darkModeBtn">
+              <span class="black"></span>
+              <span class="white"></span>
+            </div>
+
+            <span class="dashboard-darkmode__text">Dark</span>
+
+            <a href="#" class="dashboard-right__add-assessment"
+              >ADD NEW ASSESSMENT</a
+            >
+          </div>
+        </header>
+
+        <div class="assessment-main dashboard-main"></div>
       </section>
-
+      <!-- Project Status Report -->
       <section class="project-status" id="project-status">
         <h2 class="dashboard-text">Project Status</h2>
       </section>

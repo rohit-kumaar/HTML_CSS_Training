@@ -380,10 +380,14 @@ main section {
       width: 143px;
       height: 30px;
       border-radius: 5px;
-      margin-inline: rem(25);
+      margin-right: rem(25);
       background: $color-blue-star-command;
       color: $color-white;
       font-size: 10px;
+
+      .dashboard.active & {
+        display: none;
+      }
 
       &:hover {
         color: $color-blue-sapphire;
@@ -418,7 +422,7 @@ main section {
     }
 
     &-menu.show {
-      inset: 0px -3px auto 0px !important;
+      inset: 0 -3px auto 0 !important;
       transform: translate(-1px, 36px) !important;
     }
   }
