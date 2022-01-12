@@ -123,7 +123,6 @@
       text-align: center;
       transform: translateY(-50%);
       transition: all 0.5s ease;
-      cursor: pointer;
     }
   }
 
@@ -294,7 +293,6 @@
       line-height: rem(60);
       transform: translateY(-50%);
       transition: all 0.5s ease;
-      cursor: pointer;
     }
   }
 
@@ -605,11 +603,105 @@ main section {
   &__bell {
     position: absolute;
     right: rem(22);
-    cursor: pointer;
     &::before {
       content: "\e9d2";
       color: $color-green-apple-700;
       font-size: rem(24);
+    }
+  }
+
+  &-mailbox {
+    display: flex;
+    align-items: center;
+    margin-top: rem(24);
+    opacity: 0;
+    transition: all 0.5s ease;
+
+    #{$notification}.active & {
+      opacity: 1;
+    }
+
+    &__button {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: rem(300);
+      padding-right: rem(18.61);
+      border: none;
+      border-right: 1px solid $color-grey-light;
+      background: $color-white;
+    }
+
+    &__header {
+      font-size: rem(16);
+      font-weight: 700;
+    }
+
+    &__sub-header {
+      font-size: rem(12);
+      text-align: left;
+      opacity: 0.7;
+    }
+
+    &__search {
+      margin-left: rem(9.55);
+
+      &::before {
+        content: "\ebf7";
+        font-size: rem(22);
+      }
+    }
+
+    &__menu {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      padding: 0;
+      margin-top: rem(18) !important;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      width: 100%;
+      min-height: rem(43);
+      padding: rem(10) 0;
+      border-bottom: rem(2) solid $color-grey-light;
+
+      &:hover {
+        color: $color-black;
+      }
+    }
+
+    &__profile {
+      display: grid;
+      place-items: center;
+      width: rem(30);
+      aspect-ratio: 1 / 1;
+      background: $color-mint-cream;
+      border-radius: 50%;
+      font-size: rem(11);
+      font-weight: 700;
+    }
+
+    &__mail {
+      padding-left: rem(13);
+      text-align: left;
+    }
+
+    &__title {
+      font-size: rem(11);
+      font-weight: 700;
+    }
+
+    &__message {
+      font-size: rem(10);
+    }
+
+    &__time {
+      margin-left: auto;
+      font-size: rem(9);
     }
   }
 }

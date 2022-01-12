@@ -102,4 +102,12 @@
       color: $color-silver;
     }
   }
+
+  & > aside.notification {
+    background: $color-black-eerie-700;
+
+    .notification__date {
+      color: $color-silver;
+    }
+  }
 }
