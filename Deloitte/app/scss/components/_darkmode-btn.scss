@@ -104,10 +104,47 @@
   }
 
   & > aside.notification {
-    background: $color-black-eerie-700;
+    $notifi: ".notification";
+    $notifi-mail: "#{$notifi}-mailbox";
 
-    .notification__date {
+    &.active {
+      background: $color-black-eerie-700;
+    }
+
+    #{$notifi}__date {
       color: $color-silver;
+    }
+
+    #{$notifi}__time {
+      color: $color-silver;
+    }
+
+    #{$notifi}__bell::before,
+    #{$notifi-mail}__search::before {
+      color: $color-silver;
+    }
+
+    &.active #{$notifi}__header,
+    #{$notifi-mail}__item {
+      border-bottom: rem(1) solid $color-black-jet;
+    }
+
+    #{$notifi-mail}__button {
+      border-right: rem(1) solid $color-black-jet;
+      background: $color-black-eerie-700;
+      color: $color-silver;
+    }
+
+    #{$notifi-mail}__header {
+      color: $color-cultured;
+    }
+
+    #{$notifi-mail}__menu {
+      background: $color-black-eerie-700;
+    }
+
+    #{$notifi-mail}__time {
+      color: $color-platinum;
     }
   }
 }
