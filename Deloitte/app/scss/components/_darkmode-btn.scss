@@ -69,6 +69,21 @@
     & p {
       color: $color-silver;
     }
+
+    & .assessment-main {
+      &-summary {
+        &__header {
+          color: $color-white;
+        }
+        &__sub-header {
+          color: $color-silver;
+        }
+      }
+
+      &__info {
+        background: $color-black-eerie-700;
+      }
+    }
   }
 
   & > * ul li {
