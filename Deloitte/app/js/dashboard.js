@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const notification = document.getElementById("notification");
   const main = document.getElementById("main");
   const section = main.querySelectorAll("section");
+  const dashboardRightAddAssessment = document.querySelector(
+    ".dashboard-right__add-assessment"
+  );
+  const closeAddAssessment = document.getElementById("closeAddAssessment");
 
   function menuBtnChange() {
     if (sidebar.classList.contains("close")) {
@@ -40,6 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  dashboardRightAddAssessment.addEventListener("click", function () {
+    document.querySelector(".add-assessment").style.display = "block";
+  });
+
+  closeAddAssessment.addEventListener("click", () => {
+    document.querySelector(".add-assessment").style.display = "none";
+  });
+
   darkModeBtn.addEventListener("click", () => {
     document.body.classList.toggle("darkmode");
   });
@@ -69,4 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
   //     assessmentMainListStatus.innerText = "INACTIVE";
   //   }
   // });
+});
+
+function show(anything) {
+  document.querySelector(".textBox").value = anything;
+}
+
+const dropdown = document.querySelector(".add-assessment-form__dropdown");
+dropdown.addEventListener("click", () => {
+  dropdown.classList.toggle("active");
 });

@@ -36,6 +36,7 @@
   & > .sidebar {
     background: $color-black-eerie-700;
   }
+
   & > * {
     background: $color-black-eerie;
     color: $color-white;
@@ -66,6 +67,11 @@
     & h2 {
       color: $color-white;
     }
+
+    & .add-assessment__title {
+      color: $color-black;
+    }
+
     & p {
       color: $color-silver;
     }
@@ -84,6 +90,10 @@
         background: $color-black-eerie-700;
       }
     }
+  }
+
+  div.option div {
+    color: $color-black;
   }
 
   & > * ul li {

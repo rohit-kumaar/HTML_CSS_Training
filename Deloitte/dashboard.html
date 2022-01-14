@@ -147,9 +147,13 @@
 
             <span class="dashboard-darkmode__text">Dark</span>
 
-            <a href="#" class="dashboard-right__add-assessment"
-              >ADD NEW ASSESSMENT</a
+            <a
+              href="#"
+              data-page="add-assessment"
+              class="dashboard-right__add-assessment"
             >
+              ADD NEW ASSESSMENT
+            </a>
           </div>
         </header>
 
@@ -199,6 +203,111 @@
         </div>
 
         <i class="bx bxs-plus-square"></i>
+      </section>
+      <!-- Add New Assessment Form  -->
+      <section class="add-assessment">
+        <header class="add-assessment__header">
+          <h2 class="add-assessment__title">Add New Assessment</h2>
+          <i class="bx bx-x" id="closeAddAssessment"></i>
+        </header>
+
+        <form class="add-assessment-form">
+          <div class="add-assessment__item">
+            <label class="add-assessment-form__title"> Assessment Name </label>
+            <input
+              class="add-assessment-form__text"
+              type="text"
+              name="text"
+              placeholder="Enter Assessment Name"
+            />
+          </div>
+
+          <div class="add-assessment__item">
+            <label class="add-assessment-form__title"> Description</label>
+            <input
+              class="add-assessment-form__text add-assessment-form__text--height"
+              type="text"
+              name="text"
+              placeholder="Enter Assessment Description"
+            />
+          </div>
+
+          <div class="add-assessment__item">
+            <label class="add-assessment-form__title">
+              Client Assessment Domain Name
+            </label>
+
+            <div class="add-assessment-form__dropdown">
+              <input
+                type="text"
+                class="textBox"
+                placeholder="Select Assessment Name"
+                readonly
+              />
+
+              <div class="option">
+                <div onclick="show('www.abc@abc.com')">www.abc@abc.com</div>
+                <div onclick="show('www.xyz@xyz.com')">www.xyz@xyz.com</div>
+                <div onclick="show('www.pqr@pqr.com')">www.pqr@pqr.com</div>
+                <div onclick="show('www.mno@mno.com')">www.mno@mno.com</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="add-assessment-form__module">
+            <div class="add-assessment__item">
+              <label class="add-assessment-form__title"> Module </label>
+              <input
+                class="add-assessment-form__text"
+                type="text"
+                name="text"
+                placeholder="Enter Module Name"
+              />
+            </div>
+
+            <div class="add-assessment__item">
+              <label class="add-assessment-form__title">
+                Assessment Domain
+              </label>
+              <select class="add-assessment-form__text">
+                <option disabled selected>Select Module Name</option>
+                <option value="xyz">xyz</option>
+                <option value="abc">abc</option>
+              </select>
+            </div>
+
+            <div class="add-assessment__item">
+              <label class="add-assessment-form__title">
+                Assessment Role
+              </label>
+              <input
+                class="add-assessment-form__text"
+                type="text"
+                name="text"
+                placeholder="Select Assesment Role"
+              />
+            </div>
+
+            <div class="add-assessment__item">
+              <label class="add-assessment-form__title">
+                Report Template
+              </label>
+              <select class="add-assessment-form__text">
+                <option disabled selected>Select Report Template</option>
+                <option value="xyz">xyz</option>
+                <option value="abc">abc</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="add-assessment-form__botton-area">
+            <input
+              class="add-assessment-form__button"
+              type="submit"
+              value="Save Assessment"
+            />
+          </div>
+        </form>
       </section>
       <!-- User Management -->
       <section class="user-management" id="user-management">
@@ -293,7 +402,9 @@
             </nav>
           </header>
 
-          <details class="assessment-main__details assessment-main__details--first">
+          <details
+            class="assessment-main__details assessment-main__details--first"
+          >
             <summary class="assessment-main-summary">
               <span class="assessment-main-summary__header">
                 Assessment Domain - VAPT
@@ -350,7 +461,9 @@
             </ul>
           </details>
 
-          <details class="assessment-main__details assessment-main__details--second">
+          <details
+            class="assessment-main__details assessment-main__details--second"
+          >
             <summary class="assessment-main-summary">
               <span class="assessment-main-summary__header">
                 Assessment Domain - Operational Control
