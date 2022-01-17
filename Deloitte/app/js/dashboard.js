@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
     section[3].classList.toggle("active");
     section[4].classList.toggle("active");
     section[5].classList.toggle("active");
+    section[6].classList.toggle("active");
   });
 
   // const assessmentMainListStatus = document.querySelector(

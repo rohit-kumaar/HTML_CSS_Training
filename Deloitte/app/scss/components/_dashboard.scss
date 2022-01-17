@@ -340,6 +340,7 @@ main section {
   }
 }
 
+// <!-- Dashboard -->
 .dashboard {
   padding: rem(21) 0 rem(39) rem(41);
 
@@ -553,6 +554,7 @@ main section {
   margin-left: auto;
 }
 
+// <!-- Assessment Master -->
 .assessment {
   &-main {
     width: 99%;
@@ -680,6 +682,7 @@ main section {
   }
 }
 
+// <!-- Add New Assessment Form  -->
 .add-assessment {
   position: absolute;
   left: calc(100% - 406px);
@@ -838,6 +841,142 @@ main section {
     margin-top: rem(18);
     &:not(:first-child) {
       margin-top: rem(16);
+    }
+  }
+}
+
+// <!-- Project Status Report -->
+.project-status {
+  &-main {
+    position: relative;
+    width: 97%;
+    min-height: rem(357);
+    padding-right: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -25px;
+      width: rem(1);
+      height: 237px;
+      background: $color-grey-light;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(21);
+      width: 100%;
+      min-height: rem(164);
+
+      &:first-child {
+        border-radius: rem(20);
+        margin-bottom: rem(29);
+        box-shadow: 0 rem(4) rem(34) #0000000d;
+      }
+    }
+
+    &__card {
+      position: relative;
+      height: rem(164);
+      padding: rem(37) rem(35) rem(69) rem(28);
+      border-radius: rem(20);
+      box-shadow: 0 rem(4) rem(34) #0000000d;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: rem(30);
+        left: rem(-5);
+        width: rem(3);
+        height: rem(30);
+        background: $color-black-jet;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 43px;
+        left: -24px;
+        width: 23px;
+        height: 1px;
+        background: $color-grey-light;
+      }
+    }
+
+    &__title {
+      font-size: rem(16);
+      font-weight: 600;
+    }
+
+    &__progress {
+      color: $color-silver;
+      font-size: rem(12);
+      font-weight: 600;
+      float: right;
+    }
+
+    &__progress-status {
+      width: 100%;
+    }
+
+    &-progress-info {
+      display: flex;
+      padding: rem(24) 0 rem(23) 0;
+      margin-left: rem(22);
+
+      & > * {
+        & > *:not(:last-child) {
+          margin-bottom: rem(5);
+        }
+      }
+
+      & > *:not(:first-child) {
+        margin-left: rem(52);
+      }
+
+      &__logo {
+        // position: relative;
+        display: grid;
+        place-items: center;
+        width: rem(27);
+        height: rem(27);
+        border-radius: rem(30);
+        background: $color-green-apple-700;
+
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   left: -142px;
+        //   width: 521%;
+        //   height: 2px;
+        //   border: 10px dashed red;
+        //   background: white;
+        // }
+
+        .bx-check {
+          &::before {
+            content: "\ea41";
+            color: $color-white;
+            font-size: rem(24);
+          }
+        }
+      }
+
+      &__review {
+        font-size: rem(12);
+        font-weight: 700;
+      }
+
+      &__reviewer,
+      &__date {
+        font-size: rem(10);
+        span {
+          display: block;
+          font-weight: 700;
+        }
+      }
     }
   }
 }

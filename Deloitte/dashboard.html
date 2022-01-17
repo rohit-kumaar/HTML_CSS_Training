@@ -568,8 +568,138 @@
         </div>
       </section>
       <!-- Project Status Report -->
-      <section class="project-status" id="project-status">
-        <h2 class="dashboard-text">Project Status</h2>
+      <section class="project-status dashboard" id="project-status">
+        <header class="project-status__header dashboard__header">
+          <div class="dashboard-left">
+            <h2 class="dashboard-left__name">
+              ITC Assest A - Runtime Status Update
+            </h2>
+            <p class="dashboard-left__message">
+              Checkout the status of the project
+            </p>
+          </div>
+
+          <div class="dashboard-right">
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Workspace
+                <i class="bx bx-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="dashboard-darkmode" id="darkModeBtn">
+              <span class="black"></span>
+              <span class="white"></span>
+            </div>
+
+            <span class="dashboard-darkmode__text">Dark</span>
+
+            <a
+              href="#"
+              data-page="add-assessment"
+              class="dashboard-right__add-assessment"
+            >
+              ADD NEW ASSESSMENT
+            </a>
+          </div>
+        </header>
+
+        <div class="project-status-main dashboard-main">
+          <div class="project-status-main__items">
+            <div class="project-status-main__card">
+              <h2 class="project-status-main__title">Pre Assessment</h2>
+              <p class="project-status-main__progress">40% Progress</p>
+
+              <progress
+                class="project-status-main__progress-status"
+                value="40"
+                max="100"
+              ></progress>
+            </div>
+
+            <div class="project-status-main-progress-info">
+              <div>
+                <span class="project-status-main-progress-info__logo">
+                  <i class="bx bx-check"></i>
+                </span>
+
+                <h3 class="project-status-main-progress-info__review">
+                  Assessment Review
+                </h3>
+
+                <p class="project-status-main-progress-info__reviewer">
+                  Reviewer :
+                  <span> ITC Admin </span>
+                </p>
+
+                <p class="project-status-main-progress-info__date">
+                  Completed On :
+                  <span> 17 Nov 2021 11:23am</span>
+                </p>
+              </div>
+
+              <div>
+                <span class="project-status-main-progress-info__logo">
+                  <i class="bx bx-check"></i>
+                </span>
+
+                <h3 class="project-status-main-progress-info__review">
+                  Response
+                </h3>
+
+                <p class="project-status-main-progress-info__reviewer">
+                  Performed by :
+                  <span> Safety User</span>
+                </p>
+
+                <p class="project-status-main-progress-info__date">
+                  Completed On :
+                  <span> 13 Nov 2021 1:56pm</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-status-main__items">
+            <div class="project-status-main__card">
+              <h2 class="project-status-main__title">COVID - 19</h2>
+              <p class="project-status-main__progress">80% Progress</p>
+
+              <progress
+                class="project-status-main__progress-status"
+                value="80"
+                max="100"
+              >
+                80%
+              </progress>
+            </div>
+
+            <div class="project-status-main__card">
+              <h2 class="project-status-main__title">Operational Control</h2>
+            </div>
+
+            <div class="project-status-main__card">
+              <h2 class="project-status-main__title">Safety Planning</h2>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
