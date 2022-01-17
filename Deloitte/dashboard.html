@@ -318,8 +318,155 @@
         <h2 class="dashboard-text">Asset Management</h2>
       </section>
       <!-- Container Management -->
-      <section class="container-management" id="container-management">
-        <h2 class="dashboard-text">Container Management</h2>
+      <section class="container-management dashboard" id="container-management">
+        <header class="dashboard__header">
+          <div class="dashboard-left">
+            <h2 class="dashboard-left__name">Container Management</h2>
+            <p class="dashboard-left__message">Checkout the Structure</p>
+          </div>
+
+          <div class="dashboard-right">
+            <div class="dropdown">
+              <button
+                class="dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Select Workspace
+                <i class="bx bx-chevron-down"></i>
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item active" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="#">Separated link</a></li>
+              </ul>
+            </div>
+
+            <div class="dashboard-darkmode" id="darkModeBtn">
+              <span class="black"></span>
+              <span class="white"></span>
+            </div>
+
+            <span class="dashboard-darkmode__text">Dark</span>
+
+            <a
+              href="#"
+              data-page="add-assessment"
+              class="dashboard-right__add-assessment"
+            >
+              ADD NEW ASSESSMENT
+            </a>
+          </div>
+        </header>
+
+        <div class="container-management-main dashboard-main">
+          <div class="container-management-applicant">
+            <span class="plus-icon">
+              <i class="bx bx-plus"></i>
+            </span>
+            <a href="#" class="container-management-applicant__name">
+              Application name
+            </a>
+
+            <a href="#" class="container-management-applicant__desc">
+              Applications desc
+            </a>
+
+            <span class="plus-icon">
+              <i class="bx bx-plus"></i>
+            </span>
+          </div>
+
+          <div class="container-management-sub-applicant">
+            <div class="container-management-sub-applicant-info">
+              <a href="#" class="container-management-sub-applicant__name">
+                On Prem Application
+              </a>
+
+              <a href="#" class="container-management-sub-applicant__desc">
+                On Prem application desc
+              </a>
+
+              <span class="plus-icon">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <div class="container-management-sub-applicant-info">
+              <a href="#" class="container-management-sub-applicant__name">
+                Sub Application name
+              </a>
+
+              <a href="#" class="container-management-sub-applicant__desc">
+                description will be here
+              </a>
+
+              <span class="plus-icon">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <div class="container-management-sub-applicant-info">
+              <a href="#" class="container-management-sub-applicant__name">
+                Sub Application name
+              </a>
+
+              <a href="#" class="container-management-sub-applicant__desc">
+                description will be here
+              </a>
+
+              <span class="plus-icon">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="container-management-sub-internal">
+            <div class="container-management-sub-internal__info">
+              <a href="#" class="container-management-sub-internal__title">
+                Sub internal
+              </a>
+
+              <a href="#" class="container-management-sub-internal__name">
+                Application name
+              </a>
+
+              <a href="#" class="container-management-sub-internal__desc">
+                description will be here
+              </a>
+
+              <span class="plus-icon">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+
+            <div class="container-management-sub-internal__info">
+              <a href="#" class="container-management-sub-internal__title">
+                Sub internal
+              </a>
+
+              <a href="#" class="container-management-sub-internal__name">
+                Application name
+              </a>
+
+              <a href="#" class="container-management-sub-internal__desc">
+                description will be here
+              </a>
+
+              <span class="plus-icon">
+                <i class="bx bx-plus"></i>
+              </span>
+            </div>
+          </div>
+        </div>
       </section>
       <!-- Assessment Master -->
       <section class="assessment dashboard" id="assessment-master">

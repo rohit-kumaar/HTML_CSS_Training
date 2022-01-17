@@ -554,6 +554,127 @@ main section {
   margin-left: auto;
 }
 
+// <!-- Container Management -->
+.container-management {
+  &-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 0;
+
+    .plus-icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem(16);
+      height: rem(16);
+      border: rem(1) solid $color-silver;
+      border-radius: 50%;
+      background: $color-white;
+
+      &:first-child {
+        top: rem(-8);
+      }
+
+      &:last-child {
+        bottom: rem(-8);
+      }
+
+      .bx-plus:before {
+        content: "\ebc0";
+        color: $color-grey-web;
+      }
+    }
+  }
+
+  &-applicant {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: rem(158);
+    min-height: rem(56);
+    border-radius: rem(10);
+    background: $color-yellowgreen;
+    box-shadow: 0 rem(4) rem(24) $color-silver;
+
+    &__name {
+      color: $color-white;
+      font-size: rem(12);
+      font-weight: 700;
+    }
+
+    &__desc {
+      color: $color-white;
+      font-size: rem(11);
+    }
+  }
+
+  &-sub-applicant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(120);
+    width: 100%;
+    margin-top: rem(41);
+
+    &-info {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: rem(154);
+      height: rem(53);
+      border: rem(1) solid #e6e6e6;
+      border-radius: rem(10);
+      box-shadow: 0 rem(4) rem(24) #c4c5c340;
+    }
+
+    &__name {
+      font-size: rem(11);
+      font-weight: 700;
+    }
+
+    &__desc {
+      font-size: rem(11);
+    }
+  }
+
+  &-sub-internal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: rem(10);
+    width: 100%;
+    margin-top: rem(64);
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: rem(166);
+      height: rem(70);
+      border: rem(1) solid #e6e6e6;
+      border-radius: rem(10);
+    }
+
+    &__title,
+    &__name {
+      font-size: rem(11);
+      font-weight: 700;
+    }
+
+    &__desc {
+      font-size: rem(11);
+    }
+  }
+}
+
 // <!-- Assessment Master -->
 .assessment {
   &-main {
