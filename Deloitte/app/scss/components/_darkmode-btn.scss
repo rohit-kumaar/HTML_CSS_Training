@@ -90,6 +90,22 @@
         background: $color-black-eerie-700;
       }
     }
+
+    .project-status-main {
+      &__items:first-child,
+      &__card {
+        box-shadow: 0 rem(4) rem(34) #ffffff0d;
+      }
+
+      &-progress-info {
+        &__reviewer,
+        &__date {
+          span {
+            color: $color-silver;
+          }
+        }
+      }
+    }
   }
 
   div.option div {
