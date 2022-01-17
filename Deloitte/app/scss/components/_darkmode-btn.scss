@@ -106,6 +106,16 @@
         }
       }
     }
+
+    .container-management {
+      &-applicant,
+      &-sub-applicant,
+      &-sub-internal {
+        a {
+          color: $color-white;
+        }
+      }
+    }
   }
 
   div.option div {
