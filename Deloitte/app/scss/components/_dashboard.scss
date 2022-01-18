@@ -1038,8 +1038,41 @@ main section {
       float: right;
     }
 
-    &__progress-status {
+    .progress-bar {
       width: 100%;
+      height: rem(8);
+      border-radius: rem(10);
+    }
+
+    progress[value] {
+      position: relative;
+      width: 100%;
+      height: rem(8);
+      border-radius: rem(10);
+
+      &::-webkit-progress-bar {
+        border-radius: rem(10);
+        background-color: #ddd;
+      }
+
+      &::-webkit-progress-value {
+        position: relative;
+        border-radius: rem(10);
+        background-size: rem(35) rem(20), 100% 100%, 10% 100%;
+      }
+    }
+
+    &__progress-status::-webkit-progress-value {
+      background-image: -webkit-linear-gradient(
+          135deg,
+          transparent,
+          transparent 33%,
+          #8dd 33%,
+          #8dd 66%,
+          transparent 66%
+        ),
+        -webkit-linear-gradient(top, #ffffff40, #00000033),
+        -webkit-linear-gradient(left, #00abab, #00abab);
     }
 
     &-progress-info {
