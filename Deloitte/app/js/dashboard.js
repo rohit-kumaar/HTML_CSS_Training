@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeBtn = document.getElementById("btn");
   const log_out = document.getElementById("log_out");
   const settings = document.getElementById("settings");
-  const darkModeBtn = document.getElementById("darkModeBtn");
+
   const notificationBell = document.getElementById("notificationBell");
   const notification = document.getElementById("notification");
   const main = document.getElementById("main");
@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".add-assessment").style.display = "none";
   });
 
-  darkModeBtn.addEventListener("click", () => {
-    document.body.classList.toggle("darkmode");
-  });
-
   notificationBell.addEventListener("click", () => {
     notification.classList.toggle("active");
     section[0].classList.toggle("active");
@@ -82,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function () {
   //     assessmentMainListStatus.innerText = "INACTIVE";
   //   }
   // });
+
+  const dashboardDarkModeBtn = document.querySelectorAll(".dashboard-darkmode");
+
+  for (const dashboardDarkMode of dashboardDarkModeBtn) {
+    dashboardDarkMode.addEventListener("click", () => {
+      document.body.classList.toggle("darkmode");
+    });
+  }
 });
 
 function show(anything) {

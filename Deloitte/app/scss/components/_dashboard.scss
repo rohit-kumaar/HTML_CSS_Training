@@ -587,7 +587,7 @@ main section {
         color: $color-grey-web;
       }
 
-      .left-line {
+      .curly-left-border {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -598,7 +598,7 @@ main section {
         border-bottom: rem(2) solid $color-green-apple-700;
         border-bottom-right-radius: rem(10);
 
-        &__bottom-boder {
+        span {
           position: absolute;
           top: rem(23);
           right: rem(6);
@@ -610,7 +610,7 @@ main section {
         }
       }
 
-      .bottom-line {
+      .curly-bottom-border {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -664,7 +664,7 @@ main section {
         }
       }
 
-      .right-line {
+      .curly-right-border {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -675,7 +675,7 @@ main section {
         border-left: rem(2) solid $color-green-apple-700;
         border-bottom-left-radius: rem(10);
 
-        &__bottom-boder {
+        span {
           position: absolute;
           top: rem(23);
           left: rem(6);
