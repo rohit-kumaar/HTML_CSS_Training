@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const log_out = document.getElementById("log_out");
   const settings = document.getElementById("settings");
 
-  const notificationBell = document.getElementById("notificationBell");
-  const notification = document.getElementById("notification");
   const main = document.getElementById("main");
-  const section = main.querySelectorAll("section");
+
   const dashboardRightAddAssessment = document.querySelector(
     ".dashboard-right__add-assessment"
   );
@@ -52,15 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".add-assessment").style.display = "none";
   });
 
+  
+
+  const notificationBell = document.getElementById("notificationBell");
+  const notification = document.getElementById("notification");
+  const sections = main.querySelectorAll("section");
   notificationBell.addEventListener("click", () => {
     notification.classList.toggle("active");
-    section[0].classList.toggle("active");
-    section[1].classList.toggle("active");
-    section[2].classList.toggle("active");
-    section[3].classList.toggle("active");
-    section[4].classList.toggle("active");
-    section[5].classList.toggle("active");
-    section[6].classList.toggle("active");
+    for (const section of sections) {
+      section.classList.toggle("active");
+    }
   });
 
   // const assessmentMainListStatus = document.querySelector(
