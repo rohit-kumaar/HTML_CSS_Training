@@ -591,22 +591,22 @@ main section {
         position: absolute;
         z-index: -1;
         top: 0;
-        right: 12px;
-        width: 100px;
-        height: 25px;
-        border-right: 2px solid $color-green-apple-700;
-        border-bottom: 2px solid $color-green-apple-700;
-        border-bottom-right-radius: 10px;
+        right: rem(12);
+        width: rem(100);
+        height: rem(25);
+        border-right: rem(2) solid $color-green-apple-700;
+        border-bottom: rem(2) solid $color-green-apple-700;
+        border-bottom-right-radius: rem(10);
 
         &__bottom-boder {
           position: absolute;
-          top: 23px;
-          right: 4px;
-          width: 230px;
-          height: 40px;
-          border-top: 2px solid $color-green-apple-700;
-          border-left: 2px solid $color-green-apple-700;
-          border-top-left-radius: 40px;
+          top: rem(23);
+          right: rem(6);
+          width: rem(230);
+          height: rem(40);
+          border-top: rem(2) solid $color-green-apple-700;
+          border-left: rem(2) solid $color-green-apple-700;
+          border-top-left-radius: rem(40);
         }
       }
 
@@ -615,51 +615,51 @@ main section {
         z-index: -1;
         top: 0;
         width: rem(2);
-        height: 50px;
+        height: rem(50);
         background-color: $color-green-apple-700;
 
         &--height {
-          height: 30px;
+          height: rem(30);
         }
 
         &__left,
         &__right {
           position: absolute;
-          bottom: -13px;
-          width: 100px;
-          height: 20px;
+          bottom: rem(-13);
+          width: rem(100);
+          height: rem(20);
         }
 
         &__left {
           right: 0;
-          border-right: 2px solid $color-green-apple-700;
-          border-bottom: 2px solid $color-green-apple-700;
-          border-bottom-right-radius: 30px;
+          border-right: rem(2) solid $color-green-apple-700;
+          border-bottom: rem(2) solid $color-green-apple-700;
+          border-bottom-right-radius: rem(30);
 
           span {
             position: absolute;
-            top: 18.5px;
-            left: -26px;
-            width: 50px;
-            height: 73px;
-            border-top: 2px solid $color-green-apple-700;
-            border-left: 2px solid $color-green-apple-700;
-            border-top-left-radius: 30px;
+            top: rem(18.5);
+            left: rem(-26);
+            width: rem(50);
+            height: rem(73);
+            border-top: rem(2) solid $color-green-apple-700;
+            border-left: rem(2) solid $color-green-apple-700;
+            border-top-left-radius: rem(30);
           }
         }
         &__right {
-          border-left: 2px solid $color-green-apple-700;
-          border-bottom: 2px solid $color-green-apple-700;
-          border-bottom-left-radius: 30px;
+          border-left: rem(2) solid $color-green-apple-700;
+          border-bottom: rem(2) solid $color-green-apple-700;
+          border-bottom-left-radius: rem(30);
           span {
             position: absolute;
-            top: 18.5px;
-            right: -26px;
-            width: 50px;
-            height: 73px;
-            border-top: 2px solid $color-green-apple-700;
-            border-right: 2px solid $color-green-apple-700;
-            border-top-right-radius: 30px;
+            top: rem(18.5);
+            right: rem(-26);
+            width: rem(50);
+            height: rem(73);
+            border-top: rem(2) solid $color-green-apple-700;
+            border-right: rem(2) solid $color-green-apple-700;
+            border-top-right-radius: rem(30);
           }
         }
       }
@@ -668,22 +668,22 @@ main section {
         position: absolute;
         z-index: -1;
         top: 0;
-        left: 12px;
-        width: 100px;
-        height: 25px;
-        border-bottom: 2px solid $color-green-apple-700;
-        border-left: 2px solid $color-green-apple-700;
-        border-bottom-left-radius: 10px;
+        left: rem(12);
+        width: rem(100);
+        height: rem(25);
+        border-bottom: rem(2) solid $color-green-apple-700;
+        border-left: rem(2) solid $color-green-apple-700;
+        border-bottom-left-radius: rem(10);
 
         &__bottom-boder {
           position: absolute;
-          top: 23px;
-          left: 4px;
-          width: 230px;
-          height: 40px;
-          border-top: 2px solid $color-green-apple-700;
-          border-right: 2px solid $color-green-apple-700;
-          border-top-right-radius: 40px;
+          top: rem(23);
+          left: rem(6);
+          width: rem(230);
+          height: rem(40);
+          border-top: rem(2) solid $color-green-apple-700;
+          border-right: rem(2) solid $color-green-apple-700;
+          border-top-right-radius: rem(40);
         }
       }
     }
@@ -720,6 +720,7 @@ main section {
     gap: rem(120);
     width: 100%;
     margin-top: rem(41);
+    background: $color-white;
 
     &-info {
       position: relative;
@@ -731,7 +732,6 @@ main section {
       height: rem(53);
       border: rem(1) solid #e6e6e6;
       border-radius: rem(10);
-      background: $color-white;
       box-shadow: 0 rem(4) rem(24) #c4c5c340;
     }
 
