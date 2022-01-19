@@ -1,30 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sidebar = document.getElementById("sidebar");
-  const closeBtn = document.getElementById("btn");
-  const log_out = document.getElementById("log_out");
-  const settings = document.getElementById("settings");
-
-  const main = document.getElementById("main");
-
-  const closeAddAssessment = document.getElementById("closeAddAssessment");
-
-  function menuBtnChange() {
-    if (sidebar.classList.contains("close")) {
-      closeBtn.classList.replace("bx-chevron-left", "bx-chevron-right");
-    } else {
-      closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");
-    }
-  }
-
-  closeBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
-    menuBtnChange();
-  });
-
-  log_out.addEventListener("click", () => {
-    settings.classList.toggle("active");
-  });
-
+  // Main page display by clicking sidebar navigation
   function showPage(page) {
     document.querySelectorAll("section").forEach((section) => {
       section.style.display = "none";
@@ -39,10 +14,29 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  const sidebar = document.getElementById("sidebar");
+  const closeBtn = document.getElementById("btn");
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+    menuBtnChange();
+  });
+  function menuBtnChange() {
+    if (sidebar.classList.contains("close")) {
+      closeBtn.classList.replace("bx-chevron-left", "bx-chevron-right");
+    } else {
+      closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");
+    }
+  }
+
+  const settings = document.getElementById("settings");
+  const logout = document.getElementById("log_out");
+  logout.addEventListener("click", () => {
+    settings.classList.toggle("active");
+  });
+
   const dashboardRightAddAssessments = document.querySelectorAll(
     ".dashboard-right__add-assessment"
   );
-
   for (const dashboardRightAddAssessment of dashboardRightAddAssessments) {
     dashboardRightAddAssessment.addEventListener("click", () => {
       const addAssessment = document.querySelector(".add-assessment");
@@ -51,12 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  const closeAddAssessment = document.getElementById("closeAddAssessment");
   closeAddAssessment.addEventListener("click", () => {
     document.querySelector(".add-assessment").style.display = "none";
   });
 
   const notificationBell = document.getElementById("notificationBell");
   const notification = document.getElementById("notification");
+  const main = document.getElementById("main");
   const sections = main.querySelectorAll("section");
   notificationBell.addEventListener("click", () => {
     notification.classList.toggle("active");
@@ -65,24 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // const assessmentMainListStatus = document.querySelector(
-  //   ".assessment-main-list--status"
-  // );
-
-  // const formCheckInput = document.querySelector(".form-check-input");
-
-  // formCheckInput.addEventListener("click", () => {
-  //   if ((type = "checkbox")) {
-  //     console.log("ACTIVE");
-  //     assessmentMainListStatus.innerText = "ACTIVE";
-  //   } else if (type !== "checkbox") {
-  //     console.log("INACTIVE");
-  //     assessmentMainListStatus.innerText = "INACTIVE";
-  //   }
-  // });
-
   const dashboardDarkModeBtn = document.querySelectorAll(".dashboard-darkmode");
-
   for (const dashboardDarkMode of dashboardDarkModeBtn) {
     dashboardDarkMode.addEventListener("click", () => {
       document.body.classList.toggle("darkmode");
