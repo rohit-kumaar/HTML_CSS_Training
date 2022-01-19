@@ -6,9 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const main = document.getElementById("main");
 
-  const dashboardRightAddAssessment = document.querySelector(
-    ".dashboard-right__add-assessment"
-  );
   const closeAddAssessment = document.getElementById("closeAddAssessment");
 
   function menuBtnChange() {
@@ -42,15 +39,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  dashboardRightAddAssessment.addEventListener("click", function () {
-    document.querySelector(".add-assessment").style.display = "block";
-  });
+  const dashboardRightAddAssessments = document.querySelectorAll(
+    ".dashboard-right__add-assessment"
+  );
+
+  for (const dashboardRightAddAssessment of dashboardRightAddAssessments) {
+    dashboardRightAddAssessment.addEventListener("click", () => {
+      const addAssessment = document.querySelector(".add-assessment");
+      addAssessment.style.display = "block";
+      addAssessment.style.zIndex = "10";
+    });
+  }
 
   closeAddAssessment.addEventListener("click", () => {
     document.querySelector(".add-assessment").style.display = "none";
   });
-
-  
 
   const notificationBell = document.getElementById("notificationBell");
   const notification = document.getElementById("notification");
