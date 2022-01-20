@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Main page display by clicking sidebar navigation
+  // Main page display by clicking sidebar navigation start
   function showPage(page) {
     document.querySelectorAll("section").forEach((section) => {
       section.style.display = "none";
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       showPage(this.dataset.page);
     });
   });
+  // Main page display by clicking sidebar navigation end
 
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("btn");
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".add-assessment").style.display = "none";
   });
 
+  // Notifiaction bell start
   const notificationBell = document.getElementById("notificationBell");
   const notification = document.getElementById("notification");
   const main = document.getElementById("main");
@@ -59,24 +61,53 @@ document.addEventListener("DOMContentLoaded", function () {
     for (const section of sections) {
       section.classList.toggle("active");
     }
+    notificationBellBtnChange();
   });
 
+  function notificationBellBtnChange() {
+    if (notification.classList.contains("active")) {
+      notificationBell.classList.replace("bx-bell", "bx-x");
+    } else {
+      notificationBell.classList.replace("bx-x", "bx-bell");
+    }
+  }
+  // Notifiaction bell end
+
+  // Dark mode start
   const body = document.querySelector("body");
   const dashboardDarkModeBtn = document.querySelectorAll(".dashboard-darkmode");
-  const dashboardDarkmodeText = document.querySelector(
+  const dashboardDarkmodeTexts = document.querySelectorAll(
     ".dashboard-darkmode__text"
   );
   for (const dashboardDarkMode of dashboardDarkModeBtn) {
     dashboardDarkMode.addEventListener("click", () => {
       document.body.classList.toggle("darkmode");
-      if (body.classList == "darkmode") {
-        dashboardDarkmodeText.innerText = "Light";
-        dashboardDarkmodeText.style.color = "white";
-      } else if (body.classList == "") {
-        dashboardDarkmodeText.innerText = "Dark";
-        dashboardDarkmodeText.style.color = "black";
+
+      for (const dashboardDarkmodeText of dashboardDarkmodeTexts) {
+        if (body.classList == "darkmode") {
+          dashboardDarkmodeText.innerText = "Light";
+          dashboardDarkmodeText.style.color = "white";
+        } else if (body.classList == "") {
+          dashboardDarkmodeText.innerText = "Dark";
+          dashboardDarkmodeText.style.color = "black";
+        }
       }
     });
+    // Dark mode end
+
+    // Assessment Master Check button start
+
+    // const inputTypeCheckboxs = document.querySelectorAll(
+    //   "input[type=checkbox]"
+    // );
+
+    // for (const inputTypeCheckbox of inputTypeCheckboxs) {
+    //   inputTypeCheckbox.addEventListener("click", () => {
+    //     console.log("H");
+    //   });
+    // }
+
+    // Assessment Master Check button end
   }
 });
 

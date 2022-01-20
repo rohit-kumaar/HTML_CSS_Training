@@ -3,16 +3,51 @@
   z-index: 10;
   top: 0;
   left: 0;
-  width: 221px;
+  width: rem(221);
   height: 100vh;
   padding: rem(33) rem(9) 0 rem(23);
   background: $color-white-cultured;
   transition: all 0.5s ease;
 
-  //  For small size
+  //  For small size start
   &.close {
-    width: 67px;
+    width: rem(67);
     background: $color-green-apple-700 !important;
+
+    &
+      ~ main
+      .dashboard
+      .dashboard-main
+      .dashboard-items
+      .dashboard-card:first-child {
+      display: table;
+      flex-grow: 0;
+      width: rem(196);
+
+      & .dashboard-card__message {
+        margin-left: auto;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: rem(91);
+        left: rem(96);
+        height: rem(178);
+        transition: all 0.3s ease;
+        transform: rotate(-90deg);
+      }
+    }
+
+    & ~ main section {
+      left: rem(115);
+      width: calc(100% - 160px);
+      transition: all 0.5s ease;
+
+      &.active {
+        width: calc(100% - 425px);
+      }
+    }
 
     & li:hover .tooltip {
       display: block;
@@ -27,24 +62,28 @@
       }
     }
 
-    & .sidebar-logo .sidebar-logo__name {
-      opacity: 0;
+    & .sidebar-logo {
+      & .sidebar-logo__name {
+        opacity: 0;
+
+        & .circle {
+          display: none;
+        }
+      }
     }
 
-    & .sidebar-logo .sidebar-logo__name .circle {
-      display: none;
+    & .sidebar-logo {
+      & img {
+        display: block;
+      }
+
+      & #btn {
+        background: $color-black;
+        text-align: right;
+      }
     }
 
-    & .sidebar-logo img {
-      display: block;
-    }
-
-    & .sidebar-logo #btn {
-      background: $color-black;
-      text-align: right;
-    }
-
-    & li .tooltip {
+    & .sidebar-logo & li .tooltip {
       display: block;
     }
 
@@ -66,16 +105,19 @@
       & #log_out {
         display: none;
         width: 100%;
-        background: #1d1b31;
+        background: $color-purple-dark;
       }
 
-      & .profile-details .name_job .name,
-      & .profile-details .name_job .job {
-        color: $color-white;
-        opacity: 0;
+      & .profile-details .name_job {
+        & .name,
+        & .job {
+          color: $color-white;
+          opacity: 0;
+        }
       }
     }
   }
+  //  For small size end
 
   &-logo {
     position: relative;
@@ -137,7 +179,7 @@
   }
 
   &-list {
-    margin-top: rem(61.63px);
+    margin-top: rem(61.63);
     height: 100%;
 
     &__name {
@@ -181,7 +223,7 @@
       padding: rem(6) rem(12);
       border-radius: rem(4);
       background: $color-white;
-      box-shadow: 0 rem(5) rem(10) rgba(0, 0, 0, 0.3);
+      box-shadow: 0 rem(5) rem(10) #0000004d;
       font-size: rem(15);
       opacity: 0;
       white-space: nowrap;
@@ -228,7 +270,7 @@
       width: auto;
       margin-top: rem(12);
       margin-left: rem(18);
-      font-size: 11px;
+      font-size: rem(11);
       font-weight: 600;
     }
 
@@ -316,7 +358,7 @@ main section {
   position: relative;
   z-index: 2;
   top: 0;
-  left: 221px;
+  left: rem(221);
   width: calc(100% - 266px);
   min-height: 100vh;
   transition: all 0.5s ease;
@@ -327,16 +369,6 @@ main section {
 
   &:not(:first-child) {
     display: none;
-  }
-}
-
-.sidebar.close ~ main section {
-  left: 115px;
-  width: calc(100% - 160px);
-  transition: all 0.5s ease;
-
-  &.active {
-    width: calc(100% - 425px);
   }
 }
 
@@ -379,13 +411,13 @@ main section {
     &__add-assessment {
       display: grid;
       place-items: center;
-      width: 143px;
-      height: 30px;
-      border-radius: 5px;
+      width: rem(143);
+      height: rem(30);
+      border-radius: rem(5);
       margin-right: rem(25);
       background: $color-blue-star-command;
       color: $color-white;
-      font-size: 10px;
+      font-size: rem(10);
 
       .dashboard.active & {
         display: none;
@@ -492,7 +524,7 @@ main section {
       display: grid;
       place-items: center;
       width: fit-content;
-      height: 14px;
+      height: rem(14);
       padding-inline: rem(7);
       border-radius: rem(20);
       margin-left: auto;
@@ -525,37 +557,6 @@ main section {
     color: $color-silver;
     font-size: rem(78);
   }
-}
-
-.sidebar.close
-  ~ main
-  .dashboard
-  .dashboard-main
-  .dashboard-items
-  .dashboard-card:first-child {
-  display: table;
-  flex-grow: 0;
-  width: rem(196);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: rem(91);
-    left: rem(96);
-    height: rem(178);
-    transition: all 0.3s ease;
-    transform: rotate(-90deg);
-  }
-}
-
-.sidebar.close
-  ~ main
-  .dashboard
-  .dashboard-main
-  .dashboard-items
-  .dashboard-card:first-child
-  .dashboard-card__message {
-  margin-left: auto;
 }
 
 // <!-- Container Management -->
@@ -1245,6 +1246,7 @@ main section {
   }
 }
 
+// <!-- Bell icon notification  -->
 .notification {
   $notification: ".notification";
   position: fixed;
@@ -1299,12 +1301,8 @@ main section {
   &__bell {
     position: absolute;
     right: rem(22);
-
-    &::before {
-      content: "\e9d2";
-      color: $color-green-apple-700;
-      font-size: rem(24);
-    }
+    color: $color-green-apple-700;
+    font-size: rem(24);
   }
 
   &-mailbox {
