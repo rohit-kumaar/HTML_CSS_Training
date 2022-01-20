@@ -61,10 +61,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  const body = document.querySelector("body");
   const dashboardDarkModeBtn = document.querySelectorAll(".dashboard-darkmode");
+  const dashboardDarkmodeText = document.querySelector(
+    ".dashboard-darkmode__text"
+  );
   for (const dashboardDarkMode of dashboardDarkModeBtn) {
     dashboardDarkMode.addEventListener("click", () => {
       document.body.classList.toggle("darkmode");
+      if (body.classList == "darkmode") {
+        dashboardDarkmodeText.innerText = "Light";
+        dashboardDarkmodeText.style.color = "white";
+      } else if (body.classList == "") {
+        dashboardDarkmodeText.innerText = "Dark";
+        dashboardDarkmodeText.style.color = "black";
+      }
     });
   }
 });

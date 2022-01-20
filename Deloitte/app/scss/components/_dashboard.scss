@@ -364,6 +364,7 @@ main section {
       font-size: rem(20);
       font-weight: 700;
     }
+
     &__message {
       font-size: rem(15);
       opacity: 0.7;
@@ -431,6 +432,7 @@ main section {
   &-main {
     width: 100%;
     padding-right: rem(90);
+
     &__title {
       font-size: rem(12);
       opacity: 0.3;
@@ -465,6 +467,7 @@ main section {
       display: grid;
       grid-template-rows: repeat(4, 1fr);
       padding-bottom: 0;
+
       &::before {
         content: "";
         position: absolute;
@@ -510,6 +513,7 @@ main section {
       font-size: rem(14);
       font-weight: 700;
     }
+
     &__sub-header {
       font-size: rem(11);
     }
@@ -647,10 +651,12 @@ main section {
             border-top-left-radius: rem(30);
           }
         }
+
         &__right {
           border-left: rem(2) solid $color-green-apple-700;
           border-bottom: rem(2) solid $color-green-apple-700;
           border-bottom-left-radius: rem(30);
+
           span {
             position: absolute;
             top: rem(18.5);
@@ -1062,6 +1068,7 @@ main section {
     flex-direction: column;
     padding: 0 rem(2) 0 rem(9);
     margin-top: rem(18);
+
     &:not(:first-child) {
       margin-top: rem(16);
     }
@@ -1228,6 +1235,7 @@ main section {
       &__reviewer,
       &__date {
         font-size: rem(10);
+
         span {
           display: block;
           font-weight: 700;
@@ -1291,6 +1299,7 @@ main section {
   &__bell {
     position: absolute;
     right: rem(22);
+
     &::before {
       content: "\e9d2";
       color: $color-green-apple-700;
