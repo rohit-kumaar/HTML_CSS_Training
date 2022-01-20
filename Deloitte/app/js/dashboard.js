@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const settings = document.getElementById("settings");
-  const logout = document.getElementById("log_out");
+  const logout = document.getElementById("logout");
   logout.addEventListener("click", () => {
     settings.classList.toggle("active");
   });

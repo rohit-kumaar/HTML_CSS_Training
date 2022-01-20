@@ -6,6 +6,7 @@ var csso = require("gulp-csso");
 var concat = require("gulp-concat");
 var minify = require("gulp-minify");
 var cleanCss = require("gulp-clean-css");
+const browsersync = require("browser-sync").create();
 
 // Development Tasks
 gulp.task("sass", function () {
@@ -22,10 +23,21 @@ gulp.task("sass", function () {
     .pipe(gulp.dest("app/css")); // Outputs it in the css folder
 });
 
-// Watchers
-gulp.task("watch", function () {
+function watch() {
+  browsersync.init({
+    server: {
+      baseDir: "./",
+    },
+  });
+  // gulp.watch("./scss/**/*.scss", style);
+  gulp.watch("./**/*.html").on("change", browsersync.reload);
+  gulp.watch("app/js/**/*.js").on("change", browsersync.reload);
   gulp.watch("app/scss/**/*.scss", gulp.series("sass"));
-});
+}
+
+// Watchers
+// gulp.task("watch", function () {
+// });
 
 // Gulp task to minify CSS files
 gulp.task("minifycss", function () {
@@ -70,3 +82,5 @@ gulp.task("minifyjs", function () {
       .pipe(gulp.dest("app/js"))
   );
 });
+
+exports.watch = watch;
