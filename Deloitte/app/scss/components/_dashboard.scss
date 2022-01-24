@@ -24,6 +24,11 @@
       flex-grow: 0;
       width: rem(196);
 
+      @include breakpoint(ipad-max) {
+        flex-grow: 1;
+        padding-bottom: rem(17);
+      }
+
       & .dashboard-card__message {
         margin-left: auto;
       }
@@ -36,6 +41,10 @@
         height: rem(178);
         transition: all 0.3s ease;
         transform: rotate(-90deg);
+
+        @include breakpoint(ipad-max) {
+          display: none;
+        }
       }
     }
 
@@ -376,6 +385,10 @@ main section {
 .dashboard {
   padding: rem(21) 0 rem(39) rem(41);
 
+  @include breakpoint(ipad-max) {
+    padding-inline: rem(24);
+  }
+
   &.darkmode {
     background: $color-black-eerie;
   }
@@ -465,6 +478,10 @@ main section {
     width: 100%;
     padding-right: rem(90);
 
+    @include breakpoint(ipad-max) {
+      padding-right: 0;
+    }
+
     &__title {
       font-size: rem(12);
       opacity: 0.3;
@@ -480,6 +497,10 @@ main section {
     & > :first-child {
       width: 100%;
       flex-grow: 1;
+
+      @include breakpoint(ipad-max) {
+        flex-grow: 0;
+      }
     }
   }
 
@@ -489,6 +510,10 @@ main section {
     padding: rem(17) rem(16) rem(17) rem(22);
     border-radius: rem(10);
     box-shadow: 0 rem(4) rem(24) #c4c5c340;
+
+    @include breakpoint(ipad-max) {
+      flex-grow: 1;
+    }
 
     &:hover {
       color: $color-black;
@@ -1087,18 +1112,18 @@ main section {
     &::before {
       content: "";
       position: absolute;
-      left: rem(-25);
+      left: -25px;
       width: rem(1);
-      height: rem(237);
+      height: 237px;
       background: $color-grey-light;
     }
 
     &__items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(291px, 1fr));
       gap: rem(21);
       width: 100%;
-      min-height: 185px;
+      min-height: rem(164);
 
       &:first-child {
         border-radius: rem(20);
@@ -1201,23 +1226,12 @@ main section {
       }
 
       &__logo {
-        // position: relative;
         display: grid;
         place-items: center;
         width: rem(27);
         height: rem(27);
         border-radius: rem(30);
         background: $color-green-apple-700;
-
-        // &::before {
-        //   content: "";
-        //   position: absolute;
-        //   left: -142px;
-        //   width: 521%;
-        //   height: 2px;
-        //   border: 10px dashed red;
-        //   background: white;
-        // }
 
         .bx-check {
           &::before {
