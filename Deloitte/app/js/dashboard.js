@@ -15,6 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   // Main page display by clicking sidebar navigation end
 
+  // Notifiaction bell start
+  const notificationBell = document.getElementById("notificationBell");
+  const notification = document.getElementById("notification");
+  const main = document.getElementById("main");
+  const sections = main.querySelectorAll("section");
+  notificationBell.addEventListener("click", () => {
+    notification.classList.toggle("active");
+    for (const section of sections) {
+      section.classList.toggle("active");
+    }
+    notificationBellBtnChange();
+  });
+
+  function notificationBellBtnChange() {
+    if (notification.classList.contains("active")) {
+      notificationBell.classList.replace("bx-bell", "bx-x");
+    } else {
+      notificationBell.classList.replace("bx-x", "bx-bell");
+    }
+  }
+  // Notifiaction bell end
+
+  // Aside bar start
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("btn");
   closeBtn.addEventListener("click", () => {
@@ -28,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
       closeBtn.classList.replace("bx-chevron-right", "bx-chevron-left");
     }
   }
+  // Aside bar end
 
   const settings = document.getElementById("settings");
   const logout = document.getElementById("logout");
@@ -50,28 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
   closeAddAssessment.addEventListener("click", () => {
     document.querySelector(".add-assessment").style.display = "none";
   });
-
-  // Notifiaction bell start
-  const notificationBell = document.getElementById("notificationBell");
-  const notification = document.getElementById("notification");
-  const main = document.getElementById("main");
-  const sections = main.querySelectorAll("section");
-  notificationBell.addEventListener("click", () => {
-    notification.classList.toggle("active");
-    for (const section of sections) {
-      section.classList.toggle("active");
-    }
-    notificationBellBtnChange();
-  });
-
-  function notificationBellBtnChange() {
-    if (notification.classList.contains("active")) {
-      notificationBell.classList.replace("bx-bell", "bx-x");
-    } else {
-      notificationBell.classList.replace("bx-x", "bx-bell");
-    }
-  }
-  // Notifiaction bell end
 
   // Dark mode start
   const body = document.querySelector("body");

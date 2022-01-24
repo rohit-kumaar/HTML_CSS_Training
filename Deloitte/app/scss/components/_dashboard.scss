@@ -1087,18 +1087,18 @@ main section {
     &::before {
       content: "";
       position: absolute;
-      left: -25px;
+      left: rem(-25);
       width: rem(1);
-      height: 237px;
+      height: rem(237);
       background: $color-grey-light;
     }
 
     &__items {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
       gap: rem(21);
       width: 100%;
-      min-height: rem(164);
+      min-height: 185px;
 
       &:first-child {
         border-radius: rem(20);
@@ -1109,7 +1109,7 @@ main section {
 
     &__card {
       position: relative;
-      height: rem(164);
+      height: 100%;
       padding: rem(37) rem(35) rem(69) rem(28);
       border-radius: rem(20);
       box-shadow: 0 rem(4) rem(34) #0000000d;
