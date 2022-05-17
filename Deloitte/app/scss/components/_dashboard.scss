@@ -7,7 +7,7 @@
   height: 100vh;
   padding: rem(33) rem(9) 0 rem(23);
   background: $color-white-cultured;
-  transition: all 0.5s ease;
+  transition: width 0.5s ease, background 0.5s ease;
 
   //  For small size start
   &.close {
